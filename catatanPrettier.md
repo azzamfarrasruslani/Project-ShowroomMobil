@@ -6,7 +6,7 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 // .prettierrc
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+"plugins": ["prettier-plugin-tailwindcss"]
 }
 
 --Gunakan Prettier untuk Merapikan Kodenpx prettier --write path/to/file.html
