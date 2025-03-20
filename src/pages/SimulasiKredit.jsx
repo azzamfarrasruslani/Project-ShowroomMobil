@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Alert from "../components/Alert";
 import InputField from "../components/InputField";
 import SelectField from "../components/SelectField";
@@ -9,7 +9,12 @@ export default function SimulasiKredit() {
   const [nama, setNama] = useState("");
   const [errors, setErrors] = useState({});
   const [hasilSimulasi, setHasilSimulasi] = useState(null);
+  const [isValid, setIsValid] = useState(false);
 
+  useEffect(() => {
+    validate();
+  }, [nama, harga, tenor]);
+  
   const validate = () => {
     let newErrors = {};
     if (!nama) {
@@ -21,17 +26,18 @@ export default function SimulasiKredit() {
 
     if (!harga || parseFloat(harga) <= 0) {
       newErrors.harga = "Harga kendaraan wajib diisi.";
-    } else if (parseFloat(harga) <= 0) {
-      newErrors.harga = "Harga kendaraan harus lebih dari 0.";
     }
 
-    if (!tenor) newErrors.tenor = "Silakan pilih tenor.";
+    if (!tenor) {
+      newErrors.tenor = "Silakan pilih tenor.";
+    }
+
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    setIsValid(Object.keys(newErrors).length === 0);
   };
 
   const hitungKredit = () => {
-    if (!validate()) return;
+    if (!isValid) return;
     const bunga = 0.05;
     const tenorBulan = parseInt(tenor);
     const hargaKendaraan = parseFloat(harga);
@@ -53,6 +59,7 @@ export default function SimulasiKredit() {
           onChange={(e) => setNama(e.target.value)}
         />
         {errors.nama && <Alert tipe="error" pesan={errors.nama} />}
+
         <InputField
           label="Harga Kendaraan"
           type="number"
@@ -60,21 +67,30 @@ export default function SimulasiKredit() {
           onChange={(e) => setHarga(e.target.value)}
         />
         {errors.harga && <Alert tipe="error" pesan={errors.harga} />}
+
         <SelectField
-          label="Tenor (Bulan)"
+          label="Pilih Tenor (bulan)"
+          options={[
+            { value: "12", label: "12 Bulan" },
+            { value: "24", label: "24 Bulan" },
+            { value: "36", label: "36 Bulan" },
+          ]}
           onChange={(e) => setTenor(e.target.value)}
         />
         {errors.tenor && <Alert tipe="error" pesan={errors.tenor} />}
 
-
         <button
           onClick={hitungKredit}
-          className="mt-4 w-full rounded bg-blue-500 py-2 text-white"
+          className={`mt-4 w-full rounded py-2 text-white ${
+            isValid
+              ? "bg-blue-500 hover:bg-blue-600"
+              : "cursor-not-allowed bg-gray-400"
+          }`}
+          disabled={!isValid}
         >
           Tampilkan Hasil
         </button>
 
-        
         {hasilSimulasi && (
           <div className="mt-4 rounded bg-slate-100 p-4 shadow-md">
             <h3 className="text-lg font-semibold text-blue-900">
