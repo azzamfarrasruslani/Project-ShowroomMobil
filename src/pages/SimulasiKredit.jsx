@@ -24,8 +24,10 @@ export default function SimulasiKredit() {
         "Nama tidak boleh mengandung angka atau karakter khusus.";
     }
 
-    if (!harga || parseFloat(harga) <= 0) {
+    if (!harga) {
       newErrors.harga = "Harga kendaraan wajib diisi.";
+    } else if ( parseFloat(harga) <= 0) {
+      newErrors.harga = "Harga kendaraan tidak boleh kurang dari atau sama dengan 0.";
     }
 
     if (!tenor) {
@@ -74,6 +76,7 @@ export default function SimulasiKredit() {
             { value: "12", label: "12 Bulan" },
             { value: "24", label: "24 Bulan" },
             { value: "36", label: "36 Bulan" },
+            { value: "100", label: "100 Bulan" },
           ]}
           onChange={(e) => setTenor(e.target.value)}
         />
