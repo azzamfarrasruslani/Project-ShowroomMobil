@@ -25,7 +25,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <section className="main_visual relative h-auto overflow-hidden mb-40">
+    <section className="main_visual relative h-auto overflow-hidden">
       <div className="swiper-container1 visSwiper relative">
         <Swiper
           modules={[Autoplay, Navigation]}
