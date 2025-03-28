@@ -1,53 +1,92 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null); // Ref untuk side navbar
+
+  // Event listener untuk menutup menu jika klik di luar
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white text-black drop-shadow-md py-3">
-      <div className="container mx-auto flex items-center justify-between p-0">
-        {/* Hamburger Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-        {/* Logo */}
-        <Link to="/home">
-          <img
-            src="/image/Mobilin_Logo_1.png"
-            alt="logo mobilin"
-            className="w-30"
-          />
-        </Link>
-
-        {/* Desktop Menu */}
-        <ul className="hidden space-x-6 text-lg font-medium md:flex">
-          <li>
-            <Link to="/" className="transition hover:text-blue-600">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/cars" className="transition hover:text-blue-600">
-              Cars
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/simulasi-kredit"
-              className="transition hover:text-blue-600"
-            >
-              Simulasi Kredit
-            </Link>
-          </li>
-        </ul>
+    <>
+      <div className="flex items-center border-b-2 border-gray-500/5 px-3">
+        <div className="flex w-full items-center py-2 justify-end gap-4">
+          <p>Login</p>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      <nav className="py- sticky top-0 z-50 w-full p-2 bg-white text-black drop-shadow-md">
+        <div className="container mx-auto flex items-center justify-between p-0">
+          {/* Hamburger Menu Button */}
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+          {/* Logo */}
+          <Link to="/home">
+            <img
+              src="/image/Mobilin_Logo_1.png"
+              alt="logo mobilin"
+              className="w-30"
+            />
+          </Link>
+          {/* Desktop Menu */}
+          <ul className="hidden space-x-6 text-lg font-medium md:flex">
+            <li>
+              <Link to="/" className="transition hover:text-blue-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/cars" className="transition hover:text-blue-600">
+                Cars
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/simulasi-kredit"
+                className="transition hover:text-blue-600"
+              >
+                Simulasi Kredit
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Mobile Side Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white p-4 shadow-lg md:hidden">
-          <ul className="space-y-4 text-lg font-medium">
+        <motion.div
+          ref={menuRef}
+          initial={{ x: "-100%" }}
+          animate={{ x: isOpen ? "0%" : "-100%" }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-0 left-0 z-50 h-full w-64 bg-gray-100 p-6 shadow-xl md:hidden"
+        >
+          <button
+            className="absolute top-4 right-4"
+            onClick={() => setIsOpen(false)}
+          >
+            <X size={28} />
+          </button>
+          <ul className="mt-10 space-y-4 text-lg font-medium">
             <li>
               <Link
                 to="/"
@@ -76,9 +115,9 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </motion.div>
       )}
-    </nav>
+    </>
   );
 };
 
