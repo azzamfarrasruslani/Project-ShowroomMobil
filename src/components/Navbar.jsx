@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center border-b-2 border-gray-500/5 px-30">
+      <div className="hidden md:flex items-center border-b-2 border-gray-500/5 px-10">
         <div className="flex w-full items-center justify-end gap-6 py-2">
           <div className="flex items-center gap-2">
             <Icon name="promo" className="text-xl text-gray-800" />
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="py- sticky top-0 z-50 w-full bg-white p-2 text-black drop-shadow-md">
+      <nav className="sticky top-0 z-50 w-full bg-white p-2 text-black drop-shadow-md">
         <div className="container mx-auto flex items-center justify-between p-0">
           {/* Hamburger Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
