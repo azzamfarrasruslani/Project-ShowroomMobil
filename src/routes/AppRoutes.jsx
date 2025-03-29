@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Cars from "../pages/Cars";
 import SimulasiKredit from "../pages/SimulasiKredit";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop"; 
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import ScrollToTop from "../components/common/ScrollToTop"; 
 
 
 const AppRoutes = () => {
