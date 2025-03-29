@@ -11,7 +11,7 @@ const AppRoutes = () => {
   return (
     <Router>
       <Navbar />
-      <ScrollToTop /> {/* Tambahkan di sini */}
+      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cars" element={<Cars />} />
