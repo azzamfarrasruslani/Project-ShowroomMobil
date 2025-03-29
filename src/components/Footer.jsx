@@ -2,7 +2,7 @@ import Icon from "../lib/Icon";
 
 const Footer = () => {
   return (
-    <footer className="ixed bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-40 py-10 text-white">
+    <footer className="ixed bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-10 py-10 text-white">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-start justify-between gap-6">
         {/* Logo */}
         <div className="flex w-full flex-col items-center md:w-auto md:items-start">
@@ -52,15 +52,26 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-5 mt-20 text-center ">
-        <Icon name="facebook" className="text-2xl font bg-white rounded-full px-4 py-3 text-black hover:bg-black hover:text-white" />
-        <Icon name="instagram" className="text-2xl bg-white rounded-full px-4 py-3 text-black hover:bg-black hover:text-white" />
-        <Icon name="youtube" className="text-2xl bg-white rounded-full px-3 py-3 text-black hover:bg-black hover:text-white" />
+      <div className="mt-20 flex flex-wrap justify-center gap-3 text-center md:gap-5">
+        <Icon
+          name="facebook"
+          className="w-10 rounded-full bg-white py-2.5 text-xl text-black hover:bg-black hover:text-white"
+        />
+        <Icon
+          name="instagram"
+          className="w-10 rounded-full bg-white py-2.5 text-xl text-black hover:bg-black hover:text-white"
+        />
+        <Icon
+          name="youtube"
+          className="w-10 rounded-full bg-white py-2.5 text-xl text-black hover:bg-black hover:text-white"
+        />
       </div>
 
       {/* Copyright */}
-      <div className="mt-6 text-center text-sm text-gray-400">
-        © 2025 Showroom Mobil Bekas Mobilin. All Rights Reserved.
+      <div className="mt-10 border-t-2 border-gray-500/80 px-4 text-center">
+        <div className="mt-6 text-center text-xs text-gray-400 md:text-sm">
+          © 2025 Showroom Mobilin. All Rights Reserved.
+        </div>
       </div>
     </footer>
   );
