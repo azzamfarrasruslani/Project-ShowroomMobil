@@ -32,10 +32,13 @@ const Carousel = () => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          className="w-full object-cover h-[400px] max-h-[690px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[500px]"
+          className="h-[400px] max-h-[690px] w-full object-cover sm:min-h-[400px] md:min-h-[600px] lg:min-h-[500px]"
         >
           <SwiperSlide className="flex items-center justify-center text-white">
-            <img src="/image/2.png" alt="gambar"/>
+            <img src="/image/2.png" alt="gambar" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center text-white">
+            <img src="/image/3.png" alt="gambar" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center text-white">
             <img src="/image/1.png" alt="gambar" />
@@ -45,14 +48,14 @@ const Carousel = () => {
         {/* Custom Navigation Buttons */}
         <button
           ref={prevRef}
-          className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-white bg-opacity-50 text-black rounded-full p-3 z-10 hidden lg:block"
+          className="bg-opacity-50 absolute top-1/2 left-5 z-10 hidden -translate-y-1/2 transform rounded-full bg-white p-3 text-black lg:block"
         >
           <ChevronLeft size={24} />
         </button>
 
         <button
           ref={nextRef}
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-white bg-opacity-50 text-black rounded-full p-3 z-10 hidden lg:block"
+          className="bg-opacity-50 absolute top-1/2 right-5 z-10 hidden -translate-y-1/2 transform rounded-full bg-white p-3 text-black lg:block"
         >
           <ChevronRight size={24} />
         </button>
