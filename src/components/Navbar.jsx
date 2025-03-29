@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import Icon from "../lib/Icon";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 
@@ -27,13 +28,20 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center border-b-2 border-gray-500/5 px-3">
-        <div className="flex w-full items-center py-2 justify-end gap-4">
-          <p>Login</p>
+      <div className="flex items-center border-b-2 border-gray-500/5 px-30">
+        <div className="flex w-full items-center justify-end gap-6 py-2">
+          <div className="flex items-center gap-2">
+            <Icon name="promo" className="text-xl text-gray-800" />
+            <p className="font-semibold text-gray-800">Promo</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Icon name="login" className="text-xl text-gray-800" />
+            <p className="font-semibold text-gray-800">Login/Sign Up</p>
+          </div>
         </div>
       </div>
 
-      <nav className="py- sticky top-0 z-50 w-full p-2 bg-white text-black drop-shadow-md">
+      <nav className="py- sticky top-0 z-50 w-full bg-white p-2 text-black drop-shadow-md">
         <div className="container mx-auto flex items-center justify-between p-0">
           {/* Hamburger Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
