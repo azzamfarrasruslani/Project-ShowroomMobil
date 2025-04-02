@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import Icon from "../../lib/Icon";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import "../../locales/i18n"; // Pastikan impor konfigurasi i18n
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +15,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        menuRef.current && !menuRef.current.contains(event.target) &&
-        overlayRef.current && overlayRef.current.contains(event.target)
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        overlayRef.current &&
+        overlayRef.current.contains(event.target)
       ) {
         setIsOpen(false);
       }
@@ -29,17 +33,32 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  // Ubah bahasa menggunakan i18next
+  const { t, i18n } = useTranslation();
+
+  // Fungsi untuk mengubah bahasa
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <>
-      <div className="hidden md:flex items-center border-b-2 border-gray-500/5 px-10">
-        <div className="flex w-full items-center justify-end gap-6 py-2">
+      <div className="hidden items-center border-b-2 border-gray-500/5 bg-white px-10 md:flex">
+        <div className="flex w-full items-center justify-end gap-3 py-2">
           <div className="flex items-center gap-2">
-            <Icon name="promo" className="text-xl text-gray-800" />
-            <p className="font-semibold text-gray-800">Promo</p>
+            <Icon name="language" className="text-md text-gray-800" />
+            <select
+              className="appearance-none rounded-lg bg-gray-200 px-3 py-1 text-sm font-bold text-gray-800 transition-all focus:ring-2 focus:ring-blue-900 focus:outline-none"
+              onChange={(e) => changeLanguage(e.target.value)}
+            >
+              <option className="bg-white text-black" value="id">ID</option>
+              <option  className="bg-white text-black" value="en">EN</option>
+            </select>
           </div>
+          <span>|</span>
           <div className="flex items-center gap-2">
-            <Icon name="login" className="text-xl text-gray-800" />
-            <p className="font-semibold text-gray-800">Login/Sign Up</p>
+            <Icon name="user" className="text-md text-gray-800" />
+            <p className="text-sm font-medium text-gray-800">{t("masuk")} / {t("daftar")}</p>
           </div>
         </div>
       </div>
@@ -58,19 +77,22 @@ const Navbar = () => {
           </Link>
           <ul className="hidden space-x-6 text-lg font-medium md:flex">
             <li>
-              <Link to="/" className="transition hover:text-blue-600">
-                Home
+              <Link
+                to="/"
+                className="font-medium transition hover:text-gray-800"
+              >
+                {t("beranda")} 
               </Link>
             </li>
             <li>
-              <Link to="/cars" className="transition hover:text-blue-600">
-                Cars
+              <Link to="/cars" className="transition hover:text-gray-800">
+              {t("beli mobil")} 
               </Link>
             </li>
             <li>
               <Link
                 to="/simulasi-kredit"
-                className="transition hover:text-blue-600"
+                className="transition hover:text-gray-800"
               >
                 Simulasi Kredit
               </Link>
