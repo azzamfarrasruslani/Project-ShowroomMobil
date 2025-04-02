@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faHome, faUser, faChevronLeft, faChevronRight, faRightToBracket, faReceipt } from "@fortawesome/free-solid-svg-icons";
+import {  faHome, faUser, faChevronLeft, faChevronRight, faRightToBracket, faReceipt, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faYoutube} from "@fortawesome/free-brands-svg-icons";
 /**
  * Komponen Ikon Universal
@@ -13,6 +13,7 @@ const Icon = ({ name, className }) => {
     instagram: faInstagram,
     youtube: faYoutube,
     login: faRightToBracket,
+    language: faLanguage,
     promo: faReceipt,
     home: faHome,
     user: faUser,
