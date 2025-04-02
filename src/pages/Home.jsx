@@ -1,11 +1,15 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
-
+import SearchCar from "../components/pages/home/SearchCar";
 const Home = () => {
   return (
     <>
-      <Carousel />
+      {/* Hero Section */}
+      <section >
+        <Carousel />
+        <SearchCar />
+      </section>
     </>
   );
 };
