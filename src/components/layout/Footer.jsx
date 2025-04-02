@@ -2,7 +2,7 @@ import Icon from "../../lib/Icon";
 
 const Footer = () => {
   return (
-    <footer className="ixed bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-10 py-10 text-white">
+    <footer className="bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-10 py-10 text-white">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-start justify-between gap-6">
         {/* Logo */}
         <div className="flex w-full flex-col items-center md:w-auto md:items-start">
