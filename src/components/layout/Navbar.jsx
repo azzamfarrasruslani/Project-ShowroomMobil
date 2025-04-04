@@ -6,6 +6,7 @@ import Icon from "../../lib/Icon";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "../../locales/i18n"; // Pastikan impor konfigurasi i18n
+import CustomSelect from "../ui/CustomSelect";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,14 +52,20 @@ const Navbar = () => {
               className="appearance-none rounded-lg bg-gray-200 px-3 py-1 text-sm font-bold text-gray-800 transition-all focus:ring-2 focus:ring-blue-900 focus:outline-none"
               onChange={(e) => changeLanguage(e.target.value)}
             >
-              <option className="bg-white text-black" value="id">ID</option>
-              <option  className="bg-white text-black" value="en">EN</option>
+              <option className="bg-white text-black" value="id">
+                ID
+              </option>
+              <option className="bg-white text-black" value="en">
+                EN
+              </option>
             </select>
           </div>
           <span>|</span>
           <div className="flex items-center gap-2">
             <Icon name="user" className="text-md text-gray-800" />
-            <p className="text-sm font-medium text-gray-800">{t("masuk")} / {t("daftar")}</p>
+            <p className="text-sm font-medium text-gray-800">
+              {t("masuk")} / {t("daftar")}
+            </p>
           </div>
         </div>
       </div>
@@ -81,12 +88,12 @@ const Navbar = () => {
                 to="/"
                 className="font-medium transition hover:text-gray-800"
               >
-                {t("beranda")} 
+                {t("beranda")}
               </Link>
             </li>
             <li>
               <Link to="/cars" className="transition hover:text-gray-800">
-              {t("beli mobil")} 
+                {t("beli mobil")}
               </Link>
             </li>
             <li>
