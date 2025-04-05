@@ -14,7 +14,7 @@ export default function SimulasiKredit() {
   useEffect(() => {
     validate();
   }, [nama, harga, tenor]);
-  
+
   const validate = () => {
     let newErrors = {};
     if (!nama) {
@@ -26,8 +26,9 @@ export default function SimulasiKredit() {
 
     if (!harga) {
       newErrors.harga = "Harga kendaraan wajib diisi.";
-    } else if ( parseFloat(harga) <= 0) {
-      newErrors.harga = "Harga kendaraan tidak boleh kurang dari atau sama dengan 0.";
+    } else if (parseFloat(harga) <= 0) {
+      newErrors.harga =
+        "Harga kendaraan tidak boleh kurang dari atau sama dengan 0.";
     }
 
     if (!tenor) {

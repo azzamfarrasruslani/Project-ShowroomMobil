@@ -1,8 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faHome, faUser, faChevronLeft, faChevronRight, faRightToBracket, faReceipt, faLanguage, faMagnifyingGlass, faFilter, faList , faTv, 
-  faLocationDot, faCircleXmark
+import {
+  faHome,
+  faUser,
+  faChevronLeft,
+  faChevronRight,
+  faRightToBracket,
+  faReceipt,
+  faLanguage,
+  faMagnifyingGlass,
+  faFilter,
+  faList,
+  faTv,
+  faLocationDot,
+  faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faInstagram, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 /**
  * Komponen Ikon Universal
  * @param {string} name - Nama ikon (contoh: "home", "user", "coffee")
@@ -25,8 +41,8 @@ const Icon = ({ name, className }) => {
     location: faLocationDot,
     search: faMagnifyingGlass,
     filter: faFilter,
-    arrowLeft: faChevronLeft,  
-    arrowRight: faChevronRight, 
+    arrowLeft: faChevronLeft,
+    arrowRight: faChevronRight,
   };
 
   return <FontAwesomeIcon icon={icons[name]} className={className} />;

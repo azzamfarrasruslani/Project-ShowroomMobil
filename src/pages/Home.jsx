@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section >
+      <section>
         <Carousel />
         <SearchCar />
       </section>

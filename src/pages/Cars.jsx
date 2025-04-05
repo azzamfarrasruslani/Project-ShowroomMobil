@@ -35,7 +35,7 @@ const FilterSidebar = ({
       case "merek":
         return (
           <div>
-            <h3 className="font-semibold mb-2">Merek & Model</h3>
+            <h3 className="mb-2 font-semibold">Merek & Model</h3>
             <ul>
               {["Honda", "Toyota", "Suzuki", "Daihatsu"].map((brand) => (
                 <li key={brand}>
@@ -55,7 +55,7 @@ const FilterSidebar = ({
       case "tahun":
         return (
           <div>
-            <h3 className="font-semibold mb-2">Tahun</h3>
+            <h3 className="mb-2 font-semibold">Tahun</h3>
             <ul>
               {[2023, 2022, 2021, 2020].map((year) => (
                 <li key={year}>
@@ -75,7 +75,7 @@ const FilterSidebar = ({
       case "lokasi":
         return (
           <div>
-            <h3 className="font-semibold mb-2">Lokasi</h3>
+            <h3 className="mb-2 font-semibold">Lokasi</h3>
             <ul>
               {["Jakarta", "Bandung", "Surabaya", "Lokasi Saat Ini"].map(
                 (location) => (
@@ -89,7 +89,7 @@ const FilterSidebar = ({
                       {location}
                     </label>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
@@ -129,7 +129,7 @@ const FilterSidebar = ({
         <div className="flex-grow">
           <div className="flex h-full flex-row gap-4">
             {/* Tab Buttons */}
-            <div className="flex flex-col justify-start gap-2 bg-gray-200 h-full w-40">
+            <div className="flex h-full w-40 flex-col justify-start gap-2 bg-gray-200">
               {[
                 { key: "merek", label: "Merek & Model" },
                 { key: "tahun", label: "Tahun" },
@@ -150,7 +150,7 @@ const FilterSidebar = ({
             </div>
 
             {/* Tab Content */}
-            <div className="flex flex-col gap-4 px-10 py-10 flex-grow overflow-y-auto">
+            <div className="flex flex-grow flex-col gap-4 overflow-y-auto px-10 py-10">
               {renderTabContent()}
             </div>
           </div>
@@ -175,8 +175,6 @@ const FilterSidebar = ({
     </motion.div>
   );
 };
-
-
 
 // --- TabPagination Component ---
 const TabPagination = ({ totalTabs, activeTab, onTabChange }) => (
