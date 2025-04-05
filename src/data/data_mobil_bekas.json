@@ -1,0 +1,559 @@
+[
+    {
+        "id": 1,
+        "merek": "Wuling",
+        "nama": "Confero",
+        "tahun_beli": 2011,
+        "tipe": "Coupe",
+        "transmisi": "Manual",
+        "jarak_tempuh": 85300,
+        "warna": "Kuning",
+        "harga": 262213518,
+        "daerah": "Makassar",
+        "fitur_tambahan": [
+            "Airbag",
+            "AC",
+            "Power Steering",
+            "Kamera Belakang",
+            "Sensor Parkir"
+        ],
+        "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 2,
+        "merek": "Hyundai",
+        "nama": "Creta",
+        "tahun_beli": 2010,
+        "tipe": "MPV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 49420,
+        "warna": "Silver",
+        "harga": 204911938,
+        "daerah": "Makassar",
+        "fitur_tambahan": [
+            "AC",
+            "Power Steering",
+            "Kamera Belakang"
+        ],
+        "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 3,
+        "merek": "Kia",
+        "nama": "Sonet",
+        "tahun_beli": 2010,
+        "tipe": "MPV",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 99682,
+        "warna": "Kuning",
+        "harga": 371627316,
+        "daerah": "Bandung",
+        "fitur_tambahan": [
+            "AC",
+            "Bluetooth",
+            "Airbag",
+            "Sunroof"
+        ],
+      "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 4,
+        "merek": "Mitsubishi",
+        "nama": "Mirage",
+        "tahun_beli": 2015,
+        "tipe": "MPV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 76902,
+        "warna": "Hijau",
+        "harga": 439673505,
+        "daerah": "Denpasar",
+        "fitur_tambahan": [
+            "ABS",
+            "Bluetooth",
+            "Power Steering",
+            "Sensor Parkir",
+            "AC"
+        ],
+        "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 5,
+        "merek": "Hyundai",
+        "nama": "Tucson",
+        "tahun_beli": 2021,
+        "tipe": "Crossover",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 42523,
+        "warna": "Merah",
+        "harga": 112360322,
+        "daerah": "Jakarta",
+        "fitur_tambahan": [
+            "Sunroof",
+            "Kamera Belakang",
+            "Airbag",
+            "Power Steering",
+            "ABS"
+        ],
+          "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 6,
+        "merek": "Honda",
+        "nama": "HR-V",
+        "tahun_beli": 2013,
+        "tipe": "MPV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 46288,
+        "warna": "Abu-abu",
+        "harga": 355453285,
+        "daerah": "Jakarta",
+        "fitur_tambahan": [
+            "Airbag",
+            "ABS"
+        ],
+         "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 7,
+        "merek": "Suzuki",
+        "nama": "Ertiga",
+        "tahun_beli": 2013,
+        "tipe": "MPV",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 108756,
+        "warna": "Hijau",
+        "harga": 160887853,
+        "daerah": "Palembang",
+        "fitur_tambahan": [
+            "Power Steering",
+            "Sunroof",
+            "Sensor Parkir",
+            "Bluetooth"
+        ],
+         "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 8,
+        "merek": "Suzuki",
+        "nama": "Ertiga",
+        "tahun_beli": 2020,
+        "tipe": "Convertible",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 57925,
+        "warna": "Merah",
+        "harga": 321078267,
+        "daerah": "Yogyakarta",
+        "fitur_tambahan": [
+            "Bluetooth",
+            "ABS",
+            "Sunroof",
+            "Power Steering"
+        ],
+         "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 9,
+        "merek": "Honda",
+        "nama": "HR-V",
+        "tahun_beli": 2020,
+        "tipe": "Pickup",
+        "transmisi": "Manual",
+        "jarak_tempuh": 12388,
+        "warna": "Kuning",
+        "harga": 258045509,
+        "daerah": "Makassar",
+        "fitur_tambahan": [
+            "ABS",
+            "Sensor Parkir"
+        ],
+         "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 10,
+        "merek": "Daihatsu",
+        "nama": "Xenia",
+        "tahun_beli": 2022,
+        "tipe": "SUV",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 27171,
+        "warna": "Merah",
+        "harga": 490869567,
+        "daerah": "Surabaya",
+        "fitur_tambahan": [
+            "Sunroof",
+            "Bluetooth",
+            "Airbag",
+            "Sensor Parkir"
+        ],
+         "gambar": "https://img1.kurumaerabi.com/image/i/202503/2950/8a95019a.jpg"
+    },
+    {
+        "id": 11,
+        "merek": "Nissan",
+        "nama": "X-Trail",
+        "tahun_beli": 2019,
+        "tipe": "Coupe",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 35969,
+        "warna": "Hijau",
+        "harga": 385054281,
+        "daerah": "Semarang",
+        "fitur_tambahan": [
+            "Bluetooth",
+            "Sunroof",
+            "Power Steering",
+            "Airbag",
+            "AC"
+        ],
+        "gambar": "https://example.com/images/car_11.jpg"
+    },
+    {
+        "id": 12,
+        "merek": "Kia",
+        "nama": "Sonet",
+        "tahun_beli": 2018,
+        "tipe": "Convertible",
+        "transmisi": "Manual",
+        "jarak_tempuh": 119058,
+        "warna": "Biru",
+        "harga": 309004802,
+        "daerah": "Balikpapan",
+        "fitur_tambahan": [
+            "Power Steering",
+            "ABS",
+            "Bluetooth"
+        ],
+        "gambar": "https://example.com/images/car_12.jpg"
+    },
+    {
+        "id": 13,
+        "merek": "Mazda",
+        "nama": "2",
+        "tahun_beli": 2019,
+        "tipe": "Pickup",
+        "transmisi": "Manual",
+        "jarak_tempuh": 47960,
+        "warna": "Silver",
+        "harga": 100743303,
+        "daerah": "Yogyakarta",
+        "fitur_tambahan": [
+            "Sensor Parkir",
+            "Power Steering"
+        ],
+        "gambar": "https://example.com/images/car_13.jpg"
+    },
+    {
+        "id": 14,
+        "merek": "Suzuki",
+        "nama": "Swift",
+        "tahun_beli": 2012,
+        "tipe": "Hatchback",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 131349,
+        "warna": "Silver",
+        "harga": 483690548,
+        "daerah": "Yogyakarta",
+        "fitur_tambahan": [
+            "Bluetooth",
+            "Kamera Belakang",
+            "AC",
+            "Sensor Parkir"
+        ],
+        "gambar": "https://example.com/images/car_14.jpg"
+    },
+    {
+        "id": 15,
+        "merek": "Suzuki",
+        "nama": "Ertiga",
+        "tahun_beli": 2016,
+        "tipe": "Hatchback",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 71705,
+        "warna": "Silver",
+        "harga": 151438795,
+        "daerah": "Makassar",
+        "fitur_tambahan": [
+            "Sensor Parkir",
+            "Kamera Belakang",
+            "Airbag",
+            "AC"
+        ],
+        "gambar": "https://example.com/images/car_15.jpg"
+    },
+    {
+        "id": 16,
+        "merek": "Wuling",
+        "nama": "Cortez",
+        "tahun_beli": 2023,
+        "tipe": "Pickup",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 32918,
+        "warna": "Putih",
+        "harga": 148409204,
+        "daerah": "Palembang",
+        "fitur_tambahan": [
+            "Sensor Parkir",
+            "Sunroof",
+            "Bluetooth",
+            "Airbag",
+            "Kamera Belakang"
+        ],
+        "gambar": "https://example.com/images/car_16.jpg"
+    },
+    {
+        "id": 17,
+        "merek": "Honda",
+        "nama": "Brio",
+        "tahun_beli": 2012,
+        "tipe": "Convertible",
+        "transmisi": "Manual",
+        "jarak_tempuh": 66289,
+        "warna": "Merah",
+        "harga": 274876998,
+        "daerah": "Balikpapan",
+        "fitur_tambahan": [
+            "Kamera Belakang",
+            "Power Steering",
+            "Airbag",
+            "Bluetooth"
+        ],
+        "gambar": "https://example.com/images/car_17.jpg"
+    },
+    {
+        "id": 18,
+        "merek": "Nissan",
+        "nama": "Serena",
+        "tahun_beli": 2016,
+        "tipe": "Hatchback",
+        "transmisi": "Manual",
+        "jarak_tempuh": 25447,
+        "warna": "Merah",
+        "harga": 301929588,
+        "daerah": "Surabaya",
+        "fitur_tambahan": [
+            "Airbag",
+            "Power Steering"
+        ],
+        "gambar": "https://example.com/images/car_18.jpg"
+    },
+    {
+        "id": 19,
+        "merek": "Daihatsu",
+        "nama": "Terios",
+        "tahun_beli": 2011,
+        "tipe": "MPV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 108420,
+        "warna": "Biru",
+        "harga": 139257542,
+        "daerah": "Jakarta",
+        "fitur_tambahan": [
+            "AC",
+            "Sensor Parkir",
+            "Sunroof"
+        ],
+        "gambar": "https://example.com/images/car_19.jpg"
+    },
+    {
+        "id": 20,
+        "merek": "Mitsubishi",
+        "nama": "Pajero",
+        "tahun_beli": 2019,
+        "tipe": "Coupe",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 10737,
+        "warna": "Silver",
+        "harga": 487279465,
+        "daerah": "Denpasar",
+        "fitur_tambahan": [
+            "AC",
+            "Kamera Belakang",
+            "Sunroof"
+        ],
+        "gambar": "https://example.com/images/car_20.jpg"
+    },
+    {
+        "id": 21,
+        "merek": "Honda",
+        "nama": "Jazz",
+        "tahun_beli": 2015,
+        "tipe": "SUV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 15179,
+        "warna": "Merah",
+        "harga": 108295362,
+        "daerah": "Denpasar",
+        "fitur_tambahan": [
+            "ABS",
+            "Power Steering",
+            "Kamera Belakang",
+            "AC"
+        ],
+        "gambar": "https://example.com/images/car_21.jpg"
+    },
+    {
+        "id": 22,
+        "merek": "Kia",
+        "nama": "Picanto",
+        "tahun_beli": 2022,
+        "tipe": "Crossover",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 38544,
+        "warna": "Hitam",
+        "harga": 277921597,
+        "daerah": "Bandung",
+        "fitur_tambahan": [
+            "Kamera Belakang",
+            "Power Steering",
+            "Sensor Parkir",
+            "Sunroof"
+        ],
+        "gambar": "https://example.com/images/car_22.jpg"
+    },
+    {
+        "id": 23,
+        "merek": "Nissan",
+        "nama": "Serena",
+        "tahun_beli": 2011,
+        "tipe": "Convertible",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 138323,
+        "warna": "Silver",
+        "harga": 374047779,
+        "daerah": "Medan",
+        "fitur_tambahan": [
+            "Sunroof",
+            "ABS",
+            "AC"
+        ],
+        "gambar": "https://example.com/images/car_23.jpg"
+    },
+    {
+        "id": 24,
+        "merek": "Daihatsu",
+        "nama": "Ayla",
+        "tahun_beli": 2012,
+        "tipe": "Hatchback",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 130321,
+        "warna": "Silver",
+        "harga": 391045116,
+        "daerah": "Palembang",
+        "fitur_tambahan": [
+            "Power Steering",
+            "Bluetooth"
+        ],
+        "gambar": "https://example.com/images/car_24.jpg"
+    },
+    {
+        "id": 25,
+        "merek": "Wuling",
+        "nama": "Confero",
+        "tahun_beli": 2023,
+        "tipe": "Hatchback",
+        "transmisi": "Manual",
+        "jarak_tempuh": 41866,
+        "warna": "Hitam",
+        "harga": 395290078,
+        "daerah": "Medan",
+        "fitur_tambahan": [
+            "AC",
+            "Sensor Parkir",
+            "Sunroof",
+            "Airbag",
+            "ABS"
+        ],
+        "gambar": "https://example.com/images/car_25.jpg"
+    },
+    {
+        "id": 26,
+        "merek": "Suzuki",
+        "nama": "XL7",
+        "tahun_beli": 2017,
+        "tipe": "Hatchback",
+        "transmisi": "Manual",
+        "jarak_tempuh": 82498,
+        "warna": "Silver",
+        "harga": 268194894,
+        "daerah": "Semarang",
+        "fitur_tambahan": [
+            "AC",
+            "Sensor Parkir",
+            "Sunroof",
+            "Airbag",
+            "Kamera Belakang"
+        ],
+        "gambar": "https://example.com/images/car_26.jpg"
+    },
+    {
+        "id": 27,
+        "merek": "Mazda",
+        "nama": "6",
+        "tahun_beli": 2018,
+        "tipe": "Pickup",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 128737,
+        "warna": "Kuning",
+        "harga": 454375492,
+        "daerah": "Balikpapan",
+        "fitur_tambahan": [
+            "Kamera Belakang",
+            "Sensor Parkir"
+        ],
+        "gambar": "https://example.com/images/car_27.jpg"
+    },
+    {
+        "id": 28,
+        "merek": "Wuling",
+        "nama": "Almaz",
+        "tahun_beli": 2010,
+        "tipe": "SUV",
+        "transmisi": "Manual",
+        "jarak_tempuh": 32352,
+        "warna": "Kuning",
+        "harga": 376604829,
+        "daerah": "Jakarta",
+        "fitur_tambahan": [
+            "Sunroof",
+            "Airbag",
+            "Kamera Belakang",
+            "AC"
+        ],
+        "gambar": "https://example.com/images/car_28.jpg"
+    },
+    {
+        "id": 29,
+        "merek": "Daihatsu",
+        "nama": "Terios",
+        "tahun_beli": 2020,
+        "tipe": "Pickup",
+        "transmisi": "Manual",
+        "jarak_tempuh": 36102,
+        "warna": "Silver",
+        "harga": 250696553,
+        "daerah": "Semarang",
+        "fitur_tambahan": [
+            "ABS",
+            "AC",
+            "Power Steering"
+        ],
+        "gambar": "https://example.com/images/car_29.jpg"
+    },
+    {
+        "id": 30,
+        "merek": "Suzuki",
+        "nama": "Baleno",
+        "tahun_beli": 2023,
+        "tipe": "Hatchback",
+        "transmisi": "Otomatis",
+        "jarak_tempuh": 56710,
+        "warna": "Putih",
+        "harga": 123264746,
+        "daerah": "Bandung",
+        "fitur_tambahan": [
+            "Bluetooth",
+            "Power Steering"
+        ],
+        "gambar": "https://example.com/images/car_30.jpg"
+    }
+]
