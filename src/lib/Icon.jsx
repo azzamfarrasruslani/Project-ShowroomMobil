@@ -10,7 +10,7 @@ import {
   faMagnifyingGlass,
   faFilter,
   faList,
-  faTv,
+  faTableCellsLarge,
   faLocationDot,
   faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -37,7 +37,7 @@ const Icon = ({ name, className }) => {
     user: faUser,
     list: faList,
     close: faCircleXmark,
-    card: faTv,
+    card: faTableCellsLarge,
     location: faLocationDot,
     search: faMagnifyingGlass,
     filter: faFilter,
