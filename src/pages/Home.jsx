@@ -1,8 +1,11 @@
+import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 import SearchCar from "../components/features/home/SearchCar";
+
 const Home = () => {
+  const [selectedType, setSelectedType] = useState(null);
   return (
     <>
       {/* Hero Section */}
