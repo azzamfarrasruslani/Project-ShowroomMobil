@@ -1,9 +1,6 @@
-import { useState } from "react";
-// Icons
+import { useState, useMemo } from "react";
 import Icon from "../lib/Icon";
-// Data
 import cars from "../data/data_mobil_bekas.json";
-// Components - Features
 import FilterSidebar from "../components/features/cars/FilterSidebar";
 import SearchBar from "../components/features/cars/SearchBar";
 import CarCard from "../components/features/cars/CarCard";
@@ -13,92 +10,67 @@ import CheckBoxFilter from "../components/features/cars/CheckBoxFilter";
 
 const Cars = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredCars, setFilteredCars] = useState(cars);
   const [showFilter, setShowFilter] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [viewMode, setViewMode] = useState("card");
+  const [filters, setFilters] = useState({ merek: [], transmisi: [] });
 
-  const [filters, setFilters] = useState({
-    merek: [],
-    transmisi: [],
-  });
-
-  // Filter cars based on search term
   const carsPerPage = 9;
-  const totalTabs = Math.ceil(filteredCars.length / carsPerPage);
 
-  // Function to handle filter changes
-  const handleFilterChange = (category, selectedTags) => {
-    const updatedFilters = {
-      ...filters,
-      [category]: selectedTags,
-    };
+  const filteredCars = useMemo(() => {
+    return cars.filter((car) => {
+      const matchSearch =
+        car.nama.toLowerCase().includes(searchTerm) ||
+        car.merek.toLowerCase().includes(searchTerm) ||
+        car.daerah.toLowerCase().includes(searchTerm);
 
-    setFilters(updatedFilters);
-
-    // Gabungkan semua filter
-    const filtered = cars.filter((car) => {
       const matchMerek =
-        updatedFilters.merek.length === 0 ||
-        updatedFilters.merek.includes(car.merek);
+        filters.merek.length === 0 || filters.merek.includes(car.merek);
       const matchTransmisi =
-        updatedFilters.transmisi.length === 0 ||
-        updatedFilters.transmisi.includes(car.transmisi);
+        filters.transmisi.length === 0 || filters.transmisi.includes(car.transmisi);
 
-      return matchMerek && matchTransmisi;
+      return matchSearch && matchMerek && matchTransmisi;
     });
+  }, [searchTerm, filters]);
 
-    setFilteredCars(filtered);
+  const totalTabs = Math.ceil(filteredCars.length / carsPerPage);
+  const currentCars = filteredCars.slice(
+    activeTab * carsPerPage,
+    (activeTab + 1) * carsPerPage
+  );
+
+  const handleFilterChange = (category, selectedTags) => {
+    setFilters((prev) => ({ ...prev, [category]: selectedTags }));
     setActiveTab(0);
   };
 
-  // Function to get tag counts for a specific field
-  const getTagCounts = (field) => {
-    const counts = {};
-
-    cars.forEach((car) => {
-      const key = car[field];
-      counts[key] = (counts[key] || 0) + 1;
-    });
-
-    return Object.entries(counts).map(([name, count]) => ({ name, count }));
-  };
-
-  // Function to handle reset filter
   const handleResetFilter = () => {
-    setFilteredCars(cars);
+    setFilters({ merek: [], transmisi: [] });
     setActiveTab(0);
   };
 
-  // Function to handle apply filter
   const handleApplyFilter = () => {
     setShowFilter(false);
   };
 
-  // Function to handle tab change
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
 
-  // Function to handle search input
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    const filtered = cars.filter(
-      (car) =>
-        car.nama.toLowerCase().includes(term) ||
-        car.merek.toLowerCase().includes(term) ||
-        car.daerah.toLowerCase().includes(term),
-    );
-    setFilteredCars(filtered);
     setActiveTab(0);
   };
 
-  // Function to handle view mode change
-  const currentCars = filteredCars.slice(
-    activeTab * carsPerPage,
-    (activeTab + 1) * carsPerPage,
-  );
+  const getTagCounts = (field) => {
+    const counts = {};
+    cars.forEach((car) => {
+      const key = car[field];
+      counts[key] = (counts[key] || 0) + 1;
+    });
+    return Object.entries(counts).map(([name, count]) => ({ name, count }));
+  };
 
   return (
     <div>
@@ -116,6 +88,7 @@ const Cars = () => {
         </p>
 
         <SearchBar searchTerm={searchTerm} onSearch={handleSearch} />
+
         <div className="flex flex-col gap-4 md:flex-row">
           <div className="flex gap-4">
             <CheckBoxFilter
@@ -179,12 +152,16 @@ const Cars = () => {
                 <CarCard key={car.id} car={car} />
               ) : (
                 <ListCard key={car.id} car={car} />
-              ),
+              )
             )}
           </div>
         ) : (
-          <div className=" flex justify-center -mt-20">
-            <img src="/public/image/error/notfound-01.png" alt="notfound" className=" w-120" />
+          <div className="flex justify-center -mt-20">
+            <img
+              src="/public/image/error/notfound-01.png"
+              alt="notfound"
+              className="w-120"
+            />
           </div>
         )}
 
