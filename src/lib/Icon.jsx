@@ -43,6 +43,7 @@ const Icon = ({ name, className }) => {
     filter: faFilter,
     arrowLeft: faChevronLeft,
     arrowRight: faChevronRight,
+   
   };
 
   return <FontAwesomeIcon icon={icons[name]} className={className} />;
