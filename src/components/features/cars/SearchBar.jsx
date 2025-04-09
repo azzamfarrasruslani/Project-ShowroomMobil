@@ -13,7 +13,7 @@ const SearchBar = ({ searchTerm, onSearch }) => (
       type="text"
       value={searchTerm}
       onChange={onSearch}
-      className="w-full rounded-md border border-gray-300 bg-gray-800 p-3 pl-10 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:outline-none"
+      className="w-full rounded-md border border-gray-300 bg-gray-800 p-3 pl-10 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:outline-none md:text-base text-sm"
       placeholder="Cari berdasarkan Merek, Model, atau Kata Kunci"
     />
   </div>
