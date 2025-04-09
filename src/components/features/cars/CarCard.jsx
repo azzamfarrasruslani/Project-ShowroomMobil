@@ -1,6 +1,5 @@
 import Icon from "../../../lib/Icon";
 
-
 const CarCard = ({ car }) => {
   return (
     <div className="rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
@@ -24,8 +23,15 @@ const CarCard = ({ car }) => {
         </p>
         <h2 className="mt-2 text-lg font-bold text-gray-800">{car.nama}</h2>
 
-        <div className="mt-3 rounded-xl border border-gray-200 p-3">
+        <div className="mt-3 rounded-xl border border-gray-300 p-3">
           <div className="flex items-center gap-2 text-sm text-gray-600">
+            <img
+              src="../../public/icon/brand-icon.svg"
+              alt="calendar"
+              className="h-4 w-4"
+            />
+            <p>{car.warna}</p>
+            <span className="px-1">•</span>
             <img
               src="../../public/icon/calendar-icon.svg"
               alt="calendar"
@@ -39,9 +45,6 @@ const CarCard = ({ car }) => {
               className="h-4 w-4"
             />
             <p>{car.transmisi}</p>
-            <span className="px-1">•</span>
-            <Icon name="location" className="h-4 w-4 text-gray-600" />
-            <p>{car.daerah}</p>
           </div>
 
           <div className="mt-2 flex items-center gap-2 text-sm text-gray-600">
@@ -51,6 +54,9 @@ const CarCard = ({ car }) => {
               className="h-4 w-4"
             />
             <p>{car.jarak_tempuh.toLocaleString("id-ID")} km</p>
+            <span className="px-1">•</span>
+            <Icon name="location" className="h-4 w-4 text-gray-600" />
+            <p>{car.daerah}</p>
           </div>
         </div>
       </div>
