@@ -1,7 +1,7 @@
 import { useState } from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/features/home/Carousel";
 import SearchCar from "../components/features/home/SearchCar";
 
 const Home = () => {
@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section>
+      <section className="min-h-screen">
         <Carousel />
-        <SearchCar />
+        {/* <SearchCar /> */}
       </section>
     </>
   );
