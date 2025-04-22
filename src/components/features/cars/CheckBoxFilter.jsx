@@ -7,8 +7,6 @@ export default function CheckBoxFilter({ onFilterChange, tag, name }) {
   const [selectedTags, setSelectedTags] = useState([]);
   const dropdownRef = useRef(null);
 
-
-
   // Close the dropdown when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -77,7 +75,9 @@ export default function CheckBoxFilter({ onFilterChange, tag, name }) {
 
             <div className="rounded-xl bg-white text-gray-800 shadow-lg">
               <div className="max-h-60 overflow-y-auto px-4 py-2">
-                <h4 className="mb-2 text-sm font-bold">All</h4>
+                <div className="sticky top-0 z-10 border-b border-gray-200 bg-white px-4 py-2">
+                  <h4 className="text-sm font-bold">All</h4>
+                </div>
                 {tag.map((item) => (
                   <label
                     key={item.name}
