@@ -15,19 +15,19 @@ export default function ErrorPage() {
       code: "403",
       title: "Error 403",
       description: "Access denied. You do not have permission to view this page.",
-      picture: "/img/403.png",
+      picture: "/image/error/403.png",
     },
     {
-      code: "405",
-      title: "Error 405",
-      description: "Method Not Allowed. The request method is not supported by this server.",
-      picture: "/img/405.png",
+      code: "500",
+      title: "Error 500",
+      description: "Internal Server Error. Something went wrong on our end.",
+      picture: "/image/error/500.png", 
     },
     {
       code: "401",
       title: "Error 401",
       description: "Unauthorized access. Please log in to continue.",
-      picture: "/img/401.png",
+      picture: "/image/error/401.png",
     },
   ];
 
