@@ -9,7 +9,7 @@ export default function ErrorPage() {
       code: "404",
       title: "Error 404",
       description: "The page you are looking for doesn’t exist or might have been removed.",
-      picture: "/image/error/notfound-01.png",
+      picture: "/image/error/404.png",
     },
     {
       code: "403",
