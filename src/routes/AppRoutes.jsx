@@ -22,8 +22,8 @@ const AppRoutes = () => {
           <Route path="/sell-cars" element={<SellCar />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/kontak-kami" element={<ContactUs />} />
-          {/* Add more routes as needed */}
           {/* 404 Not Found */}
+          <Route path="/error/:errorCode" element={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
 
