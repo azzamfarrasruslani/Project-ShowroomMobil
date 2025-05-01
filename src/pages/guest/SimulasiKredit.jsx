@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Alert from "../components/common/Alert";
-import InputField from "../components/common/InputField";
-import SelectField from "../components/common/SelectField";
+import Alert from "../../components/common/Alert";
+import InputField from "../../components/common/InputField";
+import SelectField from "../../components/common/SelectField";
 
 export default function SimulasiKredit() {
   const [tenor, setTenor] = useState("");

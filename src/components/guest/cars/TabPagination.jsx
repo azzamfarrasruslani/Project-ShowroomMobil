@@ -2,7 +2,6 @@
 import Icon from "../../../lib/Icon";
 
 export default function TabPagination({ totalTabs, activeTab, onTabChange }) {
-
   const handlePrev = () => {
     if (activeTab > 0) {
       onTabChange(activeTab - 1);
@@ -13,7 +12,7 @@ export default function TabPagination({ totalTabs, activeTab, onTabChange }) {
     if (activeTab < totalTabs - 1) {
       onTabChange(activeTab + 1);
     }
-  }
+  };
 
   return (
     <div className="mt-6 flex justify-center">

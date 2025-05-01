@@ -1,15 +1,15 @@
 import { useState, useMemo } from "react";
 /* eslint-disable no-unused-vars */
 import { motion, AnimatePresence } from "framer-motion";
-import Icon from "../lib/Icon";
-import cars from "../data/data_mobil_bekas.json";
-import FilterSidebar from "../components/features/cars/FilterSidebar";
-import SearchBar from "../components/features/cars/SearchBar";
-import TabPagination from "../components/features/cars/TabPagination";
-import CheckBoxFilter from "../components/features/cars/CheckBoxFilter";
-import CardItem from "../components/features/cars/CardItem";
+import Icon from "../../lib/Icon";
+import cars from "../../data/data_mobil_bekas.json";
+import FilterSidebar from "../../components/guest/cars/FilterSidebar";
+import SearchBar from "../../components/guest/cars/SearchBar";
+import TabPagination from "../../components/guest/cars/TabPagination";
+import CheckBoxFilter from "../../components/guest/cars/CheckBoxFilter";
+import CardItem from "../../components/guest/cars/CardItem";
 
-export default function BuyCars ()  {
+export default function BuyCars() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showFilter, setShowFilter] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -130,7 +130,9 @@ export default function BuyCars ()  {
       </div>
 
       <div className="container mx-auto mt-10 mb-30 flex flex-col gap-6 px-1">
-        <p className="text-gray-600 text-sm px-3 md:text-md md:px-0">{filteredCars.length} Hasil</p>
+        <p className="md:text-md px-3 text-sm text-gray-600 md:px-0">
+          {filteredCars.length} Hasil
+        </p>
 
         {showFilter && (
           <FilterSidebar
@@ -146,7 +148,7 @@ export default function BuyCars ()  {
           <div
             className={
               viewMode === "grid"
-                ? "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 "
+                ? "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
                 : "flex flex-col gap-2"
             }
           >
@@ -164,7 +166,7 @@ export default function BuyCars ()  {
           </div>
         )}
 
-        <p className="text-gray-600 text-sm px-3 md:text-md md:px-0">
+        <p className="md:text-md px-3 text-sm text-gray-600 md:px-0">
           Menampilkan {currentCars.length} dari {filteredCars.length} mobil
         </p>
 

@@ -1,8 +1,6 @@
 // Icons
 import Icon from "../../../lib/Icon";
 
-
-
 const SearchBar = ({ searchTerm, onSearch }) => (
   <div className="relative">
     <Icon
@@ -13,7 +11,7 @@ const SearchBar = ({ searchTerm, onSearch }) => (
       type="text"
       value={searchTerm}
       onChange={onSearch}
-      className="w-full rounded-md border border-gray-300 bg-gray-800 p-3 pl-10 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:outline-none md:text-base text-sm"
+      className="w-full rounded-md border border-gray-300 bg-gray-800 p-3 pl-10 text-sm text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:outline-none md:text-base"
       placeholder="Cari berdasarkan Merek, Model, atau Kata Kunci"
     />
   </div>
