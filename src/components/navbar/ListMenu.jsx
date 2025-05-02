@@ -43,7 +43,7 @@ export default function ListMenu() {
         </li> */}
         <li>
           <NavLink to="/kontak-kami" className={menuClass}>
-            {t("Kontak Kami")}
+            {t("kontak kami")}
           </NavLink>
         </li>
       </ul>
