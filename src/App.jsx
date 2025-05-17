@@ -15,6 +15,8 @@ const BuyCars = React.lazy(() => import("./pages/guest/BuyCars"));
 const SellCars = React.lazy(() => import("./pages/guest/SellCars"));
 const Faq = React.lazy(() => import("./pages/guest/Faq"));
 const ContactUs = React.lazy(() => import("./pages/guest/ContactUs"));
+const AboutUs = React.lazy(() => import("./pages/guest/AboutUs"));
+const Artikel = React.lazy(() => import("./pages/guest/Artikel"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 
 // Admin Pages
@@ -47,6 +49,8 @@ function App() {
             <Route path="/sell-cars" element={<SellCars />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/kontak-kami" element={<ContactUs />} />
+            <Route path="/tentang-kami" element={<AboutUs />} />
+            <Route path="/artikel" element={<Artikel />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
