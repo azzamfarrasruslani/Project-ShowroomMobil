@@ -30,7 +30,9 @@ import Orders from "./pages/admin/Orders";
 import TestDrive from "./pages/admin/TestDrive";
 
 // Auth Pages
-
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import ForgotPassword from "./pages/auth/Forgot";
 // Layouts
 import ScrollToTop from "./layout/ScrollToTop";
 import ErrorPage from "./pages/error/errorPage";
@@ -55,6 +57,7 @@ function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
