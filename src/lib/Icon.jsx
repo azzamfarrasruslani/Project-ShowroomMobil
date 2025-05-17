@@ -13,15 +13,21 @@ import {
   faTableCellsLarge,
   faLocationDot,
   faCircleXmark,
-} from "@fortawesome/free-solid-svg-icons";
+  faCar,
+  faShieldAlt,
+  faHandshake,
+  faClipboardCheck,
+} from "@fortawesome/free-solid-svg-icons"; // Semua ikon ini termasuk dalam free-solid-svg-icons
+
 import {
   faFacebookF,
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+
 /**
  * Komponen Ikon Universal
- * @param {string} name - Nama ikon (contoh: "home", "user", "coffee")
+ * @param {string} name - Nama ikon (contoh: "home", "user", "car")
  * @param {string} className - Tambahan class untuk styling
  */
 const Icon = ({ name, className }) => {
@@ -43,7 +49,10 @@ const Icon = ({ name, className }) => {
     filter: faFilter,
     arrowLeft: faChevronLeft,
     arrowRight: faChevronRight,
-   
+    car: faCar,
+    shield: faShieldAlt,
+    handshake: faHandshake,
+    checklist: faClipboardCheck,
   };
 
   return <FontAwesomeIcon icon={icons[name]} className={className} />;
