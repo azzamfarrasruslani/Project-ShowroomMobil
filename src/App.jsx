@@ -17,7 +17,9 @@ const Faq = React.lazy(() => import("./pages/guest/Faq"));
 const ContactUs = React.lazy(() => import("./pages/guest/ContactUs"));
 const AboutUs = React.lazy(() => import("./pages/guest/AboutUs"));
 const Artikel = React.lazy(() => import("./pages/guest/Artikel"));
+const ArtikelDetail = React.lazy(() => import("./pages/guest/ArtikelDetail"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
+const Karir = React.lazy(() => import("./pages/guest/Karir"));
 
 // Admin Pages
 import Dashboard from "./pages/admin/Dashboard";
@@ -51,6 +53,8 @@ function App() {
             <Route path="/kontak-kami" element={<ContactUs />} />
             <Route path="/tentang-kami" element={<AboutUs />} />
             <Route path="/artikel" element={<Artikel />} />
+            <Route path="/artikel/:id" element={<ArtikelDetail />} />
+            <Route path="/karir" element={<Karir />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
