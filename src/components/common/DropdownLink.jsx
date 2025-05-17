@@ -38,9 +38,9 @@ export default function DropdownLink({ items = [], selected, onSelect }) {
   };
 
   return (
-    <div ref={dropdownRef} className="relative w-full sm:w-auto">
+    <div ref={dropdownRef} className="relative  sm:w-auto">
       <motion.button
-        className="flex items-center justify-between px-4 text-lg font-medium text-gray-800 capitalize transition duration-300 ease-in-out hover:text-yellow-600"
+        className="flex items-center justify-between text-lg font-medium text-gray-800 capitalize transition duration-300 ease-in-out hover:text-yellow-600"
         onClick={() => setIsOpen(!isOpen)}
         whileTap={{ scale: 0.97 }}
       >
@@ -66,7 +66,7 @@ export default function DropdownLink({ items = [], selected, onSelect }) {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.ul
-            className="absolute z-10 mt-2 min-w-52 overflow-hidden rounded-lg bg-gray-50"
+            className="absolute z-10 mt-2 min-w-48 overflow-hidden rounded-lg bg-gray-50"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
