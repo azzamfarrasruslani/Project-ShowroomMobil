@@ -66,7 +66,7 @@ export default function DropdownLink({ items = [], selected, onSelect }) {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.ul
-            className="absolute z-10 mt-2 min-w-44 overflow-hidden rounded-lg bg-slate-100 shadow-xl"
+            className="absolute z-10 mt-2 min-w-52 overflow-hidden rounded-lg bg-gray-50"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -76,7 +76,7 @@ export default function DropdownLink({ items = [], selected, onSelect }) {
               <li key={i} onClick={() => handleSelect(item)}>
                 <Link
                   to={item.path}
-                  className="block px-5 py-2 text-base text-gray-800 transition duration-300 ease-in-out hover:bg-gray-100 hover:text-yellow-600"
+                  className="block px-8 py-2 text-base text-gray-800 transition duration-300 ease-in-out hover:bg-gray-100 hover:text-yellow-600"
                 >
                   {item.label}
                 </Link>
