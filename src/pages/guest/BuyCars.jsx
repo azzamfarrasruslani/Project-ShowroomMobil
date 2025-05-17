@@ -8,6 +8,8 @@ import SearchBar from "../../components/guest/cars/SearchBar";
 import TabPagination from "../../components/guest/cars/TabPagination";
 import CheckBoxFilter from "../../components/guest/cars/CheckBoxFilter";
 import CardItem from "../../components/guest/cars/CardItem";
+import HeroSection from "../../components/guest/cars/HeroSection";
+
 
 export default function BuyCars() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -76,9 +78,8 @@ export default function BuyCars() {
 
   return (
     <div>
-      <div className="h-[400px] max-h-[260px] w-full object-cover sm:min-h-[300px] md:min-h-[200px] lg:min-h-[500px]">
-        <img src="/image/Sell_Car_Banner.png" alt="Sell Car Banner" />
-      </div>
+     
+     <HeroSection/>
 
       <div className="container mx-auto mt-10 mb-10 flex w-full flex-col gap-5 rounded-lg bg-slate-800 p-8 text-gray-100 shadow-lg">
         <h2 className="font-[Outfit] text-2xl font-bold text-yellow-500 md:text-4xl">
