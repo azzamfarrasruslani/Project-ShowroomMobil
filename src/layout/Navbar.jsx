@@ -57,12 +57,15 @@ export default function Navbar() {
             />
           </div>
           <span>|</span>
-          <div className="flex items-center gap-2">
-            <Icon name="user" className="text-md text-gray-800" />
-            <p className="text-sm font-medium text-gray-800">
-              {t("masuk")} / {t("daftar")}
-            </p>
-          </div>
+
+          <Link to="/login">
+            <div className="flex items-center gap-2">
+              <Icon name="user" className="text-md text-gray-800" />
+              <p className="text-sm font-medium text-gray-800">
+                {t("masuk")} / {t("daftar")}
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
 
