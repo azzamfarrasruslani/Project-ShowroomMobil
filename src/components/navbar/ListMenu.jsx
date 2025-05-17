@@ -1,5 +1,9 @@
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+/* eslint-disable no-unused-vars */
+import { motion, AnimatePresence } from "framer-motion";
+import DropdownLink from "../common/DropdownLink";
 
 export default function ListMenu() {
   const { t } = useTranslation();
@@ -10,6 +14,13 @@ export default function ListMenu() {
         ? "text-yellow-600 transition duration-200 ease-in-out"
         : "text-gray-800"
     }`;
+
+  const [selectedList] = useState(t("Tentang Mobilin"));
+  const menuList = [
+    { label: t("Tentang Kami"), path: "/tentang-kami" },
+    { label: t("Artikel"), path: "/artikel" },
+    { label: t("Hubungi Kami"), path: "/kontak-kami" },
+  ];
 
   return (
     <>
@@ -31,22 +42,15 @@ export default function ListMenu() {
             {t("beli mobil")}
           </NavLink>
         </li>
+        <div className="relative w-full sm:w-auto">
+          <DropdownLink items={menuList} selected={selectedList} />
+        </div>
         {/* <li>
           <NavLink to="/sell-cars" className={menuClass}>
             {t("jual mobil")}
           </NavLink>
         </li> */}
-        {/* <li>
-          <NavLink to="/faq" className={menuClass}>
-            {t("FAQ")}
-          </NavLink>
-        </li> */}
-        <li>
-          <NavLink to="/kontak-kami" className={menuClass}>
-            {t("kontak kami")}
-          </NavLink>
-        </li>
-      </ul>
+             </ul>
     </>
   );
 }
