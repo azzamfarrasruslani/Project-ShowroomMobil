@@ -52,7 +52,7 @@ export default function SimulasiKredit() {
   return (
     <div className="m-5 flex min-h-screen flex-col items-center justify-center p-5">
       <div className="w-150 rounded-lg bg-white p-6 shadow-xl">
-        <h2 className="mb-4 text-2xl font-bold text-blue-800">
+        <h2 className="mb-4 text-2xl font-bold text-gray-800">
           Simulasi Kredit Mobil
         </h2>
         <InputField
