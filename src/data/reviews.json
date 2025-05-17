@@ -1,0 +1,350 @@
+[
+    {
+        "review_id": "R001",
+        "rating": 5,
+        "review_date": "2024-12-18",
+        "reviewer_name": "User1",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Pengalaman beli mobil terbaik",
+        "review_content": "Harga sesuai, pelayanan mantap",
+        "tags": [
+            "Website Browsing Experience",
+            "Car Selection",
+            "Sales Advisor's Product Knowledge",
+            "Car Pricing",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R002",
+        "rating": 5,
+        "review_date": "2024-10-09",
+        "reviewer_name": "User2",
+        "reviewer_car": "2018 Honda Mobilio RS",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Pengalaman beli mobil terbaik",
+        "review_content": "Pelayanan dari awal sampai akhir sangat baik",
+        "tags": [
+            "Sales Advisor's Product Knowledge",
+            "Loan & Financing Process",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R003",
+        "rating": 5,
+        "review_date": "2025-04-26",
+        "reviewer_name": "User3",
+        "reviewer_car": "2019 Toyota Yaris TRD Sportivo",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Bintang lima untuk pelayanan",
+        "review_content": "Website mudah digunakan dan informatif",
+        "tags": [
+            "Sales Advisor's Communication",
+            "Sales Advisor's Product Knowledge",
+            "Website Browsing Experience"
+        ],
+        "is_verified": false
+    },
+    {
+        "review_id": "R004",
+        "rating": 5,
+        "review_date": "2024-12-14",
+        "reviewer_name": "User4",
+        "reviewer_car": "2019 Toyota Calya G",
+        "dealer": "Carsome CARSOME Malang",
+        "review_title": "Proses cepat dan mudah",
+        "review_content": "Sales advisor sangat membantu dan profesional",
+        "tags": [
+            "Sales Advisor's Communication",
+            "Loan & Financing Process",
+            "Website Browsing Experience",
+            "Car Pricing",
+            "Sales Advisor's Product Knowledge"
+        ],
+        "is_verified": false
+    },
+    {
+        "review_id": "R005",
+        "rating": 5,
+        "review_date": "2024-09-07",
+        "reviewer_name": "User5",
+        "reviewer_car": "2018 Toyota AGYA G 1.2 Automatic",
+        "dealer": "Carsome CARSOME Medan",
+        "review_title": "Proses cepat dan jelas",
+        "review_content": "Semua berjalan lancar tanpa kendala",
+        "tags": [
+            "Website Browsing Experience",
+            "Car Selection",
+            "Sales Advisor's Product Knowledge"
+        ],
+        "is_verified": false
+    },
+    {
+        "review_id": "R006",
+        "rating": 5,
+        "review_date": "2024-07-10",
+        "reviewer_name": "User6",
+        "reviewer_car": "2021 Mitsubishi Xpander GLS",
+        "dealer": "Carsome CARSOME Medan",
+        "review_title": "Salesnya ramah dan informatif",
+        "review_content": "Pelayanan dari awal sampai akhir sangat baik",
+        "tags": [
+            "Car Selection",
+            "Sales Advisor's Product Knowledge",
+            "Car Pricing",
+            "Website Browsing Experience",
+            "Loan & Financing Process",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R007",
+        "rating": 5,
+        "review_date": "2024-12-19",
+        "reviewer_name": "User7",
+        "reviewer_car": "2018 Toyota AGYA G 1.2 Automatic",
+        "dealer": "Carsome CARSOME Malang",
+        "review_title": "Salesnya ramah dan informatif",
+        "review_content": "Rekomendasi untuk yang cari mobil bekas berkualitas",
+        "tags": [
+            "Car Pricing",
+            "Loan & Financing Process",
+            "Website Browsing Experience",
+            "Sales Advisor's Communication",
+            "Sales Advisor's Product Knowledge"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R008",
+        "rating": 5,
+        "review_date": "2024-07-15",
+        "reviewer_name": "User8",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Pengalaman beli mobil terbaik",
+        "review_content": "Senang beli mobil di sini",
+        "tags": [
+            "Website Browsing Experience",
+            "Sales Advisor's Product Knowledge",
+            "Loan & Financing Process",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R009",
+        "rating": 5,
+        "review_date": "2024-06-12",
+        "reviewer_name": "User9",
+        "reviewer_car": "2016 Nissan March 1.2L",
+        "dealer": "Carsome CARSOME Jakarta",
+        "review_title": "Proses cepat dan jelas",
+        "review_content": "Rekomendasi untuk yang cari mobil bekas berkualitas",
+        "tags": [
+            "Sales Advisor's Product Knowledge",
+            "Car Selection",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R010",
+        "rating": 5,
+        "review_date": "2024-11-07",
+        "reviewer_name": "User10",
+        "reviewer_car": "2021 Mitsubishi Xpander GLS",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Bintang lima untuk pelayanan",
+        "review_content": "Pelayanan dari awal sampai akhir sangat baik",
+        "tags": [
+            "Sales Advisor's Communication",
+            "Loan & Financing Process",
+            "Car Pricing"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R011",
+        "rating": 5,
+        "review_date": "2024-10-06",
+        "reviewer_name": "User11",
+        "reviewer_car": "2018 Honda Mobilio RS",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Websitenya informatif",
+        "review_content": "Harga sesuai, pelayanan mantap",
+        "tags": [
+            "Car Selection",
+            "Loan & Financing Process",
+            "Car Pricing",
+            "Sales Advisor's Product Knowledge",
+            "Website Browsing Experience"
+        ],
+        "is_verified": false
+    },
+    {
+        "review_id": "R012",
+        "rating": 5,
+        "review_date": "2024-05-22",
+        "reviewer_name": "User12",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Jakarta",
+        "review_title": "Sangat membantu!",
+        "review_content": "Sales advisor sangat membantu dan profesional",
+        "tags": [
+            "Website Browsing Experience",
+            "Sales Advisor's Product Knowledge",
+            "Car Selection",
+            "Loan & Financing Process"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R013",
+        "rating": 5,
+        "review_date": "2024-09-13",
+        "reviewer_name": "User13",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Sangat membantu!",
+        "review_content": "Saya puas dengan layanannya",
+        "tags": [
+            "Loan & Financing Process",
+            "Website Browsing Experience",
+            "Car Pricing",
+            "Sales Advisor's Product Knowledge",
+            "Car Selection"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R014",
+        "rating": 5,
+        "review_date": "2025-01-09",
+        "reviewer_name": "User14",
+        "reviewer_car": "2018 Honda Mobilio RS",
+        "dealer": "Carsome CARSOME Medan",
+        "review_title": "Sangat membantu!",
+        "review_content": "Senang beli mobil di sini",
+        "tags": [
+            "Sales Advisor's Product Knowledge",
+            "Loan & Financing Process",
+            "Sales Advisor's Communication"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R015",
+        "rating": 5,
+        "review_date": "2025-02-17",
+        "reviewer_name": "User15",
+        "reviewer_car": "2017 Suzuki Ertiga GX",
+        "dealer": "Carsome CARSOME Bandung",
+        "review_title": "Sangat membantu!",
+        "review_content": "Pelayanan dari awal sampai akhir sangat baik",
+        "tags": [
+            "Loan & Financing Process",
+            "Sales Advisor's Communication",
+            "Car Selection",
+            "Sales Advisor's Product Knowledge",
+            "Website Browsing Experience",
+            "Car Pricing"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R016",
+        "rating": 5,
+        "review_date": "2024-09-29",
+        "reviewer_name": "User16",
+        "reviewer_car": "2019 Toyota Calya G",
+        "dealer": "Carsome CARSOME Jakarta",
+        "review_title": "Suka banget!",
+        "review_content": "Harga sesuai, pelayanan mantap",
+        "tags": [
+            "Sales Advisor's Product Knowledge",
+            "Sales Advisor's Communication",
+            "Car Selection"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R017",
+        "rating": 5,
+        "review_date": "2025-02-05",
+        "reviewer_name": "User17",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Jakarta",
+        "review_title": "Suka banget!",
+        "review_content": "Sales advisor sangat membantu dan profesional",
+        "tags": [
+            "Car Selection",
+            "Car Pricing",
+            "Website Browsing Experience",
+            "Loan & Financing Process"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R018",
+        "rating": 5,
+        "review_date": "2024-05-30",
+        "reviewer_name": "User18",
+        "reviewer_car": "2020 Honda Brio Satya E",
+        "dealer": "Carsome CARSOME Surabaya",
+        "review_title": "Bagus semua",
+        "review_content": "Pelayanan dari awal sampai akhir sangat baik",
+        "tags": [
+            "Website Browsing Experience",
+            "Sales Advisor's Product Knowledge",
+            "Sales Advisor's Communication",
+            "Loan & Financing Process",
+            "Car Selection",
+            "Car Pricing"
+        ],
+        "is_verified": false
+    },
+    {
+        "review_id": "R019",
+        "rating": 5,
+        "review_date": "2024-07-10",
+        "reviewer_name": "User19",
+        "reviewer_car": "2018 Toyota AGYA G 1.2 Automatic",
+        "dealer": "Carsome CARSOME Surabaya",
+        "review_title": "Semuanya oke banget",
+        "review_content": "Mobil dikirim tepat waktu dan sesuai deskripsi",
+        "tags": [
+            "Car Selection",
+            "Car Pricing",
+            "Sales Advisor's Communication",
+            "Sales Advisor's Product Knowledge",
+            "Loan & Financing Process",
+            "Website Browsing Experience"
+        ],
+        "is_verified": true
+    },
+    {
+        "review_id": "R020",
+        "rating": 5,
+        "review_date": "2025-03-15",
+        "reviewer_name": "User20",
+        "reviewer_car": "2017 Suzuki Ertiga GX",
+        "dealer": "Carsome CARSOME Medan",
+        "review_title": "Bintang lima untuk pelayanan",
+        "review_content": "Mobil dikirim tepat waktu dan sesuai deskripsi",
+        "tags": [
+            "Sales Advisor's Product Knowledge",
+            "Car Selection",
+            "Car Pricing",
+            "Sales Advisor's Communication",
+            "Loan & Financing Process",
+            "Website Browsing Experience"
+        ],
+        "is_verified": false
+    }
+]
