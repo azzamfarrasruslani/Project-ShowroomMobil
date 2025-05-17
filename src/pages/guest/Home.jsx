@@ -11,7 +11,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="min-h-screen">
         <Carousel />
-        {/* <SearchCar /> */}
+        <SearchCar />
       </section>
     </>
   );
