@@ -1,45 +1,43 @@
 import { useState } from "react";
-import dataArtikel from "../../../data/data_artikel.json"; 
-
+import dataArtikel from "../../../data/data_artikel.json";
+import { Link } from "react-router-dom";
 export default function ArtikelCard() {
   const [artikel] = useState(dataArtikel);
 
   return (
-    <div className="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid min-h-screen grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
       {artikel.map((item, index) => (
         <div
           key={index}
-          className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 group flex flex-col"
+          className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-xl transition duration-300 hover:shadow-2xl"
         >
           <div className="relative">
             <img
               src={item.gambar}
               alt={item.judul_artikel}
-              className="w-full h-48 object-cover group-hover:scale-105 transition duration-300"
+              className="h-48 w-full object-cover transition duration-300 group-hover:scale-105"
             />
-            <span className="absolute top-3 left-3 text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full shadow">
+            <span className="absolute top-3 left-3 rounded-full bg-blue-100 px-2 py-1 text-xs text-blue-700 shadow">
               {item.kategori}
             </span>
           </div>
 
           {/* Kontainer konten yang fleksibel */}
-          <div className="flex-1 flex flex-col p-5 space-y-3">
-            <h2 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition">
+          <div className="flex flex-1 flex-col space-y-3 p-5">
+            <h2 className="text-lg font-semibold text-gray-800 transition group-hover:text-blue-600">
               {item.judul_artikel}
             </h2>
             <p className="text-sm text-gray-600">{item.pendahuluan}</p>
-            <div className="text-xs text-gray-500 flex justify-between items-center pt-2">
+            <div className="flex items-center justify-between pt-2 text-xs text-gray-500">
               <span>🗓 {item.tanggal_publikasi}</span>
               <span>👁 {item.jumlah_view}</span>
             </div>
-            <div className="text-xs text-gray-400">
-              ✍️ {item.penulis}
-            </div>
+            <div className="text-xs text-gray-400">✍️ {item.penulis}</div>
             <div className="flex flex-wrap gap-1 pt-2">
               {item.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="text-xs bg-gray-200 hover:bg-gray-300 text-gray-800 px-2 py-1 rounded-full transition"
+                  className="rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-800 transition hover:bg-gray-300"
                 >
                   #{tag}
                 </span>
@@ -47,9 +45,12 @@ export default function ArtikelCard() {
             </div>
 
             {/* Tombol di bawah */}
-            <button className="mt-auto w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition">
+            <Link
+              to={`/artikel/${item.id}`} // gunakan id unik dari artikel
+              className="mt-auto w-full rounded-lg bg-blue-500 px-4 py-2 text-center text-white transition hover:bg-blue-600"
+            >
               Baca Selengkapnya
-            </button>
+            </Link>
           </div>
         </div>
       ))}
