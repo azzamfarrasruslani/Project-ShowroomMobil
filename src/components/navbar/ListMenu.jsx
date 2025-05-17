@@ -15,11 +15,17 @@ export default function ListMenu() {
         : "text-gray-800"
     }`;
 
-  const [selectedList] = useState(t("Tentang Mobilin"));
-  const menuList = [
+  const [selectedList1] = useState(t("Tentang Mobilin"));
+  const menuList1 = [
     { label: t("Tentang Kami"), path: "/tentang-kami" },
     { label: t("Artikel"), path: "/artikel" },
     { label: t("Hubungi Kami"), path: "/kontak-kami" },
+  ];
+
+  const [selectedList2] = useState(t("Lainnya"));
+  const menuList2 = [
+    { label: t("Karir"), path: "/karir" },
+    { label: t("Simulasi Kredit"), path: "/simulasi-kredit" }
   ];
 
   return (
@@ -47,15 +53,13 @@ export default function ListMenu() {
             {t("FAQ")}
           </NavLink>
         </li>
-        <div className="relative w-full sm:w-auto">
-          <DropdownLink items={menuList} selected={selectedList} />
-        </div>
-        {/* <li>
-          <NavLink to="/sell-cars" className={menuClass}>
-            {t("jual mobil")}
-          </NavLink>
-        </li> */}
-             </ul>
+        <li>
+          <DropdownLink items={menuList1} selected={selectedList1} />
+        </li>
+        <li>
+          <DropdownLink items={menuList2} selected={selectedList2} />
+        </li>
+      </ul>
     </>
   );
 }
