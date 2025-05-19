@@ -33,6 +33,17 @@ export default function Karir() {
         "Berpenampilan menarik",
       ],
     },
+    {
+      posisi: "Customer Service",
+      lokasi: "Bandung",
+      deskripsi:
+        "Menangani pertanyaan pelanggan, memberi informasi produk, dan membantu proses transaksi.",
+      kualifikasi: [
+        "Komunikatif dan sabar",
+        "Mampu menggunakan komputer & WhatsApp bisnis",
+        "Berpenampilan menarik",
+      ],
+    },
   ];
 
   return (
