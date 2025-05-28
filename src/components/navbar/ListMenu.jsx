@@ -20,6 +20,7 @@ export default function ListMenu() {
     { label: t("Tentang Kami"), path: "/tentang-kami" },
     { label: t("Artikel"), path: "/artikel" },
     { label: t("Hubungi Kami"), path: "/kontak-kami" },
+    { label: t("Lokasi Kami"), path: "/lokasi-kami" },
   ];
 
   const [selectedList2] = useState(t("Lainnya"));
