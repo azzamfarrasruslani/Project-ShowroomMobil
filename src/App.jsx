@@ -20,6 +20,7 @@ const Artikel = React.lazy(() => import("./pages/guest/Artikel"));
 const ArtikelDetail = React.lazy(() => import("./pages/guest/ArtikelDetail"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 const Karir = React.lazy(() => import("./pages/guest/Karir"));
+const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
 
 // Admin Pages
 import Dashboard from "./pages/admin/Dashboard";
@@ -57,6 +58,7 @@ function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
+            <Route path="/karir/:id" element={<KarirDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
