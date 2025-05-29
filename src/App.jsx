@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Home = React.lazy(() => import("./pages/guest/Home"));
 const BuyCars = React.lazy(() => import("./pages/guest/BuyCars"));
+const BuyCarsDetail = React.lazy(() => import("./pages/guest/BuyCarsDetail"));
 const SellCars = React.lazy(() => import("./pages/guest/SellCars"));
 const Faq = React.lazy(() => import("./pages/guest/Faq"));
 const ContactUs = React.lazy(() => import("./pages/guest/ContactUs"));
@@ -21,6 +22,7 @@ const ArtikelDetail = React.lazy(() => import("./pages/guest/ArtikelDetail"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 const Karir = React.lazy(() => import("./pages/guest/Karir"));
 const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
+const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
 
 // Admin Pages
 import Dashboard from "./pages/admin/Dashboard";
@@ -50,6 +52,7 @@ function App() {
           <Route element={<GuestLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/buy-cars" element={<BuyCars />} />
+            <Route path="/buy-cars/:id" element={<BuyCarsDetail />} />
             <Route path="/simulasi-kredit" element={<SimulasiKredit />} />
             <Route path="/sell-cars" element={<SellCars />} />
             <Route path="/faq" element={<Faq />} />
@@ -58,6 +61,7 @@ function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
+            <Route path="/lokasi-kami" element={<Lokasi />} />
             <Route path="/karir/:id" element={<KarirDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
