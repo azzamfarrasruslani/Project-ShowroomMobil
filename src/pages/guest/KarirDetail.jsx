@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import lowongan from "../../data/data_lowongan.json";
-
+import { MapPin, Car, ArrowLeft } from 'lucide-react';
 export default function KarirDetail() {
   const { id } = useParams();
   const data = lowongan.find((job) => job.id === id);
@@ -16,6 +16,10 @@ export default function KarirDetail() {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
+      <div className="mb-8 flex items-center gap-2 text-blue-700 cursor-pointer hover:underline">
+                <ArrowLeft size={20} />
+                <span>Kembali</span>
+            </div>
       <h1 className="text-3xl font-bold mb-2">{data.posisi}</h1>
       <p className="text-gray-700 text-lg mb-4">{data.perusahaan}</p>
 
