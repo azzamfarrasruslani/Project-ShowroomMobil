@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nama": "Carsome Veteran Experience Center",
+    "kategori": "Experience Center",
+    "alamat": "7, Jl. Bintaro Mulia I No.3, RW.1, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330",
+    "jam_operasional": "Senin - Minggu pukul 09.00 s/d 18.00",
+    "telepon": "+62 21 1234 5678",
+    "email": "veteran@carsome.co.id",
+    "tunjukkan_peta": true
+  },
+  {
+    "id": 2,
+    "nama": "Carsome Puri Mansion Inspection Center",
+    "kategori": "Inspection Center",
+    "alamat": "Ruko Puri Mansion Blok A Nomor 38, Jl. Lingkar Luar Barat, RT.2/RW.1, Kembangan Sel., Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610",
+    "jam_operasional": "Senin - Minggu pukul 09.00 s/d 18.00",
+    "telepon": "+62 21 8765 4321",
+    "email": "purimansion@carsome.co.id",
+    "tunjukkan_peta": true
+  },
+  {
+    "id": 3,
+    "nama": "Meruya Stockyard",
+    "kategori": "Stockyard",
+    "alamat": "2, RT.2/RW.1, Meruya Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11620",
+    "jam_operasional": "Senin - Jumat pukul 08.00 s/d 17.00",
+    "telepon": "+62 21 1122 3344",
+    "email": "meruya@carsome.co.id",
+    "tunjukkan_peta": true
+  },
+  {
+    "id": 4,
+    "nama": "Experience Center Jakarta Selatan",
+    "kategori": "Experience Center",
+    "alamat": "Jl. Sudirman No.55, Kec. Kebayoran Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190",
+    "jam_operasional": "Senin - Sabtu pukul 09.00 s/d 18.00",
+    "telepon": "+62 21 9988 7766",
+    "email": "jaksel@carsome.co.id",
+    "tunjukkan_peta": true
+  }
+]
