@@ -9,7 +9,7 @@ import TabPagination from "../../components/guest/cars/TabPagination";
 import CheckBoxFilter from "../../components/guest/cars/CheckBoxFilter";
 import CardItem from "../../components/guest/cars/CardItem";
 import HeroSection from "../../components/guest/cars/HeroSection";
-
+import { Link } from "react-router-dom";
 
 export default function BuyCars() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -78,8 +78,7 @@ export default function BuyCars() {
 
   return (
     <div>
-     
-     <HeroSection/>
+      <HeroSection />
 
       <div className="container mx-auto mt-10 mb-10 flex w-full flex-col gap-5 rounded-lg bg-slate-800 p-8 text-gray-100 shadow-lg">
         <h2 className="font-[Outfit] text-2xl font-bold text-yellow-500 md:text-4xl">
@@ -154,7 +153,15 @@ export default function BuyCars() {
             }
           >
             {currentCars.map((car) => (
-              <CardItem key={car.id} car={car} variant={viewMode} />
+             
+                <Link
+                  to={`/buy-cars/${car.id}`}
+                  key={car.id}
+                  className="no-underline"
+                >
+                  <CardItem key={car.id} car={car} variant={viewMode} />
+                </Link>
+             
             ))}
           </div>
         ) : (

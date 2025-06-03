@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // ===========
 const Home = React.lazy(() => import("./pages/guest/Home"));
 const BuyCars = React.lazy(() => import("./pages/guest/BuyCars"));
+const BuyCarsDetail = React.lazy(() => import("./pages/guest/BuyCarsDetail"));
 const SellCars = React.lazy(() => import("./pages/guest/SellCars"));
 const Faq = React.lazy(() => import("./pages/guest/Faq"));
 const ContactUs = React.lazy(() => import("./pages/guest/ContactUs"));
@@ -23,6 +24,9 @@ const Artikel = React.lazy(() => import("./pages/guest/Artikel"));
 const ArtikelDetail = React.lazy(() => import("./pages/guest/ArtikelDetail"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 const Karir = React.lazy(() => import("./pages/guest/Karir"));
+const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
+const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
+const LokasiDetail = React.lazy(() => import("./pages/guest/LokasiDetail"));
 
 // ===========
 // Admin Pages
@@ -62,7 +66,7 @@ import GuestLayout from "./layout/GuestLayout";
 import AdminLayout from "./layout/AdminLayout";
 import Loading from "./components/common/Loading";
 
-function App() {
+export default function App() {
   return (
     <div className="bg-gray-100">
       <ScrollToTop />
@@ -71,6 +75,7 @@ function App() {
           <Route element={<GuestLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/buy-cars" element={<BuyCars />} />
+            <Route path="/buy-cars/:id" element={<BuyCarsDetail />} />
             <Route path="/simulasi-kredit" element={<SimulasiKredit />} />
             <Route path="/sell-cars" element={<SellCars />} />
             <Route path="/faq" element={<Faq />} />
@@ -79,6 +84,9 @@ function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
+             <Route path="/karir/:id" element={<KarirDetail />} />
+            <Route path="/lokasi-kami" element={<Lokasi />} />
+            <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
@@ -99,4 +107,4 @@ function App() {
   );
 }
 
-export default App;
+

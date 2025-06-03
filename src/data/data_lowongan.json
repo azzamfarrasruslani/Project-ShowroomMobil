@@ -1,0 +1,170 @@
+[
+  {
+    "id": "1",
+    "posisi": "Sales Executive",
+    "perusahaan": "PT Mobilindo Jaya",
+    "lokasi": {
+      "kota": "Jakarta",
+      "alamat": "Jl. Raya Sudirman No.123, Jakarta Pusat"
+    },
+    "tipe_pekerjaan": "Penuh Waktu",
+    "gaji": {
+      "minimal": 5000000,
+      "maksimal": 8000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-29",
+    "batas_lamaran": "2025-06-30",
+    "deskripsi": "Menjual mobil bekas, menjalin relasi pelanggan, dan mencapai target penjualan.",
+    "kualifikasi": [
+      "Pengalaman minimal 1 tahun di bidang sales",
+      "Komunikatif",
+      "Menguasai media sosial"
+    ],
+    "kontak": {
+      "email": "hrd@mobilindojaya.co.id",
+      "telepon": "+62 812-3456-7890"
+    }
+  },
+  {
+    "id": "2",
+    "posisi": "Digital Marketing Specialist",
+    "perusahaan": "PT Kreatif Digital",
+    "lokasi": {
+      "kota": "Bandung",
+      "alamat": "Jl. Merdeka No.45, Bandung"
+    },
+    "tipe_pekerjaan": "Penuh Waktu",
+    "gaji": {
+      "minimal": 6000000,
+      "maksimal": 9000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-25",
+    "batas_lamaran": "2025-06-20",
+    "deskripsi": "Bertanggung jawab atas kampanye digital, SEO/SEM, dan strategi pemasaran online.",
+    "kualifikasi": [
+      "Pengalaman minimal 2 tahun",
+      "Familiar dengan Google Ads & Facebook Ads",
+      "Kreatif dan analitis"
+    ],
+    "kontak": {
+      "email": "karir@kreatifdigital.id",
+      "telepon": "+62 811-2222-3333"
+    }
+  },
+  {
+    "id": "3",
+    "posisi": "UI/UX Designer",
+    "perusahaan": "CV Desain Inovatif",
+    "lokasi": {
+      "kota": "Yogyakarta",
+      "alamat": "Jl. Kaliurang KM 6, Sleman"
+    },
+    "tipe_pekerjaan": "Kontrak",
+    "gaji": {
+      "minimal": 4500000,
+      "maksimal": 7000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-20",
+    "batas_lamaran": "2025-06-15",
+    "deskripsi": "Merancang tampilan dan pengalaman pengguna aplikasi web dan mobile.",
+    "kualifikasi": [
+      "Menguasai Figma dan Adobe XD",
+      "Portofolio desain yang menarik",
+      "Kemampuan analisis user flow"
+    ],
+    "kontak": {
+      "email": "rekrutmen@desaininovatif.com",
+      "telepon": "+62 856-1234-5678"
+    }
+  },
+  {
+    "id": "4",
+    "posisi": "Backend Developer",
+    "perusahaan": "PT Tech Nusantara",
+    "lokasi": {
+      "kota": "Surabaya",
+      "alamat": "Jl. HR Muhammad No.23"
+    },
+    "tipe_pekerjaan": "Remote",
+    "gaji": {
+      "minimal": 8000000,
+      "maksimal": 12000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-27",
+    "batas_lamaran": "2025-06-25",
+    "deskripsi": "Mengembangkan API dan sistem backend dengan Node.js dan MongoDB.",
+    "kualifikasi": [
+      "Pengalaman minimal 2 tahun",
+      "Menguasai REST API",
+      "Terbiasa menggunakan Git"
+    ],
+    "kontak": {
+      "email": "dev@technusantara.co.id",
+      "telepon": "+62 813-4567-8910"
+    }
+  },
+  {
+    "id": "5",
+    "posisi": "Customer Service Representative",
+    "perusahaan": "PT Layanan Prima",
+    "lokasi": {
+      "kota": "Medan",
+      "alamat": "Jl. Gatot Subroto No.100"
+    },
+    "tipe_pekerjaan": "Shift",
+    "gaji": {
+      "minimal": 4000000,
+      "maksimal": 6000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-22",
+    "batas_lamaran": "2025-06-18",
+    "deskripsi": "Melayani pelanggan melalui telepon/chat/email dan memberikan solusi.",
+    "kualifikasi": [
+      "Komunikatif",
+      "Cepat belajar",
+      "Bisa kerja dalam tim"
+    ],
+    "kontak": {
+      "email": "cs@layananprima.co.id",
+      "telepon": "+62 822-1234-0000"
+    }
+  },
+  {
+    "id": "6",
+    "posisi": "Content Writer",
+    "perusahaan": "PT Tulis Cerita",
+    "lokasi": {
+      "kota": "Semarang",
+      "alamat": "Jl. Pandanaran No.88"
+    },
+    "tipe_pekerjaan": "Freelance",
+    "gaji": {
+      "minimal": 3000000,
+      "maksimal": 5000000,
+      "mata_uang": "IDR",
+      "tipe": "per bulan"
+    },
+    "tanggal_posting": "2025-05-28",
+    "batas_lamaran": "2025-06-30",
+    "deskripsi": "Menulis artikel blog, copywriting, dan konten media sosial.",
+    "kualifikasi": [
+      "Suka menulis",
+      "Mengerti SEO dasar",
+      "Kreatif dan inovatif"
+    ],
+    "kontak": {
+      "email": "kontak@tuliscerita.com",
+      "telepon": "+62 818-8888-1234"
+    }
+  }
+]

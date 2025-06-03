@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Icon from "../../lib/Icon";  
+import axios from "axios"; 
+import Icon from "../../lib/Icon";
 
 export default function ErrorPage() {
-  const { errorCode } = useParams(); // ambil parameter dari URL
+  const { errorCode } = useParams();
+
+  const [quote, setQuote] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://api.adviceslip.com/advice")
+      .then((response) => {
+        setQuote(response.data.slip.advice);
+      })
+      .catch((error) => {
+        console.error("Gagal mengambil quote:", error);
+      });
+  }, []);
 
   const listError = [
     {
@@ -21,7 +36,7 @@ export default function ErrorPage() {
       code: "500",
       title: "Error 500",
       description: "Internal Server Error. Something went wrong on our end.",
-      picture: "/image/error/500.png", 
+      picture: "/image/error/500.png",
     },
     {
       code: "401",
@@ -31,10 +46,7 @@ export default function ErrorPage() {
     },
   ];
 
-  // cari error yang cocok
   const currentError = listError.find((err) => err.code === errorCode);
-
-  // fallback jika tidak ditemukan
   const errorData = currentError || listError[0];
 
   return (
@@ -46,6 +58,14 @@ export default function ErrorPage() {
           {errorData.description} <br />
           We suggest you go back to dashboard.
         </p>
+
+      
+        {quote && (
+          <div className="mt-4 italic text-yellow-600 text-sm max-w-md">
+            “{quote}”
+          </div>
+        )}
+
         <Link
           to="/"
           className="bg-gray-800 text-white inline-flex items-center font-bold px-5 py-3 rounded-lg hover:text-yellow-500 transition duration-200 ease-in-out shadow-lg hover:shadow-xl mt-4"
