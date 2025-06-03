@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios"; // ✅ Tambahkan ini
+import axios from "axios"; 
 import Icon from "../../lib/Icon";
 
 export default function ErrorPage() {
@@ -59,7 +59,7 @@ export default function ErrorPage() {
           We suggest you go back to dashboard.
         </p>
 
-        {/* 🔸 Quote Inspiratif */}
+      
         {quote && (
           <div className="mt-4 italic text-yellow-600 text-sm max-w-md">
             “{quote}”
