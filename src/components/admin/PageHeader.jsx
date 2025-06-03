@@ -11,11 +11,6 @@ export default function PageHeader() {
                     <span id="breadcrumb-current" className="text-gray-500">Order List</span>
                 </div>
             </div>
-            <div id="action-button">
-                <button id="add-button" className="bg-gray-800 text-white px-4 py-2 rounded-lg">
-                    Add Button
-                </button>
-            </div>
         </div>
     );
 }

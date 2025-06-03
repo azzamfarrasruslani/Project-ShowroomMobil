@@ -1,7 +1,7 @@
-// src/pages/Mobil.jsx
 import React from 'react';
-import dataMobil from '../../data/data_mobil_bekas.json';
-import PageHeader from '../../components/admin/dashboard/PageHeader';
+import { Link } from 'react-router-dom';
+import dataMobil from '../assets/data_mobil_bekas.json';
+import PageHeader from '../components/PageHeader';
 
 const formatRupiah = (number) => {
   return new Intl.NumberFormat('id-ID', {
@@ -13,7 +13,13 @@ const formatRupiah = (number) => {
 const Mobil = () => {
   return (
     <div className="p-4">
-      <PageHeader title="Kelola Mobil Bekas" />
+      <div className="flex items-center justify-between mb-4">
+        <PageHeader title="Kelola Mobil Bekas" />
+        <button className="bg-gray-800 hover:bg-gray-600 text-white px-5 py-2 rounded-lg shadow transition duration-300">
+          + Add Mobil
+        </button>
+      </div>
+
       <div className="overflow-x-auto border rounded-lg shadow-md mt-4">
         <table className="min-w-full text-sm">
           <thead className="bg-gray-100 text-left">
@@ -52,9 +58,19 @@ const Mobil = () => {
                     ))}
                   </ul>
                 </td>
-                <td className="p-2 space-x-2">
-                  <button className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">Edit</button>
-                  <button className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Delete</button>
+                <td className="p-2 space-y-1">
+                  <Link
+                    to={`/mobil/${mobil.id}`}
+                    className="block bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600 text-center"
+                  >
+                    Detail
+                  </Link>
+                  <button className="block w-full bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">
+                    Edit
+                  </button>
+                  <button className="block w-full bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

@@ -1,51 +1,55 @@
-// import { FaStar, FaMoneyBillWave } from "react-icons/fa";
-// import { LineChart, Line, Tooltip, ResponsiveContainer, CartesianGrid, XAxis, YAxis } from "recharts";
-import PageHeader from "../../components/admin/dashboard/PageHeader";
+import { FaStar, FaMoneyBillWave } from "react-icons/fa";
+import { LineChart, Line, Tooltip, ResponsiveContainer, CartesianGrid, XAxis, YAxis } from "recharts";
+import PageHeader from "../../components/admin/PageHeader";
+import QuoteBox from "../../components/admin/QuoteBox"; // ← import QuoteBox
 
-// const data = [
-//   { name: "Sen", upload: 3 },
-//   { name: "Sel", upload: 5 },
-//   { name: "Rab", upload: 2 },
-//   { name: "Kam", upload: 8 },
-//   { name: "Jum", upload: 4 },
-//   { name: "Sab", upload: 6 },
-//   { name: "Min", upload: 7 },
-// ];
+const data = [
+  { name: "Sen", upload: 3 },
+  { name: "Sel", upload: 5 },
+  { name: "Rab", upload: 2 },
+  { name: "Kam", upload: 8 },
+  { name: "Jum", upload: 4 },
+  { name: "Sab", upload: 6 },
+  { name: "Min", upload: 7 },
+];
 
 export default function Dashboard() {
   return (
     <div id="dashboard-container">
       <PageHeader />
 
-      <div className="grid gap-6 p-5 md:grid-cols-3">
+      {/* Quote Inspiratif */}
+      <div className="px-5">
+        <QuoteBox />
+      </div>
+
+      <div className="p-5 grid md:grid-cols-3 gap-6">
         {/* Mobil Terfavorit */}
-        <div className="flex items-center space-x-4 rounded-xl bg-white p-5 shadow-md transition hover:shadow-lg">
-          <div className="rounded-full bg-purple-600 p-4 text-white">
-            {/* <FaStar className="text-xl" /> */}
+        <div className="bg-white rounded-xl shadow-md p-5 flex items-center space-x-4 hover:shadow-lg transition">
+          <div className="bg-purple-600 text-white rounded-full p-4">
+            <FaStar className="text-xl" />
           </div>
           <div>
-            <p className="text-sm text-gray-500">Mobil Terfavorit</p>
-            <p className="text-lg font-bold">Toyota Avanza 2015</p>
+            <p className="text-gray-500 text-sm">Mobil Terfavorit</p>
+            <p className="font-bold text-lg">Toyota Avanza 2015</p>
           </div>
         </div>
 
         {/* Total Penjualan */}
-        <div className="flex items-center space-x-4 rounded-xl bg-white p-5 shadow-md transition hover:shadow-lg">
-          <div className="rounded-full bg-green-500 p-4 text-white">
-            {/* <FaMoneyBillWave className="text-xl" /> */}
+        <div className="bg-white rounded-xl shadow-md p-5 flex items-center space-x-4 hover:shadow-lg transition">
+          <div className="bg-green-500 text-white rounded-full p-4">
+            <FaMoneyBillWave className="text-xl" />
           </div>
           <div>
-            <p className="text-sm text-gray-500">Total Penjualan</p>
-            <p className="text-lg font-bold">Rp 12.500.000</p>
+            <p className="text-gray-500 text-sm">Total Penjualan</p>
+            <p className="font-bold text-lg">Rp 12.500.000</p>
           </div>
         </div>
 
         {/* Grafik Tren Upload Mobil */}
-        <div className="col-span-1 rounded-xl bg-white p-5 shadow-md transition hover:shadow-lg md:col-span-1">
-          <h3 className="mb-2 font-semibold text-gray-700">
-            Upload Mobil Mingguan
-          </h3>
-          {/* <ResponsiveContainer width="100%" height={150}>
+        <div className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition col-span-1 md:col-span-1">
+          <h3 className="font-semibold text-gray-700 mb-2">Upload Mobil Mingguan</h3>
+          <ResponsiveContainer width="100%" height={150}>
             <LineChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
@@ -53,7 +57,7 @@ export default function Dashboard() {
               <Tooltip />
               <Line type="monotone" dataKey="upload" stroke="#4F46E5" strokeWidth={2} />
             </LineChart>
-          </ResponsiveContainer> */}
+          </ResponsiveContainer>
         </div>
       </div>
     </div>

@@ -13,9 +13,9 @@ export default function Customers() {
                 </div>
             </div>
             <div id="action-button">
-                <button id="add-button" className="bg-hijau text-white px-4 py-2 rounded-lg">
-		                Add Button
-		            </button>
+                <button className="bg-gray-800 hover:bg-gray-600 text-white px-5 py-2 rounded-lg shadow transition duration-300">
+                    + Add Customer
+                </button>
             </div>
         </div>
     );

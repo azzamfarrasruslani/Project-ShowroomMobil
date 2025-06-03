@@ -10,6 +10,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import ContactUs from "./pages/guest/ContactUs";
 // import SimulasiKredit from "./pages/guest/SimulasiKredit";
 
+// ===========
+// Guest Pages
+// ===========
 const Home = React.lazy(() => import("./pages/guest/Home"));
 const BuyCars = React.lazy(() => import("./pages/guest/BuyCars"));
 const SellCars = React.lazy(() => import("./pages/guest/SellCars"));
@@ -21,19 +24,38 @@ const ArtikelDetail = React.lazy(() => import("./pages/guest/ArtikelDetail"));
 const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 const Karir = React.lazy(() => import("./pages/guest/Karir"));
 
+// ===========
 // Admin Pages
-import Dashboard from "./pages/admin/Dashboard";
-import Customers from "./pages/admin/Customers";
-import Mobil from "./pages/admin/Mobil";
-import Pembeli from "./pages/admin/Pembeli";
-import Orders from "./pages/admin/Orders";
-import TestDrive from "./pages/admin/TestDrive";
+// ===========
+// Komponen utama
+const Dashboard = React.lazy(() => import("./pages/admin/Dashboard"));
+const Customers = React.lazy(() => import("./pages/admin/Customers"));
+const Orders = React.lazy(() => import("./pages/admin/Orders"));
+const Mobil = React.lazy(() => import("./pages/admin/Mobil"));
+const MobilDetail = React.lazy(() => import("./pages/admin/Detail/DetailMobil"));
+const TestDrive = React.lazy(() => import("./pages/admin/TestDrive"));
+const DetailTestDrive = React.lazy(() => import("./pages/admin/Detail/DetailTestDrive"));
+const DetailPesansaranManajer = React.lazy(() => import("./pages/admin/DetailPesansaranManajer"));
+const Pembeli = React.lazy(() => import("./pages/admin/Pembeli"));
+const Errormobilin = React.lazy(() => import("./pages/admin/Errormobilin"));
 
+// Komponen tambahan
+const ArtikelManager = React.lazy(() => import("./components/admin/ArtikelManager"));
+const FaqManager = React.lazy(() => import("./components/admin/FaqManager"));
+const TeamManager = React.lazy(() => import("./components/admin/TeamManager"));
+const JobManager = React.lazy(() => import("./components/admin/JobManager"));
+const PesanSaranManager = React.lazy(() => import("./pages/admin/Pesansaranmanager"));
+
+// ===========
 // Auth Pages
+// ===========
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/Forgot";
+
+// ===========
 // Layouts
+// ===========
 import ScrollToTop from "./layout/ScrollToTop";
 import ErrorPage from "./pages/error/errorPage";
 import GuestLayout from "./layout/GuestLayout";

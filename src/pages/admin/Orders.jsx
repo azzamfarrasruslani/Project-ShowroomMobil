@@ -1,21 +1,29 @@
 export default function Orders() {
-    const title = {}
+    const title = {};
+
     return (
-        <div id="pageheader-container" className="flex items-center justify-between p-4">
-            <div id="pageheader-left" className="flex flex-col">
-                <span id="page-title" className="text-3xl font-semibold">
-                    Orders
-                </span>
-                <div id="breadcrumb-links" className="flex items-center font-medium space-x-2 mt-2">
-                    {/* <span id="breadcrumb-home" className="text-gray-500">Dashboard</span>
-                    <span id="breadcrumb-separator" className="text-gray-500">/</span>
-                    <span id="breadcrumb-current" className="text-gray-500">Order List</span> */}
+        <div className="p-6 font-poppins bg-white shadow-md rounded-lg">
+            {/* Page Header */}
+            <div className="flex items-center justify-between mb-6">
+                <div className="flex flex-col">
+                    <span className="text-3xl font-extrabold text-green-600">Orders</span>
+                    <div className="flex items-center space-x-2 mt-2 text-sm text-gray-500 font-medium">
+                        <span>Dashboard</span>
+                        <span>/</span>
+                        <span>Order List</span>
+                    </div>
                 </div>
+
+                <div id="action-button">
+                <button className="bg-gray-800 hover:bg-gray-600 text-white px-5 py-2 rounded-lg shadow transition duration-300">
+                    + Add Order
+                </button>
             </div>
-            <div id="action-button">
-                <button id="add-button" className="bg-hijau text-white px-4 py-2 rounded-lg">
-		                Add Button
-		            </button>
+            </div>
+
+            {/* Placeholder for Order List Content */}
+            <div className="text-gray-500 italic">
+                (Order list content will appear here...)
             </div>
         </div>
     );
