@@ -23,6 +23,7 @@ const SimulasiKredit = React.lazy(() => import("./pages/guest/SimulasiKredit"));
 const Karir = React.lazy(() => import("./pages/guest/Karir"));
 const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
 const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
+const LokasiDetail = React.lazy(() => import("./pages/guest/LokasiDetail"));
 
 // Admin Pages
 import Dashboard from "./pages/admin/Dashboard";
@@ -43,7 +44,7 @@ import GuestLayout from "./layout/GuestLayout";
 import AdminLayout from "./layout/AdminLayout";
 import Loading from "./components/common/Loading";
 
-function App() {
+export default function App() {
   return (
     <div className="bg-gray-100">
       <ScrollToTop />
@@ -61,8 +62,9 @@ function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
+             <Route path="/karir/:id" element={<KarirDetail />} />
             <Route path="/lokasi-kami" element={<Lokasi />} />
-            <Route path="/karir/:id" element={<KarirDetail />} />
+            <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
@@ -83,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+
