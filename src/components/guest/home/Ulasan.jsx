@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import React from 'react';
 
 const ulasanData = [
@@ -76,7 +78,8 @@ const Ulasan = () => {
         </div>
 
         <div className="text-center mt-10">
-          <a href="#" className="text-blue-200 underline">Lihat lebih banyak ulasan</a>
+          {/* <a href="#" className="text-blue-200 underline">Lihat lebih banyak ulasan</a> */}
+          <NavLink to="/ulasan" className="inline-block ml-4 text-blue-200 underline" >Lihat lebih banyak ulasan </NavLink>
         </div>
       </div>
     </section>
