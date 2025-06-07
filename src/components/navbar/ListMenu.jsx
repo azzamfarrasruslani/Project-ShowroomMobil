@@ -39,14 +39,14 @@ export default function ListMenu() {
         />
       </Link>
       <ul className="hidden space-x-6 text-lg font-medium capitalize md:flex">
-        {/* <li>
-          <NavLink to="/" className={menuClass}>
-            {t("beranda")}
-          </NavLink>
-        </li> */}
         <li>
           <NavLink to="/buy-cars" className={menuClass}>
             {t("beli mobil")}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/sell-cars" className={menuClass}>
+            {t("jual mobil")}
           </NavLink>
         </li>
         <li>
