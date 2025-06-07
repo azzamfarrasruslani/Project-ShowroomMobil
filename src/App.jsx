@@ -2,13 +2,6 @@ import React, { Suspense } from "react";
 import "./css/styles.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Guest Pages
-// import Home from "./pages/guest/Home";
-// import BuyCars from "./pages/guest/BuyCars";
-// import SellCar from "./pages/guest/SellCars";
-// import Faq from "./pages/guest/Faq";
-// import ContactUs from "./pages/guest/ContactUs";
-// import SimulasiKredit from "./pages/guest/SimulasiKredit";
 
 // ===========
 // Guest Pages
