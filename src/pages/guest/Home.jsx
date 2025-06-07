@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Carousel from "../../components/guest/home/Carousel";
 import SearchCar from "../../components/guest/home/SearchCar";
+import Ulasan from "../../components/guest/home/Ulasan";
 
 const Home = () => {
   const [selectedType, setSelectedType] = useState(null);
@@ -12,6 +13,8 @@ const Home = () => {
       <section className="min-h-screen">
         <Carousel />
         <SearchCar />
+
+        <Ulasan/>
       </section>
     </>
   );
