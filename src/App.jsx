@@ -20,6 +20,7 @@ const Karir = React.lazy(() => import("./pages/guest/Karir"));
 const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
 const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
 const LokasiDetail = React.lazy(() => import("./pages/guest/LokasiDetail"));
+const Ulasan = React.lazy(() => import("./pages/guest/Ulasan"));
 
 // ===========
 // Admin Pages
@@ -91,6 +92,7 @@ export default function App() {
             <Route path="/lokasi-kami" element={<Lokasi />} />
             <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/ulasan" element={<Ulasan />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
