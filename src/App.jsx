@@ -36,19 +36,29 @@ const Dashboard = React.lazy(() => import("./pages/admin/Dashboard"));
 const Customers = React.lazy(() => import("./pages/admin/Customers"));
 const Orders = React.lazy(() => import("./pages/admin/Orders"));
 const Mobil = React.lazy(() => import("./pages/admin/Mobil"));
-const MobilDetail = React.lazy(() => import("./pages/admin/Detail/DetailMobil"));
+const MobilDetail = React.lazy(
+  () => import("./pages/admin/Detail/DetailMobil"),
+);
 const TestDrive = React.lazy(() => import("./pages/admin/TestDrive"));
-const DetailTestDrive = React.lazy(() => import("./pages/admin/Detail/DetailTestDrive"));
-const DetailPesansaranManajer = React.lazy(() => import("./pages/admin/DetailPesansaranManajer"));
+const DetailTestDrive = React.lazy(
+  () => import("./pages/admin/Detail/DetailTestDrive"),
+);
+const DetailPesansaranManajer = React.lazy(
+  () => import("./pages/admin/DetailPesansaranManajer"),
+);
 const Pembeli = React.lazy(() => import("./pages/admin/Pembeli"));
 const Errormobilin = React.lazy(() => import("./pages/admin/Errormobilin"));
 
 // Komponen tambahan
-const ArtikelManager = React.lazy(() => import("./components/admin/ArtikelManager"));
+const ArtikelManager = React.lazy(
+  () => import("./components/admin/ArtikelManager"),
+);
 const FaqManager = React.lazy(() => import("./components/admin/FaqManager"));
 const TeamManager = React.lazy(() => import("./components/admin/TeamManager"));
 const JobManager = React.lazy(() => import("./components/admin/JobManager"));
-const PesanSaranManager = React.lazy(() => import("./pages/admin/Pesansaranmanager"));
+const PesanSaranManager = React.lazy(
+  () => import("./pages/admin/Pesansaranmanager"),
+);
 
 // ===========
 // Auth Pages
@@ -84,7 +94,7 @@ export default function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
-             <Route path="/karir/:id" element={<KarirDetail />} />
+            <Route path="/karir/:id" element={<KarirDetail />} />
             <Route path="/lokasi-kami" element={<Lokasi />} />
             <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
@@ -99,6 +109,15 @@ export default function App() {
             <Route path="/pembeli" element={<Pembeli />} />
             <Route path="/Orders" element={<Orders />} />
             <Route path="/test-drive" element={<TestDrive />} />
+            <Route path="/admin/artikel" element={<ArtikelManager />} />
+            <Route path="/admin/faq" element={<FaqManager />} />
+            <Route path="/admin/tim" element={<TeamManager />} />
+            <Route path="/admin/lowongan" element={<JobManager />} />
+            <Route path="/pesansaran" element={<PesanSaranManager />} />{" "}
+            <Route
+              path="/pesansaran/:id"
+              element={<DetailPesansaranManajer />}
+            />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>{" "}
@@ -106,5 +125,3 @@ export default function App() {
     </div>
   );
 }
-
-
