@@ -2,33 +2,38 @@ import { MapPin, Car, ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { lokasiAPI } from "../../services/lokasiAPI";
+import Loading from "../../components/guest/Loading";
+import Error from "../../components/guest/Error";
+import EmptyState from "../../components/guest/EmptyState";
 
 export default function Lokasi() {
   const [lokasiData, setLokasiData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Panggil API saat komponen mount
-    lokasiAPI
-      .fetch()
-      .then((data) => {
-        // Data dari API kemungkinan array objek
+    const loadLowongan = async () => {
+      try {
+        setLoading(true);
+        setError("");
+        const data = await lokasiAPI.fetch();
         setLokasiData(data);
+      } catch (error) {
+        console.error("Gagal mengambil data lowongan:", error);
+        setError("Gagal mengambil data lowongan");
+      } finally {
         setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Gagal mengambil data ulasan:", error);
-        setLoading(false);
-      });
+      }
+    };
+
+    loadLowongan();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="py-12 text-center">
-        <p>Loading ulasan...</p>
-      </div>
-    );
-  }
+  if (loading) return <Loading message="Memuat data lokasi..." />;
+  if (error) return <Error message={error} />;
+  if (lokasiData.length === 0)
+    return <EmptyState message="Belum ada lokasi yang tersedia." />;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 px-4 py-10 md:px-20">
       {/* Judul Halaman */}
