@@ -1,113 +1,183 @@
-import { useState, useEffect } from "react";
-import Alert from "../../components/common/Alert";
-import InputField from "../../components/common/InputField";
-import SelectField from "../../components/common/SelectField";
+import React, { useState, useEffect } from "react";
 
-export default function SimulasiKredit() {
-  const [tenor, setTenor] = useState("");
-  const [harga, setHarga] = useState("");
-  const [nama, setNama] = useState("");
-  const [errors, setErrors] = useState({});
-  const [hasilSimulasi, setHasilSimulasi] = useState(null);
-  const [isValid, setIsValid] = useState(false);
+const FormSimulasiKredit = () => {
+  const [hargaMobil, setHargaMobil] = useState("");
+  const [uangMuka, setUangMuka] = useState("");
+  const [persenUangMuka, setPersenUangMuka] = useState(0);
+  const [tenor, setTenor] = useState(1);
+  const [estimasiBulanan, setEstimasiBulanan] = useState(0);
+  const [totalDP, setTotalDP] = useState(0);
+  const [pembayaranPertama, setPembayaranPertama] = useState(0);
+  const [premiAsuransi, setPremiAsuransi] = useState(0);
 
   useEffect(() => {
-    validate();
-  }, [nama, harga, tenor]);
+    const harga = parseFloat(hargaMobil);
+    const dp = parseFloat(uangMuka);
 
-  const validate = () => {
-    let newErrors = {};
-    if (!nama) {
-      newErrors.nama = "Nama wajib diisi.";
-    } else if (!/^[A-Za-z\s]+$/.test(nama)) {
-      newErrors.nama =
-        "Nama tidak boleh mengandung angka atau karakter khusus.";
+    if (!isNaN(harga) && harga > 0 && !isNaN(dp) && dp >= 0 && dp < harga) {
+      const persen = (dp / harga) * 100;
+      setPersenUangMuka(persen);
+
+      const pokokPinjaman = harga - dp;
+      const bungaPerTahun = 0.06;
+      const totalBunga = pokokPinjaman * bungaPerTahun * tenor;
+      const totalPinjaman = pokokPinjaman + totalBunga;
+      const cicilanBulanan = totalPinjaman / (tenor * 12);
+
+      const premi = harga * 0.015;
+      const dpTotal = dp + premi;
+      const bayarPertama = dpTotal + cicilanBulanan;
+
+      setEstimasiBulanan(Math.round(cicilanBulanan));
+      setPremiAsuransi(Math.round(premi));
+      setTotalDP(Math.round(dpTotal));
+      setPembayaranPertama(Math.round(bayarPertama));
+    } else {
+      setPersenUangMuka(0);
+      setEstimasiBulanan(0);
+      setPremiAsuransi(0);
+      setTotalDP(0);
+      setPembayaranPertama(0);
     }
-
-    if (!harga) {
-      newErrors.harga = "Harga kendaraan wajib diisi.";
-    } else if (parseFloat(harga) <= 0) {
-      newErrors.harga =
-        "Harga kendaraan tidak boleh kurang dari atau sama dengan 0.";
-    }
-
-    if (!tenor) {
-      newErrors.tenor = "Silakan pilih tenor.";
-    }
-
-    setErrors(newErrors);
-    setIsValid(Object.keys(newErrors).length === 0);
-  };
-
-  const hitungKredit = () => {
-    if (!isValid) return;
-    const bunga = 0.05;
-    const tenorBulan = parseInt(tenor);
-    const hargaKendaraan = parseFloat(harga);
-    const totalHarga = hargaKendaraan * (1 + bunga * (tenorBulan / 12));
-    const cicilanPerBulan = totalHarga / tenorBulan;
-    setHasilSimulasi({ totalHarga, cicilanPerBulan });
-  };
+  }, [hargaMobil, uangMuka, tenor]);
 
   return (
-    <div className="m-5 flex min-h-screen flex-col items-center justify-center p-5">
-      <div className="w-150 rounded-lg bg-white p-6 shadow-xl">
-        <h2 className="mb-4 text-2xl font-bold text-gray-800">
+    <div className="px-4 py-10">
+      <div className="mx-auto max-w-5xl rounded-2xl bg-white p-8 shadow-2xl">
+        <h2 className="mb-8 text-center text-3xl font-bold text-blue-900">
           Simulasi Kredit Mobil
         </h2>
-        <InputField
-          label="Nama Pemohon"
-          type="text"
-          placeholder="Masukkan nama"
-          onChange={(e) => setNama(e.target.value)}
-        />
-        {errors.nama && <Alert tipe="error" pesan={errors.nama} />}
 
-        <InputField
-          label="Harga Kendaraan"
-          type="number"
-          placeholder="Masukkan harga"
-          onChange={(e) => setHarga(e.target.value)}
-        />
-        {errors.harga && <Alert tipe="error" pesan={errors.harga} />}
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Form */}
+          <section className="space-y-6">
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Harga Mobil (Rp)
+              </label>
+              <input
+                type="number"
+                value={hargaMobil}
+                onChange={(e) => setHargaMobil(e.target.value)}
+                className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Contoh: 200000000"
+              />
+            </div>
 
-        <SelectField
-          label="Pilih Tenor (bulan)"
-          options={[
-            { value: "12", label: "12 Bulan" },
-            { value: "24", label: "24 Bulan" },
-            { value: "36", label: "36 Bulan" },
-            { value: "100", label: "100 Bulan" },
-          ]}
-          onChange={(e) => setTenor(e.target.value)}
-        />
-        {errors.tenor && <Alert tipe="error" pesan={errors.tenor} />}
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Uang Muka
+              </label>
+              <div className="flex gap-3">
+                <input
+                  type="number"
+                  value={uangMuka}
+                  onChange={(e) => setUangMuka(e.target.value)}
+                  className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  placeholder="Contoh: 50000000"
+                />
+                <input
+                  type="text"
+                  value={`${persenUangMuka.toFixed(2)}%`}
+                  disabled
+                  className="w-24 rounded-lg border border-gray-300 bg-gray-100 p-3 text-center"
+                />
+              </div>
+            </div>
 
-        <button
-          onClick={hitungKredit}
-          className={`mt-4 w-full rounded py-2 text-white ${
-            isValid
-              ? "bg-blue-500 hover:bg-blue-600"
-              : "cursor-not-allowed bg-gray-400"
-          }`}
-          disabled={!isValid}
-        >
-          Tampilkan Hasil
-        </button>
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Mitra Pembiayaan
+              </label>
+              <select className="w-full rounded-lg border border-blue-200 p-3">
+                <option>BCA Finance</option>
+              </select>
+            </div>
 
-        {hasilSimulasi && (
-          <div className="mt-4 rounded bg-slate-100 p-4 shadow-md">
-            <h3 className="text-lg font-semibold text-blue-900">
-              Hasil Simulasi Kredit
-            </h3>
-            <p>Total Harga: Rp {hasilSimulasi.totalHarga.toLocaleString()}</p>
-            <p>
-              Cicilan Per Bulan: Rp{" "}
-              {hasilSimulasi.cicilanPerBulan.toLocaleString()}
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Jenis Asuransi
+              </label>
+              <select className="w-full rounded-lg border border-blue-200 p-3">
+                <option>Total Lost Only (TLO)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Cakupan Wilayah
+              </label>
+              <select className="w-full rounded-lg border border-blue-200 p-3">
+                <option>DKI Jakarta, Jawa Barat, dan Banten</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block font-semibold text-blue-900">
+                Tenor Pinjaman
+              </label>
+              <div className="flex items-center gap-3">
+                <input
+                  type="range"
+                  min="1"
+                  max="5"
+                  value={tenor}
+                  onChange={(e) => setTenor(Number(e.target.value))}
+                  className="w-full accent-blue-700"
+                />
+                <span className="text-sm font-medium text-blue-800">
+                  {tenor} Tahun
+                </span>
+              </div>
+            </div>
+          </section>
+
+          {/* Hasil Simulasi */}
+          <section className="space-y-5 rounded-2xl bg-blue-900 p-6 text-white shadow-md">
+            <div>
+              <p className="text-sm text-gray-200">
+                Estimasi Cicilan Per Bulan
+              </p>
+              <h3 className="text-4xl font-bold text-yellow-400">
+                Rp {estimasiBulanan.toLocaleString("id-ID")}
+              </h3>
+            </div>
+
+            <div className="space-y-2 text-sm text-gray-100">
+              <div className="flex justify-between">
+                <span>Total DP</span>
+                <span className="font-semibold text-white">
+                  Rp {totalDP.toLocaleString("id-ID")}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>Uang Muka</span>
+                <span>
+                  Rp{" "}
+                  {uangMuka
+                    ? parseInt(uangMuka).toLocaleString("id-ID")
+                    : "Rp 0"}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span>Pembayaran Pertama</span>
+                <span>Rp {pembayaranPertama.toLocaleString("id-ID")}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Premi Asuransi</span>
+                <span>Rp {premiAsuransi.toLocaleString("id-ID")}</span>
+              </div>
+            </div>
+
+            <p className="text-xs text-gray-300">
+              * Perhitungan hanya simulasi. Hubungi kami untuk informasi lebih
+              lanjut.
             </p>
-          </div>
-        )}
+          </section>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default FormSimulasiKredit;
