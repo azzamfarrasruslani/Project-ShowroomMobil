@@ -11,19 +11,19 @@ const headers = {
 };
 
 export const ulasanAPI = {
-  async fetchNotes() {
+  async fetch() {
     const response = await axios.get(API_URL, { headers });
     return response.data;
   },
 
-  async createNote(data) {
+  async create(data) {
     const response = await axios.post(API_URL, data, { headers });
     return response.data;
   },
-  async deleteNote(id) {
+  async delete(id) {
     await axios.delete(`${API_URL}?id=eq.${id}`, { headers });
   },
-  async editNote(id, data) {
+  async edit(id, data) {
     const response = await axios.patch(`${API_URL}?id=eq.${id}`, data, {
       headers,
     });
