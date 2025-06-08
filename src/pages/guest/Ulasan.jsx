@@ -1,31 +1,5 @@
-import React from "react";
-
-const ulasanData = [
-  {
-    nama: "Carsome778",
-    tanggal: "30 Mar 2024",
-    ulasan: "Perbanyak pilihan kendaraan",
-    mobil: "2019 Honda BR-V E 1.5 Auto",
-    lokasi: "Carsome CARSOME Bekasi Siliwangi",
-    rating: 5,
-  },
-  {
-    nama: "Ade Kioh",
-    tanggal: "02 Mar 2024",
-    ulasan: "Mantap lah pokonya",
-    mobil: "2019 Daihatsu TERIOS X DLX 1.5 Manual",
-    lokasi: "Carsome CARSOME Tangerang Selatan",
-    rating: 5,
-  },
-  {
-    nama: "Muhammad Heray Elasya",
-    tanggal: "22 Feb 2024",
-    ulasan: "Perbanyak stok mobil",
-    mobil: "2018 Honda BRIO TEMPE RSPEC 1.5 Auto",
-    lokasi: "Carsome CARSOME Tangerang Selatan",
-    rating: 5,
-  },
-];
+import React, { useEffect, useState } from "react";
+import { ulasanAPI } from "../../services/ulasanAPI";
 
 const Star = () => (
   <svg
@@ -39,6 +13,31 @@ const Star = () => (
 );
 
 const Ulasan = () => {
+  const [ulasanData, setUlasanData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Panggil API saat komponen mount
+    ulasanAPI.fetchNotes()
+      .then((data) => {
+        // Data dari API kemungkinan array objek
+        setUlasanData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Gagal mengambil data ulasan:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center py-12">
+        <p>Loading ulasan...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
@@ -61,11 +60,18 @@ const Ulasan = () => {
               {Array.from({ length: item.rating }).map((_, i) => (
                 <Star key={i} />
               ))}
-              <span className="ml-auto text-sm text-gray-500">{item.tanggal}</span>
+              <span className="ml-auto text-sm text-gray-500">
+                {new Date(item.tanggal).toLocaleDateString("id-ID", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </span>
             </div>
-            <p className="font-semibold mb-2">“{item.ulasan}”</p>
-            <p className="text-sm text-gray-600 mb-1">{item.mobil}</p>
+            <p className="font-semibold mb-2">“{item.isi || item.ulasan}”</p>
+            <p className="text-sm text-gray-600 mb-1">{item.detail || item.mobil}</p>
             <p className="text-xs text-gray-500">{item.lokasi}</p>
+            <p className="mt-2 font-semibold">{item.nama}</p>
           </div>
         ))}
       </div>
