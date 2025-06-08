@@ -1,34 +1,37 @@
-// import lowongan from "../../data/data_lowongan.json";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { lowonganAPI } from "../../services/lowonganAPI";
+import Loading from "../../components/guest/Loading";
+import Error from "../../components/guest/Error";
+import EmptyState from "../../components/guest/EmptyState";
 
 export default function Karir() {
   const [lowonganData, setLowonganData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Panggil API saat komponen mount
-    lowonganAPI
-      .fetch()
-      .then((data) => {
-        // Data dari API kemungkinan array objek
+    const loadLowongan = async () => {
+      try {
+        setLoading(true);
+        setError("");
+        const data = await lowonganAPI.fetch();
         setLowonganData(data);
+      } catch (error) {
+        console.error("Gagal mengambil data lowongan:", error);
+        setError("Gagal mengambil data lowongan");
+      } finally {
         setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Gagal mengambil data ulasan:", error);
-        setLoading(false);
-      });
+      }
+    };
+
+    loadLowongan();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="py-12 text-center">
-        <p>Loading ulasan...</p>
-      </div>
-    );
-  }
+  if (loading) return <Loading message="Memuat data lowongan..." />;
+  if (error) return <Error message={error} />;
+  if (lowonganData.length === 0)
+    return <EmptyState message="Belum ada lowongan yang tersedia." />;
 
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
@@ -73,7 +76,6 @@ export default function Karir() {
               </ul>
             </div>
             <Link
-              key={job.id_lowongan}
               to={`/karir/${job.id_lowongan}`}
               className="mt-3 flex w-full justify-center rounded-lg bg-gray-800 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
             >
