@@ -1,6 +1,35 @@
-import lowongan from "../../data/data_lowongan.json";
+// import lowongan from "../../data/data_lowongan.json";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { lowonganAPI } from "../../services/lowonganAPI";
+
 export default function Karir() {
+  const [lowonganData, setLowonganData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Panggil API saat komponen mount
+    lowonganAPI
+      .fetch()
+      .then((data) => {
+        // Data dari API kemungkinan array objek
+        setLowonganData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Gagal mengambil data ulasan:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="py-12 text-center">
+        <p>Loading ulasan...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto mb-10 max-w-4xl text-center">
@@ -14,7 +43,7 @@ export default function Karir() {
       </div>
 
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
-        {lowongan.map((job, index) => (
+        {lowonganData.map((job, index) => (
           <div
             key={index}
             className="space-y-4 rounded-xl bg-white p-6 shadow-md transition hover:shadow-lg"
@@ -44,7 +73,8 @@ export default function Karir() {
               </ul>
             </div>
             <Link
-              to={`/karir/${job.id}`}
+              key={job.id_lowongan}
+              to={`/karir/${job.id_lowongan}`}
               className="mt-3 flex w-full justify-center rounded-lg bg-gray-800 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
             >
               Lamar Sekarang

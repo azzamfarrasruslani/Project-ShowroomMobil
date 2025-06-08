@@ -1,25 +1,65 @@
-import { useParams } from "react-router-dom";
-import lowongan from "../../data/data_lowongan.json";
-import { MapPin, Car, ArrowLeft } from 'lucide-react';
-export default function KarirDetail() {
-  const { id } = useParams();
-  const data = lowongan.find((job) => job.id === id);
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { lowonganAPI } from "../../services/lowonganAPI";
+import { ArrowLeft } from "lucide-react";
 
-  if (!data) {
+export default function KarirDetail() {
+  const { id_lowongan } = useParams();
+
+  const navigate = useNavigate();
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    lowonganAPI
+      .fetchById(id_lowongan)
+      .then((res) => {
+        if (!res) {
+          setError("Lowongan tidak ditemukan");
+          setData(null);
+        } else {
+          setData(res);
+          setError(null);
+        }
+      })
+      .catch(() => {
+        setError("Gagal mengambil data lowongan");
+        setData(null);
+      })
+      .finally(() => setLoading(false));
+  }, [id_lowongan]);
+
+  if (loading) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-10 text-center">
-        <h1 className="text-2xl font-bold text-red-600">Lowongan tidak ditemukan</h1>
-        <p className="text-gray-600">Silakan kembali ke halaman karir.</p>
+        <p>Loading data lowongan...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-3xl mx-auto px-6 py-10 text-center">
+        <h1 className="text-2xl font-bold text-red-600">{error}</h1>
+        <p className="text-gray-600 cursor-pointer hover:underline" onClick={() => navigate("/karir")}>
+          Kembali ke halaman karir
+        </p>
       </div>
     );
   }
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
-      <div className="mb-8 flex items-center gap-2 text-blue-700 cursor-pointer hover:underline">
-                <ArrowLeft size={20} />
-                <span>Kembali</span>
-            </div>
+      <div
+        className="mb-8 flex items-center gap-2 text-blue-700 cursor-pointer hover:underline"
+        onClick={() => navigate(-1)}
+      >
+        <ArrowLeft size={20} />
+        <span>Kembali</span>
+      </div>
       <h1 className="text-3xl font-bold mb-2">{data.posisi}</h1>
       <p className="text-gray-700 text-lg mb-4">{data.perusahaan}</p>
 
@@ -32,7 +72,8 @@ export default function KarirDetail() {
         </p>
         <p>
           <strong>Gaji:</strong>{" "}
-          {data.gaji.mata_uang} {data.gaji.minimal.toLocaleString()} - {data.gaji.maksimal.toLocaleString()} ({data.gaji.tipe})
+          {data.gaji.mata_uang} {data.gaji.minimal.toLocaleString()} -{" "}
+          {data.gaji.maksimal.toLocaleString()} ({data.gaji.tipe})
         </p>
         <p>
           <strong>Tanggal Posting:</strong> {data.tanggal_posting}
