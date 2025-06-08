@@ -1,72 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { karyawanAPI } from "../../../services/karyawanAPI";
-const Team = () => {
-  // const karyawanData = [
-  //   {
-  //     id_karyawan: 1,
-  //     nama: "Tom Leathes",
-  //     jabatan: "CEO & Pendiri",
-  //     foto: "/images/team/tom_leathes.jpg",
-  //     deskripsi:
-  //       "Memimpin visi Mobilin untuk mengubah cara orang menjual dan membeli mobil.",
-  //     email: "tom.leathes@example.com",
-  //     tanggal_join: "2015-01-01",
-  //   },
-  //   {
-  //     id_karyawan: 2,
-  //     nama: "Harry Jones",
-  //     jabatan: "Co-Pendiri",
-  //     foto: "/images/team/harry_jones.jpg",
-  //     deskripsi:
-  //       "Berperan penting dalam pengembangan strategi produk dan inovasi teknologi Mobilin.",
-  //     email: "harry.jones@example.com",
-  //     tanggal_join: "2015-01-01",
-  //   },
-  //   {
-  //     id_karyawan: 3,
-  //     nama: "Liz Kistruck",
-  //     jabatan: "Kepala Keuangan (CFO)",
-  //     foto: "/images/team/liz_kistruck.jpg",
-  //     deskripsi:
-  //       "Mengelola keuangan dan mendukung pertumbuhan bisnis Mobilin secara berkelanjutan.",
-  //     email: "liz.kistruck@example.com",
-  //     tanggal_join: "2016-03-15",
-  //   },
-  // ];
+import Loading from "../Loading";
+import Error from "../Error";
+import EmptyState from "../EmptyState";
 
-   const [karyawanData, setKaryawanData] = useState([]);
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      // Panggil API saat komponen mount
-      karyawanAPI
-        .fetch()
-        .then((data) => {
-          // Data dari API kemungkinan array objek
-          setKaryawanData(data);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Gagal mengambil data ulasan:", error);
-          setLoading(false);
-        });
-    }, []);
-  
-    if (loading) {
-      return (
-        <div className="py-12 text-center">
-          <p>Loading ulasan...</p>
-        </div>
-      );
-    }
+const Team = () => {
+  const [karyawanData, setKaryawanData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadKaryawan = async () => {
+      try {
+        setLoading(true);
+        setError("");
+        const data = await karyawanAPI.fetch();
+        setKaryawanData(data);
+      } catch (error) {
+        console.error("Gagal mengambil data kayawan:", error);
+        setError("Gagal mengambil data karwayan");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadKaryawan();
+  }, []);
+
+  if (loading) return <Loading message="Memuat data karyawan..." />;
+  if (error) return <Error message={error} />;
+  if (karyawanData.length === 0)
+    return <EmptyState message="Belum ada lokasi yang tersedia." />;
 
   return (
-    <section className="bg-white py-16 px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+    <section className="bg-white px-4 py-16 text-center">
+      <h2 className="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">
         Temui Orang-Orang Hebat di Balik Mobilin
       </h2>
-      <p className="text-gray-600 max-w-3xl mx-auto mb-12">
+      <p className="mx-auto mb-12 max-w-3xl text-gray-600">
         Kami adalah tim inovator, pemecah masalah, dan pemikir besar yang
         bertanya: “Bukankah seharusnya jual beli mobil itu mudah?” Dan kami
         mewujudkannya. Mobilin hadir dengan semangat tim untuk menghadirkan
@@ -74,22 +46,22 @@ const Team = () => {
         Indonesia.
       </p>
 
-      <div className="grid max-w-6xl mx-auto gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
         {karyawanData.map((karyawan) => (
           <div
             key={karyawan.id_karyawan}
-            className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300"
+            className="rounded-xl bg-gray-50 p-6 shadow transition duration-300 hover:shadow-md"
           >
             <img
               src={karyawan.foto}
               alt={karyawan.nama}
-              className="mx-auto mb-4 h-28 w-28 rounded-full object-cover border-2 border-gray-900"
+              className="mx-auto mb-4 h-28 w-28 rounded-full border-2 border-gray-900 object-cover"
             />
             <h3 className="text-lg font-semibold text-gray-800">
               {karyawan.nama}
             </h3>
-            <p className="text-gray-900 text-sm mb-2">{karyawan.jabatan}</p>
-            <p className="text-sm text-gray-600 mb-4">{karyawan.deskripsi}</p>
+            <p className="mb-2 text-sm text-gray-900">{karyawan.jabatan}</p>
+            <p className="mb-4 text-sm text-gray-600">{karyawan.deskripsi}</p>
             <a
               href={`mailto:${karyawan.email}`}
               className="text-sm text-yellow-600 hover:underline"
