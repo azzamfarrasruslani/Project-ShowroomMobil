@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import pembeliData from '../assets/pembeliData.json'; // JSON yang sudah berisi gambar
+import pembeliData from ''; // JSON yang sudah berisi gambar
 
 const Pembeli = () => {
   return (
