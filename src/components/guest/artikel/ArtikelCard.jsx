@@ -47,7 +47,7 @@ export default function ArtikelCard() {
             {/* Tombol di bawah */}
             <Link
               to={`/artikel/${item.id}`} 
-              className="mt-auto w-full rounded-lg bg-blue-500 px-4 py-2 text-center text-white transition hover:bg-blue-600"
+              className="mt-auto w-full rounded-lg bg-gray-900 px-4 py-2 text-center text-white transition hover:bg-yellow-600"
             >
               Baca Selengkapnya
             </Link>
