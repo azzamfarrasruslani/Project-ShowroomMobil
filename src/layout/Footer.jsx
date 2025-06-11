@@ -1,5 +1,5 @@
 import Icon from "../lib/Icon";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-10 py-10 text-white">
@@ -19,8 +19,11 @@ const Footer = () => {
           <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="/mobil-bekas" className="mt-2 hover:underline">
-            Mobil Bekas
+          <a href="/buy-cars" className="mt-2 hover:underline">
+           Beli Mobil
+          </a>
+          <a href="/sell-cars" className="mt-2 hover:underline">
+           Jual Mobil
           </a>
           <a href="/promo" className="mt-2 hover:underline">
             Promo
@@ -28,7 +31,7 @@ const Footer = () => {
           <a href="/tentang-kami" className="mt-2 hover:underline">
             Tentang Kami
           </a>
-          <a href="/hubungi-kami" className="mt-2 hover:underline">
+          <a href="/kontak-kami" className="mt-2 hover:underline">
             Hubungi Kami
           </a>
         </nav>
