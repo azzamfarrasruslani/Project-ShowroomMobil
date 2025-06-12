@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import testDriveData from '../../assets/testDriveData.json';
+import testDriveData from '../../../data/testDriveData.json';
 
 export default function DetailTestDrive() {
   const { id } = useParams();
