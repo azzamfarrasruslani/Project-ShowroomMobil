@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import cars from "../../data/data_mobil_bekas.json";
 import ScrollToSectionButton from "../../components/guest/buycars/ScrollToSectionButton";
+import SimulasiKredit from "../../components/guest/buycars/SimulasiKredit";
 
 export default function CarDetailPage() {
   const { id } = useParams();
@@ -34,20 +35,6 @@ export default function CarDetailPage() {
             <div className="absolute top-0 left-0 rounded-br-lg bg-yellow-400 px-4 py-1 font-bold text-black">
               Rp 2.000.000 OFF
             </div>
-          </div>
-
-          {/* Thumbnail */}
-          <div className="mt-4 flex gap-2 overflow-x-auto">
-            <img
-              className={
-                "h-16 w-24 cursor-pointer rounded-md border-2 object-cover"
-              }
-            />
-          </div>
-
-          {/* Promo label */}
-          <div className="mt-2 w-fit rounded bg-yellow-400 px-4 py-1 text-sm font-bold text-blue-900">
-            PROMO KILAT
           </div>
         </div>
 
@@ -99,10 +86,15 @@ export default function CarDetailPage() {
               Pesan Mobil
               <p className="text-xs font-normal">Dapat Dikembalikan</p>
             </button>
-            <button className="w-1/2 rounded bg-yellow-400 px-4 py-2 font-semibold text-yellow-900">
+            <Link
+              to={`/test-drive/${car.id}`}
+              key={car.id}
+              car={car}
+              className="w-1/2 rounded bg-yellow-400 px-4 py-2 font-semibold text-yellow-900"
+            >
               Tes Drive Gratis
               <p className="text-xs font-normal">Di Experience Center</p>
-            </button>
+            </Link>
           </div>
 
           <div className="border-t pt-4 text-sm text-gray-600">
@@ -112,9 +104,7 @@ export default function CarDetailPage() {
         </div>
       </div>
 
-      <div id="tes" className="">
-        <h1>tess</h1>
-      </div>
+      <SimulasiKredit car={car} />
     </div>
   );
 }
