@@ -51,44 +51,45 @@ export default function SellCar() {
         </div>
       </section>
 
-      {/* Why Section */}
-      <section className="py-16">
-        <div className="container mx-auto flex flex-col items-center gap-10 px-4 md:flex-row">
-          <div className="space-y-6 md:w-1/2">
-            <h2 className="text-2xl font-bold">Kenapa Pilih MOBILIN?</h2>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="mb-1 font-semibold">
-                  Proses Mudah & Tanpa Repot
-                </h4>
-                <p>Semua proses diurus dari awal hingga akhir.</p>
-              </div>
-              <div>
-                <h4 className="mb-1 font-semibold">Terpercaya & Aman</h4>
-                <p>Pengecekan 175 titik oleh profesional.</p>
-              </div>
-              <div>
-                <h4 className="mb-1 font-semibold">Penawaran Terbaik</h4>
-                <p>Harga sesuai kondisi mobil Anda.</p>
-              </div>
-              <div>
-                <h4 className="mb-1 font-semibold">Pembayaran Cepat</h4>
-                <p>Pembayaran 2-4 jam setelah transaksi selesai.</p>
-              </div>
+      <section className="py-16 bg-white">
+      <div className="container mx-auto flex flex-col-reverse items-center gap-10 px-4 md:flex-row md:gap-20">
+        {/* Kiri: Konten Teks */}
+        <div className="space-y-6 md:w-1/2">
+          <h2 className="text-3xl font-bold text-gray-800">Kenapa Pilih MOBILIN?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
+            <div>
+              <h4 className="mb-1 text-lg font-semibold">Proses Mudah & Tanpa Repot</h4>
+              <p>Dapatkan pengalaman yang mudah & nyaman mulai dari proses inspeksi mobil secara gratis hingga proses kepengurusan semua dokumen Anda.</p>
             </div>
-          </div>
-          <div className="md:w-1/2">
-            <div className="flex h-80 w-full items-center justify-center rounded-lg bg-gray-300">
-              {/* Tempatkan gambar ilustrasi di sini */}
-              <p>Gambar Ilustrasi</p>
+            <div>
+              <h4 className="mb-1 text-lg font-semibold">Terpercaya & Aman</h4>
+              <p>Inspektor profesional kami melakukan pemeriksaan mobil secara menyeluruh untuk mengetahui harga yang sesuai dengan kondisi mobil Anda.</p>
+            </div>
+            <div>
+              <h4 className="mb-1 text-lg font-semibold">Penawaran Terbaik</h4>
+              <p>Kami memberikan harga yang sesuai dan kami pastikan memberikan penawaran terbaik untuk Anda.</p>
+            </div>
+            <div>
+              <h4 className="mb-1 text-lg font-semibold">Pembayaran Cepat</h4>
+              <p>Kami tidak main-main. Setelah kesepakatan dibuat, kami membayar mobil Anda hanya dalam 24 jam*</p>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Kanan: Gambar */}
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            src="/image/sell-car-pilihkami.png"
+            alt="Kenapa Pilih Mobilin"
+            className="rounded-lg w-full max-w-md shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
 
       <StatistikSection />
 
-      <ContactSection />
+      {/* <ContactSection /> */}
 
     </div>
   );
