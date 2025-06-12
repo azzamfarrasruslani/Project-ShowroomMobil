@@ -49,7 +49,7 @@ export default function AboutUs() {
         </motion.div>
 
         <motion.img
-          src="/image/about-us.jpg"
+          src="/image/about-us.png"
           alt="Mobil bekas berkualitas"
           className="w-full rounded-xl shadow-xl"
           initial={{ opacity: 0, x: 50 }}
