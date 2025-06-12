@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import cars from "../../data/data_mobil_bekas.json";
-import ScrollToSectionButton from "../../components/guest/cars/ScrollToSectionButton";
+import ScrollToSectionButton from "../../components/guest/buycars/ScrollToSectionButton";
 
 export default function CarDetailPage() {
   const { id } = useParams();
@@ -91,9 +91,7 @@ export default function CarDetailPage() {
 
           <div>
             <p className="text-sm font-semibold text-gray-700">Lokasi Mobil</p>
-            <p className="text-sm text-gray-600">
-              {car.daerah}
-            </p>
+            <p className="text-sm text-gray-600">{car.daerah}</p>
           </div>
 
           <div className="flex gap-2">
