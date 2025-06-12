@@ -26,7 +26,8 @@ export default function ListMenu() {
   const [selectedList2] = useState(t("Lainnya"));
   const menuList2 = [
     { label: t("Karir"), path: "/karir" },
-    { label: t("Simulasi Kredit"), path: "/simulasi-kredit" }
+    { label: t("Simulasi Kredit"), path: "/simulasi-kredit" },
+    { label: t("Katalog Media"), path: "/katalog-media" }
   ];
 
   return (
