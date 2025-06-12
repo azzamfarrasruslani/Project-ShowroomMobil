@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import dataMobil from '';
+import dataMobil from '../../data/data_mobil_bekas.json';
 import PageHeader from '../components/PageHeader';
 
 const formatRupiah = (number) => {
