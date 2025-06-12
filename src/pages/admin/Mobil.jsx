@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dataMobil from '../../data/data_mobil_bekas.json';
-import PageHeader from '../components/PageHeader';
+import PageHeader from '../../components/admin/PageHeader';
 
 const formatRupiah = (number) => {
   return new Intl.NumberFormat('id-ID', {
