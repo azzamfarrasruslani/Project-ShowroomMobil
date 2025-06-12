@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import testDriveData from '../../data/testDriveData.jsonn';
+import testDriveData from '../../data/testDriveData.json';
 import PageHeader from '../../components/admin/PageHeader';
 
 const TestDrive = () => {
