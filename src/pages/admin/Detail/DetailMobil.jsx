@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import dataMobil from '../../assets/data_mobil_bekas.json';
+import dataMobil from '../../../data/data_mobil_bekas.json';
 
 export default function DetailMobil() {
   const { id } = useParams();
