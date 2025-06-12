@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function StatistikSection() {
     return (
-         <section className="bg-yellow-400 py-16">
+         <section className="bg-yellow-400 py-16 mb-5">
         <div className="container mx-auto flex flex-col-reverse items-center justify-between px-4 md:flex-row">
           {/* Bagian kiri - Statistik */}
           <div className="grid w-full grid-cols-2 gap-x-6 gap-y-8 text-center text-gray-900 md:w-1/2">
