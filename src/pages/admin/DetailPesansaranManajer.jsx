@@ -1,7 +1,7 @@
 // src/pages/Detail/PesanSaranDetail.jsx
 import { useParams, useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
-import pesanData from '../assets/PesanSaranData.json';
+import pesanData from '../../data/PesanSaranData.json';
 
 const formatTanggal = (tanggalStr) => {
   const date = new Date(tanggalStr);

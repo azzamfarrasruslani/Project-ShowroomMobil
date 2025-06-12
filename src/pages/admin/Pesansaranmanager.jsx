@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PageHeader from '../components/PageHeader';
-import pesanData from '../assets/PesanSaranData.json';
+import PageHeader from '../../components/admin/PageHeader';
+import pesanData from '../../data/PesanSaranData.json';
 
 const PesanSaranManager = () => {
   const [pesanSaran, setPesanSaran] = useState([]);
