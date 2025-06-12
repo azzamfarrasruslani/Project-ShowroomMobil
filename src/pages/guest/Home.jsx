@@ -28,10 +28,11 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="mt-[300px] sm:mt-[500px] md:mt-[550px] lg:mt-[580px] xl:mt-[400px]">
+      <div className="mt-[300px] sm:mt-[500px] md:mt-[550px] lg:mt-[580px] xl:mt-[300px]">
         <CaraKerja
           selectedType={selectedType}
-          setSelectedType={setSelectedType}/>
+          setSelectedType={setSelectedType}
+        />
         <Ulasan />
         <Faq />
       </div>
