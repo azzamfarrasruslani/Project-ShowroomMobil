@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import "./css/styles.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 // ===========
 // Guest Pages
 // ===========
@@ -21,6 +20,7 @@ const KarirDetail = React.lazy(() => import("./pages/guest/KarirDetail"));
 const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
 const LokasiDetail = React.lazy(() => import("./pages/guest/LokasiDetail"));
 const Ulasan = React.lazy(() => import("./pages/guest/Ulasan"));
+const KatalogMedia = React.lazy(() => import("./pages/guest/KatalogMedia"));
 
 // ===========
 // Admin Pages
@@ -88,12 +88,12 @@ export default function App() {
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/artikel/:id" element={<ArtikelDetail />} />
             <Route path="/karir" element={<Karir />} />
-          <Route path="/karir/:id_lowongan" element={<KarirDetail />} />
-
+            <Route path="/karir/:id_lowongan" element={<KarirDetail />} />
             <Route path="/lokasi-kami" element={<Lokasi />} />
             <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/ulasan" element={<Ulasan />} />
+            <Route path="/katalog-media" element={<KatalogMedia />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
