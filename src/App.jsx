@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const Home = React.lazy(() => import("./pages/guest/Home"));
 const BuyCars = React.lazy(() => import("./pages/guest/BuyCars"));
 const BuyCarsDetail = React.lazy(() => import("./pages/guest/BuyCarsDetail"));
+const TestDriver = React.lazy(() => import("./pages/guest/TestDrive"));
 const SellCars = React.lazy(() => import("./pages/guest/SellCars"));
 const Faq = React.lazy(() => import("./pages/guest/Faq"));
 const ContactUs = React.lazy(() => import("./pages/guest/ContactUs"));
@@ -80,6 +81,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/buy-cars" element={<BuyCars />} />
             <Route path="/buy-cars/:id" element={<BuyCarsDetail />} />
+            <Route path="/test-drive/:id" element={<TestDriver />} />
             <Route path="/simulasi-kredit" element={<SimulasiKredit />} />
             <Route path="/sell-cars" element={<SellCars />} />
             <Route path="/faq" element={<Faq />} />
