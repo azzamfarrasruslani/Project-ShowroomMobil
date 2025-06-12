@@ -3,12 +3,12 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "../../lib/Icon";
 import cars from "../../data/data_mobil_bekas.json";
-import FilterSidebar from "../../components/guest/cars/FilterSidebar";
-import SearchBar from "../../components/guest/cars/SearchBar";
-import TabPagination from "../../components/guest/cars/TabPagination";
-import CheckBoxFilter from "../../components/guest/cars/CheckBoxFilter";
-import CardItem from "../../components/guest/cars/CardItem";
-import HeroSection from "../../components/guest/cars/HeroSection";
+import FilterSidebar from "../../components/guest/buycars/FilterSidebar";
+import SearchBar from "../../components/guest/buycars/SearchBar";
+import TabPagination from "../../components/guest/buycars/TabPagination";
+import CheckBoxFilter from "../../components/guest/buycars/CheckBoxFilter";
+import CardItem from "../../components/guest/buycars/CardItem";
+import HeroSection from "../../components/guest/buycars/HeroSection";
 import { Link } from "react-router-dom";
 
 export default function BuyCars() {
@@ -153,15 +153,13 @@ export default function BuyCars() {
             }
           >
             {currentCars.map((car) => (
-             
-                <Link
-                  to={`/buy-cars/${car.id}`}
-                  key={car.id}
-                  className="no-underline"
-                >
-                  <CardItem key={car.id} car={car} variant={viewMode} />
-                </Link>
-             
+              <Link
+                to={`/buy-cars/${car.id}`}
+                key={car.id}
+                className="no-underline"
+              >
+                <CardItem key={car.id} car={car} variant={viewMode} />
+              </Link>
             ))}
           </div>
         ) : (
