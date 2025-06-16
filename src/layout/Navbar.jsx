@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2">
               <Icon name="user" className="text-md text-gray-800" />
               <p className="text-sm font-medium text-gray-800">
-                {t("masuk")} / {t("daftar")}
+                {t("navbar.masuk")} / {t("navbar.daftar")}
               </p>
             </div>
           </Link>
