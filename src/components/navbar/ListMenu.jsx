@@ -15,19 +15,19 @@ export default function ListMenu() {
         : "text-gray-800"
     }`;
 
-  const [selectedList1] = useState(t("Tentang Mobilin"));
+  const [selectedList1] = useState(t("navbar.tentang-mobilin"));
   const menuList1 = [
-    { label: t("Tentang Kami"), path: "/tentang-kami" },
-    { label: t("Artikel"), path: "/artikel" },
-    { label: t("Hubungi Kami"), path: "/kontak-kami" },
-    { label: t("Lokasi Kami"), path: "/lokasi-kami" },
+    { label: t("navbar.tentang-kami"), path: "/tentang-kami" },
+    { label: t("navbar.artikel"), path: "/artikel" },
+    { label: t("navbar.kontak-kami"), path: "/kontak-kami" },
+    { label: t("navbar.lokasi-kami"), path: "/lokasi-kami" },
   ];
 
-  const [selectedList2] = useState(t("Lainnya"));
+  const [selectedList2] = useState(t("navbar.lainnya"));
   const menuList2 = [
-    { label: t("Karir"), path: "/karir" },
-    { label: t("Simulasi Kredit"), path: "/simulasi-kredit" },
-    { label: t("Katalog Media"), path: "/katalog-media" }
+    { label: t("navbar.karir"), path: "/karir" },
+    { label: t("navbar.simulasi-kredit"), path: "/simulasi-kredit" },
+    { label: t("navbar.katalog-media"), path: "/katalog-media" }
   ];
 
   return (
@@ -42,12 +42,12 @@ export default function ListMenu() {
       <ul className="hidden space-x-6 text-lg font-medium capitalize md:flex">
         <li>
           <NavLink to="/buy-cars" className={menuClass}>
-            {t("beli mobil")}
+            {t("navbar.beli-mobil")}
           </NavLink>
         </li>
         <li>
           <NavLink to="/sell-cars" className={menuClass}>
-            {t("jual mobil")}
+            {t("navbar.jual-mobil")}
           </NavLink>
         </li>
         <li>
