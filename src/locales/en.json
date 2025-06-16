@@ -1,7 +1,18 @@
 {
-  "masuk": "Login",
-  "daftar": "Sign Up",
-  "beranda": "Home",
-  "beli mobil": "Buy Car",
-  "kontak kami": "Contact Us"
+  "navbar": {
+    "masuk": "Login",
+    "daftar": "Sign Up",
+    "beranda": "Home",
+    "beli-mobil": "Buy Car",
+    "jual-mobil": "Sell Car",
+    "tentang-mobilin": "About Mobilin",
+    "tentang-kami": "About Us",
+    "artikel": "Articles",
+    "kontak-kami": "Contact Us",
+    "lokasi-kami": "Our Location",
+    "lainnya": "Others",
+    "karir": "Career",
+    "simulasi-kredit": "Credit Simulation",
+    "katalog-media": "Media Catalog"
+  }
 }

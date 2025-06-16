@@ -1,7 +1,18 @@
 {
-  "masuk": "Masuk",
-  "daftar": "Daftar",
-  "beranda": "Beranda",
-  "beli mobil": "Beli Mobil",
-  "kontak kami": "Kontak Kami"
+  "navbar": {
+    "masuk": "Masuk",
+    "daftar": "Daftar",
+    "beranda": "Beranda",
+    "beli-mobil": "Beli Mobil",
+    "jual-mobil": "Jual Mobil",
+    "tentang-mobilin": "Tentang Mobilin",
+    "tentang-kami": "Tentang Kami",
+    "artikel": "Aretikel",
+    "kontak-kami": "Hubungi Kami",
+    "lokasi-kami": "Lokasi Kami",
+    "lainnya": "Lainnya",
+    "karir": "karir",
+    "simulasi-kredit": "Simulasi Kredit",
+    "katalog-media": "Katalog Media"
+  }
 }
