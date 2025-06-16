@@ -8,10 +8,13 @@ const resources = {
   id: { translation: idTranslation },
 };
 
+// Ambil dari localStorage, kalau tidak ada pakai 'id'
+const savedLang = localStorage.getItem("language") || "id";
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "id", // Bahasa default Indonesia
-  fallbackLng: "id", // Jika bahasa tidak tersedia, pakai bahasa Indonesia
+  lng: savedLang,
+  fallbackLng: "id",
   interpolation: { escapeValue: false },
 });
 
