@@ -16,6 +16,7 @@ export default function LanguageSelector({ changeLanguage, currentLang, language
     setSelectedLang(newLang);
     localStorage.setItem("language", newLang); // Simpan pilihan
     changeLanguage(newLang);
+      window.location.reload(); //   refresh otomatis setelah ganti bahasa
   };
 
   return (
