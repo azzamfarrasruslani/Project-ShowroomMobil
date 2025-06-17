@@ -1,7 +1,10 @@
 import { useParams, Link } from "react-router-dom";
+import { FaMapMarkerAlt, FaWhatsapp, FaTags, FaCar } from "react-icons/fa";
 import cars from "../../data/data_mobil_bekas.json";
 import ScrollToSectionButton from "../../components/guest/buycars/ScrollToSectionButton";
 import SimulasiKredit from "../../components/guest/buycars/SimulasiKredit";
+
+import CarDetail from "../../components/guest/buycars/CarDetail";
 
 export default function CarDetailPage() {
   const { id } = useParams();
@@ -19,78 +22,82 @@ export default function CarDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white p-4 md:p-8">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-3">
-        {/* Left - Gambar dan thumbnail */}
-        <div className="md:col-span-2">
-          <div className="relative">
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3">
+        {/* Gambar Mobil */}
+        <div className="space-y-4 md:col-span-2">
+          <div className="relative overflow-hidden rounded-xl shadow-lg">
             <img
               src={car.gambar}
               alt={car.nama}
-              className="h-auto w-full rounded-lg object-cover"
+              className="h-auto w-full object-cover"
             />
-            <div className="absolute right-0 bottom-0 rounded-tl-lg bg-blue-900 px-3 py-1 text-sm text-white">
-              s/d 31 MAY 2025
-            </div>
             <div className="absolute top-0 left-0 rounded-br-lg bg-yellow-400 px-4 py-1 font-bold text-black">
               Rp 2.000.000 OFF
+            </div>
+            <div className="absolute right-0 bottom-0 rounded-tl-lg bg-blue-900 px-3 py-1 text-sm text-white">
+              Promo s/d 31 Mei 2025
             </div>
           </div>
         </div>
 
-        {/* Right - Detail */}
-        <div className="space-y-4">
-          <h1 className="text-xl font-bold text-gray-900">
-            <span className="mr-2 rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800">
+        {/* Detail Mobil */}
+        <div className="space-y-5 rounded-xl bg-white p-4 shadow">
+          <div className="flex flex-col gap-1">
+            <span className="inline-block rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">
               Mobilin Value
             </span>
-            {car.nama}
-          </h1>
+            <h1 className="text-2xl font-bold text-gray-900">{car.nama}</h1>
+            <p className="text-sm text-gray-600">
+              {car.jarak_tempuh} km • {car.transmisi}
+            </p>
+          </div>
 
-          <p className="text-sm text-gray-600">
-            {car.jarak_tempuh} km | {car.transmisi}
-          </p>
-
-          <div className="space-y-1">
-            {/* <p className="text-sm text-gray-400 line-through">Rp 189.000.000</p> */}
+          <div>
             <p className="text-xl font-bold text-red-600">
-              {" "}
               Rp{car.harga.toLocaleString("id-ID")}
             </p>
-            {/* <p className="text-sm text-gray-600">Rp 192.000.000 (Cash)</p> */}
           </div>
 
           <ScrollToSectionButton
             className="text-sm text-blue-600 underline"
-            label="Simulasi Kredit"
+            label="Lihat Simulasi Kredit"
             targetId="tes"
           />
 
-          <button className="flex w-full items-center justify-between rounded border bg-blue-50 px-4 py-3 text-left">
-            <span className="font-medium text-blue-800">Detail Promosi</span>
-            <span className="text-blue-800">&gt;</span>
-          </button>
+          {/* Promo & Voucher */}
+          <div className="space-y-2">
+            <button className="flex w-full items-center justify-between rounded-lg border bg-blue-50 px-4 py-3 font-medium text-blue-800 transition hover:bg-blue-100">
+              <FaTags className="mr-2" />
+              Detail Promosi
+              <span>&gt;</span>
+            </button>
 
-          <button className="flex w-full items-center justify-between rounded border bg-yellow-100 px-4 py-3 text-left">
-            <span className="font-medium text-yellow-800">Voucher Saya</span>
-            <span className="text-yellow-800">&gt;</span>
-          </button>
-
-          <div>
-            <p className="text-sm font-semibold text-gray-700">Lokasi Mobil</p>
-            <p className="text-sm text-gray-600">{car.daerah}</p>
+            <button className="flex w-full items-center justify-between rounded-lg border bg-yellow-100 px-4 py-3 font-medium text-yellow-900 transition hover:bg-yellow-200">
+              🎁 Voucher Saya
+              <span>&gt;</span>
+            </button>
           </div>
 
-          <div className="flex gap-2">
-            <button className="w-1/2 rounded bg-blue-100 px-4 py-2 font-semibold text-blue-800">
+          {/* Lokasi */}
+          <div>
+            <p className="flex items-center gap-1 text-sm font-semibold text-gray-700">
+              <FaMapMarkerAlt /> Lokasi Mobil
+            </p>
+            <p className="ml-5 text-sm text-gray-600">{car.daerah}</p>
+          </div>
+
+          {/* Tombol Aksi */}
+          <div className="flex gap-3">
+            <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-blue-700">
               Pesan Mobil
-              <p className="text-xs font-normal">Dapat Dikembalikan</p>
+              <p className="text-xs font-normal text-blue-100">
+                Bisa Dikembalikan
+              </p>
             </button>
             <Link
               to={`/test-drive/${car.id}`}
-              key={car.id}
-              car={car}
-              className="w-1/2 rounded bg-yellow-400 px-4 py-2 font-semibold text-yellow-900"
+              className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-yellow-900 shadow hover:bg-yellow-500"
             >
               Tes Drive Gratis
               <p className="text-xs font-normal">Di Experience Center</p>
@@ -98,13 +105,19 @@ export default function CarDetailPage() {
           </div>
 
           <div className="border-t pt-4 text-sm text-gray-600">
-            Butuh bantuan? Hubungi kami melalui
-            <span className="ml-1 font-semibold text-green-600">WhatsApp</span>
+            Butuh bantuan? Hubungi kami lewat{" "}
+            <span className="ml-1 flex items-center gap-1 font-semibold text-green-600">
+              <FaWhatsapp /> WhatsApp
+            </span>
           </div>
         </div>
       </div>
 
-      <SimulasiKredit car={car} />
+      <CarDetail car={car} />
+
+      <div id="tes" className="mt-10">
+        <SimulasiKredit car={car} />
+      </div>
     </div>
   );
 }
