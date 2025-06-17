@@ -94,9 +94,14 @@ const Ulasan = () => {
               key={index}
               className="rounded-lg bg-white p-6 text-gray-800 shadow"
             >
+              <img src={ulasan.gambar} alt={ulasan.nama} className="mb-5 rounded-xl" />
               <div className="mb-3 flex justify-between">
                 <Bintang jumlah={ulasan.rating} />
-                <span className="text-sm text-gray-500">{ulasan.tanggal}</span>
+                <span className="text-sm text-gray-500"> {new Date(ulasan.tanggal).toLocaleDateString("id-ID", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })}</span>
               </div>
               <span className="mb-2 inline-block rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-600">
                 {ulasan.kategori}

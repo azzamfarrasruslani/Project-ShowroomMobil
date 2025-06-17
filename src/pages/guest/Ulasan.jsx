@@ -61,8 +61,10 @@ const Ulasan = () => {
         {ulasanData.map((item, index) => (
           <div
             key={index}
-            className="rounded-xl border p-4 shadow transition hover:shadow-md"
+            className="rounded-xl  bg-white p-4 shadow-md transition hover:shadow-md"
           >
+
+            <img src={item.gambar} alt={item.nama} className="rounded-xl mb-5" />
             <div className="mb-2 flex items-center">
               {Array.from({ length: item.rating }).map((_, i) => (
                 <Star key={i} />
@@ -85,11 +87,11 @@ const Ulasan = () => {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      {/* <div className="mt-8 text-center">
         <button className="px-6 py-2 font-semibold text-blue-600 hover:underline">
           Lihat Lebih Banyak Ulasan
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
