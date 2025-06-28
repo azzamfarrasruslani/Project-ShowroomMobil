@@ -4,6 +4,7 @@ import { lowonganAPI } from "../../services/lowonganAPI";
 import Loading from "../../components/guest/Loading";
 import Error from "../../components/guest/Error";
 import EmptyState from "../../components/guest/EmptyState";
+import { MapPin, Briefcase } from "lucide-react";
 
 export default function Karir() {
   const [lowonganData, setLowonganData] = useState([]);
@@ -35,49 +36,60 @@ export default function Karir() {
 
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto mb-10 max-w-4xl text-center">
-        <h2 className="text-3xl font-bold text-gray-800">
-          Karir di Dunia Mobil Bekas
-        </h2>
-        <p className="mt-2 text-gray-600">
-          Bergabunglah bersama kami dalam industri otomotif bekas yang terus
-          berkembang.
-        </p>
+      {/* Header */}
+      <div className="relative mb-16 h-[350px] w-full overflow-hidden rounded-xl bg-gray-200 shadow-lg">
+        <img
+          src="/image/karir.png" // Ubah ke path lokal atau URL ilustrasi lain
+          alt="Mobilin Career"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center bg-black/40 px-4 text-center text-white backdrop-blur-xs">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-yellow-300 bg-yellow-100 px-4 py-1 text-sm font-semibold text-yellow-800">
+            <Briefcase size={18} className="text-yellow-700" />
+            Peluang Karir Bersama Mobilin
+          </div>
+          <h1 className="text-4xl font-extrabold sm:text-5xl">
+            Bergabunglah dengan <span className="text-yellow-400">Mobilin</span>
+          </h1>
+          <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-100">
+            Bersama kami membangun masa depan industri mobil bekas yang inovatif dan berkelanjutan.
+          </p>
+        </div>
       </div>
 
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+      {/* Daftar Lowongan */}
+      <div className="mx-auto grid max-w-8xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {lowonganData.map((job, index) => (
           <div
             key={index}
-            className="space-y-4 rounded-xl bg-white p-6 shadow-md transition hover:shadow-lg"
+            className="flex h-full flex-col justify-between rounded-xl bg-white p-6 shadow-md transition hover:shadow-lg"
           >
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {job.posisi}
-                </h3>
-                <span className="text-sm text-gray-500">
-                  📍 {job.lokasi.kota}
+            <div className="flex-grow space-y-4">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">{job.posisi}</h3>
+                  <div className="flex items-center gap-1 text-sm text-gray-500">
+                    <MapPin size={16} className="text-gray-500" />
+                    {job.lokasi.kota}
+                  </div>
+                </div>
+                <span className="rounded-full bg-green-100 px-3 py-1 text-sm text-green-700">
+                  Lowongan
                 </span>
               </div>
-              <span className="rounded-full bg-green-100 px-3 py-1 text-sm text-green-700">
-                Lowongan
-              </span>
-            </div>
-            <p className="text-sm text-gray-700">{job.deskripsi}</p>
-            <div>
-              <h4 className="mb-1 text-sm font-medium text-gray-800">
-                Kualifikasi:
-              </h4>
-              <ul className="list-inside list-disc space-y-1 text-sm text-gray-600">
-                {job.kualifikasi.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+              <p className="text-sm text-gray-700">{job.deskripsi}</p>
+              <div>
+                <h4 className="mb-1 text-sm font-medium text-gray-800">Kualifikasi:</h4>
+                <ul className="list-inside list-disc space-y-1 text-sm text-gray-600">
+                  {job.kualifikasi.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <Link
               to={`/karir/${job.id_lowongan}`}
-              className="mt-3 flex w-full justify-center rounded-lg bg-gray-800 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
+              className="mt-4 flex w-full justify-center rounded-lg bg-gray-800 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
             >
               Lamar Sekarang
             </Link>
