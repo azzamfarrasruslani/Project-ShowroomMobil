@@ -19,7 +19,7 @@ export default function CarDetail({ car }) {
         <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-yellow-400"></div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 text-gray-800 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 text-gray-800 sm:grid-cols-2 lg:grid-cols-3">
         {/* Card Item */}
         {[
           {
@@ -63,7 +63,7 @@ export default function CarDetail({ car }) {
             label: "Garansi Pabrik",
             value: "Tidak",
           },
-          { icon: <Info size={20} />, label: "Masa Berlaku STNK", value: "-" },
+          // { icon: <Info size={20} />, label: "Masa Berlaku STNK", value: "-" },
         ].map((item, idx) => (
           <div
             key={idx}
