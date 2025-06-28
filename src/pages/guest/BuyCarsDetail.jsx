@@ -89,7 +89,7 @@ export default function CarDetailPage() {
 
           {/* Tombol Aksi */}
           <div className="flex gap-3">
-            <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-blue-700">
+            <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-center text-white shadow hover:bg-blue-700">
               Pesan Mobil
               <p className="text-xs font-normal text-blue-100">
                 Bisa Dikembalikan
@@ -97,7 +97,7 @@ export default function CarDetailPage() {
             </button>
             <Link
               to={`/test-drive/${car.id}`}
-              className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-yellow-900 shadow hover:bg-yellow-500"
+              className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-center text-yellow-900 shadow hover:bg-yellow-500"
             >
               Tes Drive Gratis
               <p className="text-xs font-normal">Di Experience Center</p>
