@@ -1,9 +1,16 @@
 import { useParams, Link } from "react-router-dom";
-import { FaMapMarkerAlt, FaWhatsapp, FaTags, FaCar } from "react-icons/fa";
+import {
+  MapPin,
+  Car,
+  Gauge,
+  Settings,
+  Gift,
+  PhoneCall,
+  Calendar,
+} from "lucide-react";
 import cars from "../../data/data_mobil_bekas.json";
 import ScrollToSectionButton from "../../components/guest/buycars/ScrollToSectionButton";
 import SimulasiKredit from "../../components/guest/buycars/SimulasiKredit";
-
 import CarDetail from "../../components/guest/buycars/CarDetail";
 
 export default function CarDetailPage() {
@@ -42,79 +49,99 @@ export default function CarDetailPage() {
         </div>
 
         {/* Detail Mobil */}
-        <div className="space-y-5 rounded-xl bg-white p-4 shadow">
-          <div className="flex flex-col gap-1">
-            <span className="inline-block rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">
-              Mobilin Value
-            </span>
-            <h1 className="text-2xl font-bold text-gray-900">{car.nama}</h1>
-            <p className="text-sm text-gray-600">
-              {car.jarak_tempuh} km • {car.transmisi}
-            </p>
-          </div>
+        <div className="flex h-full flex-col justify-between rounded-xl bg-white p-4 shadow">
+          {/* Bagian Atas */}
+          <div className="space-y-5">
+            {/* Label & Nama Mobil */}
+            <div className="flex flex-col gap-1">
+              <span className="inline-block rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">
+                Mobilin Value
+              </span>
+              <h1 className="text-2xl font-bold text-gray-900">{car.nama}</h1>
 
-          <div>
-            <p className="text-xl font-bold text-red-600">
-              Rp{car.harga.toLocaleString("id-ID")}
-            </p>
-          </div>
+              {/* Info Mobil */}
+              <div className="flex flex-wrap gap-3 text-sm text-gray-600">
+                <div className="flex items-center gap-1">
+                  <Gauge size={14} /> {car.jarak_tempuh} km
+                </div>
+                <div className="flex items-center gap-1">
+                  <Settings size={14} /> {car.transmisi}
+                </div>
+                {car.tahun && (
+                  <div className="flex items-center gap-1">
+                    <Calendar size={14} /> {car.tahun}
+                  </div>
+                )}
+                {car.warna && (
+                  <div className="flex items-center gap-1">
+                    <Car size={14} /> Warna: {car.warna}
+                  </div>
+                )}
+              </div>
+            </div>
 
-          <ScrollToSectionButton
-            className="text-sm text-blue-600 underline"
-            label="Lihat Simulasi Kredit"
-            targetId="tes"
-          />
-
-          {/* Promo & Voucher */}
-          <div className="space-y-2">
-            <button className="flex w-full items-center justify-between rounded-lg border bg-blue-50 px-4 py-3 font-medium text-blue-800 transition hover:bg-blue-100">
-              <FaTags className="mr-2" />
-              Detail Promosi
-              <span>&gt;</span>
-            </button>
-
-            <button className="flex w-full items-center justify-between rounded-lg border bg-yellow-100 px-4 py-3 font-medium text-yellow-900 transition hover:bg-yellow-200">
-              🎁 Voucher Saya
-              <span>&gt;</span>
-            </button>
-          </div>
-
-          {/* Lokasi */}
-          <div>
-            <p className="flex items-center gap-1 text-sm font-semibold text-gray-700">
-              <FaMapMarkerAlt /> Lokasi Mobil
-            </p>
-            <p className="ml-5 text-sm text-gray-600">{car.daerah}</p>
-          </div>
-
-          {/* Tombol Aksi */}
-          <div className="flex gap-3">
-            <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-center text-white shadow hover:bg-blue-700">
-              Pesan Mobil
-              <p className="text-xs font-normal text-blue-100">
-                Bisa Dikembalikan
+            {/* Harga */}
+            <div>
+              <p className="text-xl font-bold text-red-600">
+                Rp{car.harga.toLocaleString("id-ID")}
               </p>
-            </button>
-            <Link
-              to={`/test-drive/${car.id}`}
-              className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-center text-yellow-900 shadow hover:bg-yellow-500"
-            >
-              Tes Drive Gratis
-              <p className="text-xs font-normal">Di Experience Center</p>
-            </Link>
+            </div>
+
+            {/* Promo & Voucher */}
+            <div className="space-y-2">
+              <ScrollToSectionButton
+                className="flex w-full items-center justify-between rounded-lg border bg-blue-50 px-4 py-3 font-medium text-blue-800 transition hover:bg-blue-100"
+                label="Lihat Simulasi Kredit"
+                targetId="tes"
+              />
+              <button className="flex w-full items-center justify-between rounded-lg border bg-yellow-100 px-4 py-3 font-medium text-yellow-900 transition hover:bg-yellow-200">
+                <span className="flex items-center gap-2">
+                  <Gift size={16} /> Voucher Saya
+                </span>
+                <span>&gt;</span>
+              </button>
+            </div>
+
+            {/* Lokasi */}
+            <div>
+              <p className="flex items-center gap-1 text-sm font-semibold text-gray-700">
+                <MapPin size={14} /> Lokasi Mobil
+              </p>
+              <p className="ml-5 text-sm text-gray-600">{car.daerah}</p>
+            </div>
+
+            {/* Tombol Aksi */}
+            <div className="flex gap-3">
+              <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-center text-sm font-medium text-white shadow hover:bg-blue-700">
+                Pesan Mobil
+                <p className="text-xs font-normal text-blue-100">
+                  Bisa Dikembalikan
+                </p>
+              </button>
+              <Link
+                to={`/test-drive/${car.id}`}
+                className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-center text-sm font-medium text-yellow-900 shadow hover:bg-yellow-500"
+              >
+                Tes Drive Gratis
+                <p className="text-xs font-normal">Di Experience Center</p>
+              </Link>
+            </div>
           </div>
 
-          <div className="border-t pt-4 text-sm text-gray-600">
+          {/* Bagian Bawah Tetap */}
+          <div className="mt-6 border-t pt-4 text-sm text-gray-600">
             Butuh bantuan? Hubungi kami lewat{" "}
             <span className="ml-1 flex items-center gap-1 font-semibold text-green-600">
-              <FaWhatsapp /> WhatsApp
+              <PhoneCall size={14} /> WhatsApp
             </span>
           </div>
         </div>
       </div>
 
+      {/* Detail Tambahan */}
       <CarDetail car={car} />
 
+      {/* Simulasi Kredit */}
       <div id="tes" className="mt-10">
         <SimulasiKredit car={car} />
       </div>
