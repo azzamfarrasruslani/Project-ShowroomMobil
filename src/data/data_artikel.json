@@ -148,5 +148,20 @@
     "status": "publish",
     "komentar": [],
     "jumlah_view": 140
+  },
+  {
+    "id": 11,
+    "judul_artikel": "Panduan Lengkap Membeli Mobil Bekas Secara Online",
+   "gambar": "/image/artikel-card.jpg",
+    "tanggal_publikasi": "2025-05-20",
+    "penulis": "Sinta Rahma",
+    "kategori": "Otomotif",
+    "tags": ["mobil bekas", "beli online", "panduan"],
+    "pendahuluan": "Pembelian mobil bekas secara online semakin populer dan menawarkan kemudahan bagi pembeli.",
+    "isi": "Panduan ini menjelaskan langkah-langkah membeli mobil bekas secara online dengan aman dan tips menghindari penipuan...",
+    "kesimpulan": "Dengan persiapan yang matang, membeli mobil bekas online bisa menjadi pengalaman yang mudah dan menyenangkan.",
+    "status": "publish",
+    "komentar": [],
+    "jumlah_view": 140
   }
 ]
