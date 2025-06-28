@@ -15,6 +15,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@react-three/drei": "^10.3.0",
+    "@react-three/fiber": "^9.1.2",
     "@tailwindcss/vite": "^4.0.14",
     "axios": "^1.9.0",
     "clsx": "^2.1.1",
@@ -32,7 +34,8 @@
     "react-select": "^5.10.1",
     "recharts": "^2.15.3",
     "swiper": "^11.2.6",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.14",
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
