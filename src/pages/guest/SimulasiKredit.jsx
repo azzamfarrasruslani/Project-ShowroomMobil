@@ -44,7 +44,7 @@ const FormSimulasiKredit = () => {
   return (
     <div className="px-4 py-10">
       <div className="mx-auto max-w-5xl rounded-2xl bg-white p-8 shadow-2xl">
-        <h2 className="mb-8 text-center text-3xl font-bold text-blue-900">
+        <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
           Simulasi Kredit Mobil
         </h2>
 
@@ -52,20 +52,20 @@ const FormSimulasiKredit = () => {
           {/* Form */}
           <section className="space-y-6">
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Harga Mobil (Rp)
               </label>
               <input
                 type="number"
                 value={hargaMobil}
                 onChange={(e) => setHargaMobil(e.target.value)}
-                className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-gray-900 focus:outline-none"
                 placeholder="Contoh: 200000000"
               />
             </div>
 
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Uang Muka
               </label>
               <div className="flex gap-3">
@@ -73,7 +73,7 @@ const FormSimulasiKredit = () => {
                   type="number"
                   value={uangMuka}
                   onChange={(e) => setUangMuka(e.target.value)}
-                  className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full rounded-lg border border-blue-200 p-3 focus:ring-2 focus:ring-gray-900 focus:outline-none"
                   placeholder="Contoh: 50000000"
                 />
                 <input
@@ -86,7 +86,7 @@ const FormSimulasiKredit = () => {
             </div>
 
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Mitra Pembiayaan
               </label>
               <select className="w-full rounded-lg border border-blue-200 p-3">
@@ -95,7 +95,7 @@ const FormSimulasiKredit = () => {
             </div>
 
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Jenis Asuransi
               </label>
               <select className="w-full rounded-lg border border-blue-200 p-3">
@@ -104,7 +104,7 @@ const FormSimulasiKredit = () => {
             </div>
 
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Cakupan Wilayah
               </label>
               <select className="w-full rounded-lg border border-blue-200 p-3">
@@ -113,7 +113,7 @@ const FormSimulasiKredit = () => {
             </div>
 
             <div>
-              <label className="block font-semibold text-blue-900">
+              <label className="block font-semibold text-gray-900">
                 Tenor Pinjaman
               </label>
               <div className="flex items-center gap-3">
@@ -123,9 +123,9 @@ const FormSimulasiKredit = () => {
                   max="5"
                   value={tenor}
                   onChange={(e) => setTenor(Number(e.target.value))}
-                  className="w-full accent-blue-700"
+                  className="w-full accent-yellow-600"
                 />
-                <span className="text-sm font-medium text-blue-800">
+                <span className="text-sm font-medium text-gray-900">
                   {tenor} Tahun
                 </span>
               </div>
@@ -133,7 +133,7 @@ const FormSimulasiKredit = () => {
           </section>
 
           {/* Hasil Simulasi */}
-          <section className="space-y-5 rounded-2xl bg-blue-900 p-6 text-white shadow-md">
+          <section className="space-y-5 rounded-2xl bg-gray-900 p-6 text-white shadow-md">
             <div>
               <p className="text-sm text-gray-200">
                 Estimasi Cicilan Per Bulan
