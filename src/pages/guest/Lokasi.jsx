@@ -36,14 +36,31 @@ export default function Lokasi() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 px-4 py-10 md:px-20">
-      {/* Judul Halaman */}
-      <h1 className="mb-4 text-center text-4xl font-extrabold text-gray-900">
-        Lokasi Mobilin
-      </h1>
-      <p className="mx-auto mb-10 max-w-2xl text-center text-gray-600">
-        Temukan lokasi terdekat untuk servis mobil, perawatan, atau pengambilan
-        kendaraan dengan layanan terbaik dari Mobilin.
-      </p>
+      <div className="relative mb-16 h-[400px] w-full overflow-hidden rounded-xl bg-gray-200 shadow-xl">
+        <img
+          src="/image/lokasi.png" // Ganti ke ilustrasi showroom atau peta lokasi
+          alt="Lokasi Mobilin"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center bg-black/50 px-6 text-center text-white backdrop-blur-xs">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-1 text-sm font-semibold text-yellow-300 ring-1 ring-yellow-300">
+            🚗 Jaringan Nasional Mobilin
+          </div>
+          <h1 className="text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+            Temukan <span className="text-yellow-400">Lokasi Terdekat</span>
+          </h1>
+          <p className="mt-4 max-w-2xl text-sm text-gray-200 sm:text-base md:text-lg">
+            Showroom & layanan Mobilin kini hadir di berbagai kota. Dapatkan
+            pengalaman jual beli mobil yang cepat, aman, dan terpercaya!
+          </p>
+          <Link
+            to="#daftar-lokasi"
+            className="mt-6 inline-block rounded-lg bg-yellow-500 px-6 py-2 text-sm font-medium text-white shadow-md transition hover:bg-yellow-400"
+          >
+            Lihat Semua Lokasi
+          </Link>
+        </div>
+      </div>
 
       {/* Section Experience Center */}
       <div className="mx-auto mb-10 max-w-4xl rounded-2xl bg-white p-6 shadow-md">
@@ -78,11 +95,30 @@ export default function Lokasi() {
                 {lokasi.nama}
               </h2>
             </div>
+
             <div className="flex items-start gap-2 text-gray-600">
               <MapPin className="mt-1 text-blue-500" size={18} />
               <p className="text-sm">{lokasi.alamat}</p>
             </div>
+
             <p className="mt-2 text-sm text-gray-500">Jarak: {lokasi.jarak}</p>
+
+            {/* Tambahkan iframe jika tersedia */}
+            {lokasi.iframe && (
+              <div className="mt-4 overflow-hidden rounded-lg">
+                <iframe
+                  src={lokasi.iframe}
+                  title={`Peta ${lokasi.nama}`}
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full rounded-md border"
+                ></iframe>
+              </div>
+            )}
 
             <Link
               key={lokasi.id_lokasi}
