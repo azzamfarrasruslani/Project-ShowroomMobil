@@ -9,7 +9,7 @@ export default function ArtikelHero() {
   });
 
   // Parallax effect: gambar naik perlahan saat scroll
-  const y = useTransform(scrollYProgress, [0, 1], [0, -120]); // semakin besar -150, semakin kuat efek parallax
+  const y = useTransform(scrollYProgress, [0, 1], [0, 0]); // semakin besar -150, semakin kuat efek parallax
   const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
 
   return (
@@ -19,7 +19,7 @@ export default function ArtikelHero() {
     >
       {/* Background Image */}
       <motion.img
-        src="/image/artikel.jpg"
+        src="/image/artikel/artikel.png"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ y, scale }}
         alt="Background"
@@ -29,7 +29,7 @@ export default function ArtikelHero() {
       />
 
       {/* Overlay jika ingin teks lebih terbaca */}
-      <div className="absolute inset-0 z-0 bg-black/40"></div>
+      <div className="absolute inset-0 z-0 bg-black/60"></div>
 
       {/* Konten di atas gambar */}
       <div className="relative z-10">
