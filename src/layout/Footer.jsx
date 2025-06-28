@@ -58,15 +58,15 @@ const Footer = () => {
       <div className="mt-20 flex flex-wrap justify-center gap-3 text-center md:gap-5">
         <Icon
           name="facebook"
-          className="w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
         />
         <Icon
           name="instagram"
-          className="w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
         />
         <Icon
           name="youtube"
-          className="w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
         />
       </div>
 
