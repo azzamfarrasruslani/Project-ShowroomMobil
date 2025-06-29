@@ -1,4 +1,13 @@
-import { MapPin, Car, ArrowRight } from "lucide-react";
+import {
+  MapPin,
+  Car,
+  ArrowRight,
+  CarFront,
+  CalendarCheck,
+  Truck,
+  RefreshCcw,
+  ShieldCheck,
+} from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { lokasiAPI } from "../../services/lokasiAPI";
@@ -62,27 +71,62 @@ export default function Lokasi() {
         </div>
       </div>
 
-      {/* Section Experience Center */}
-      <div className="mx-auto mb-10 max-w-4xl rounded-2xl bg-white p-6 shadow-md">
-        <h2 className="mb-2 text-2xl font-bold text-yellow-600">Lokasi Kami</h2>
-        <h3 className="mb-2 text-xl font-semibold text-gray-700">
-          Experience Center
-        </h3>
-        <p className="mb-4 text-gray-600">
-          Kunjungi one-stop center kami, tempat di mana Anda bisa membeli,
-          menjual, test drive, dan tukar tambah mobil hanya dalam satu
-          kunjungan.
-        </p>
-        <ul className="list-inside list-disc space-y-1 text-gray-600">
-          <li>Jadwalkan inspeksi atau kunjungi langsung</li>
-          <li>Test Drive GRATIS</li>
-          <li>Ambil unit sendiri atau minta diantar ke rumah</li>
-          <li>Konsultasi dan tukar tambah</li>
-          <li>Inspeksi kendaraan gratis</li>
-        </ul>
+      <div className="mx-auto mb-10 max-w-7xl rounded-2xl bg-white p-6 shadow-md">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center">
+        
+          <div className="md:w-1/2">
+            <img
+              src="/image/lokasi2.png"
+              alt="Ilustrasi Experience Center"
+              className="max-h-[400px] w-full rounded-xl object-cover shadow-lg"
+            />
+          </div>
+          <div className="md:w-1/2">
+            <h3 className="mb-2 text-xl font-semibold text-gray-700">
+              Experience Center
+            </h3>
+            <p className="mb-6 text-gray-600">
+              Kunjungi one-stop center kami, tempat di mana Anda bisa membeli,
+              menjual, test drive, dan tukar tambah mobil hanya dalam satu
+              kunjungan.
+            </p>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
+              <div className="flex items-start gap-4">
+                <CalendarCheck className="mt-1 text-yellow-500" size={24} />
+                <p className="text-gray-700">
+                  Jadwalkan inspeksi atau kunjungi langsung
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <CarFront className="mt-1 text-yellow-500" size={24} />
+                <p className="text-gray-700">
+                  Test Drive <strong>GRATIS</strong>
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Truck className="mt-1 text-yellow-500" size={24} />
+                <p className="text-gray-700">
+                  Ambil unit sendiri atau minta diantar ke rumah
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <RefreshCcw className="mt-1 text-yellow-500" size={24} />
+                <p className="text-gray-700">Konsultasi dan tukar tambah</p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <ShieldCheck className="mt-1 text-yellow-500" size={24} />
+                <p className="text-gray-700">Inspeksi kendaraan gratis</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Daftar Lokasi */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {lokasiData.map((lokasi, index) => (
           <div
@@ -103,7 +147,6 @@ export default function Lokasi() {
 
             <p className="mt-2 text-sm text-gray-500">Jarak: {lokasi.jarak}</p>
 
-            {/* Tambahkan iframe jika tersedia */}
             {lokasi.iframe && (
               <div className="mt-4 overflow-hidden rounded-lg">
                 <iframe
@@ -122,7 +165,7 @@ export default function Lokasi() {
 
             <Link
               key={lokasi.id_lokasi}
-              to={`/karir/${lokasi.id_lokasi}`}
+              to={`/lokasi-kami/${lokasi.id_lokasi}`}
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-yellow-600 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
             >
               Lihat Detail
