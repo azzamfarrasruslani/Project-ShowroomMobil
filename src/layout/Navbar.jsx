@@ -3,17 +3,24 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Icon from "../lib/Icon";
 /* eslint-disable no-unused-vars */
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "../locales/i18n"; // Pastikan impor konfigurasi i18n
 import LanguageSelector from "../components/navbar/LanguageSelector";
 import ListMenu from "../components/navbar/ListMenu";
+import MobileNavbar from "../components/navbar/MobileNavbar";
 
 export default function Navbar() {
   // State dan Refs
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const overlayRef = useRef(null);
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropdown = (key) => {
+    setOpenDropdown((prev) => (prev === key ? null : key));
+  };
 
   // Handle klik di luar menu
   useEffect(() => {
@@ -79,61 +86,16 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {isOpen && (
-        <motion.div
-          ref={overlayRef}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-60 bg-black/50"
-        >
-          <motion.div
-            ref={menuRef}
-            initial={{ x: "-100%" }}
-            animate={{ x: "0%" }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 z-50 h-full w-64 bg-gray-100 p-6 shadow-xl md:hidden"
-          >
-            <button
-              className="absolute top-4 right-4"
-              onClick={() => setIsOpen(false)}
-            >
-              <X size={28} />
-            </button>
-            <ul className="mt-10 space-y-4 text-lg font-medium">
-              <li>
-                <Link
-                  to="/"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cars"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Cars
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cars"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={() => setIsOpen(false)}
-                >
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <MobileNavbar
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            openDropdown={openDropdown}
+            toggleDropdown={toggleDropdown}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }
