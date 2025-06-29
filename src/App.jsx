@@ -92,7 +92,7 @@ export default function App() {
             <Route path="/karir" element={<Karir />} />
             <Route path="/karir/:id_lowongan" element={<KarirDetail />} />
             <Route path="/lokasi-kami" element={<Lokasi />} />
-            <Route path="/lokasi-kami/:id" element={<LokasiDetail />} />
+            <Route path="/lokasi-kami/:id_lokasi" element={<LokasiDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/ulasan" element={<Ulasan />} />
             <Route path="/katalog-media" element={<KatalogMedia />} />
