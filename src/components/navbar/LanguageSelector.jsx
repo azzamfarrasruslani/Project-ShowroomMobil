@@ -3,20 +3,22 @@ import { useEffect, useState } from "react";
 export default function LanguageSelector({ changeLanguage, currentLang, languages }) {
   const [selectedLang, setSelectedLang] = useState(currentLang || "en");
 
+  // Hanya sekali saat pertama mount
   useEffect(() => {
     const savedLang = localStorage.getItem("language");
-    if (savedLang && languages.includes(savedLang)) {
+    if (savedLang) {
       setSelectedLang(savedLang);
-      changeLanguage(savedLang); // Set ulang bahasa saat reload
+      changeLanguage(savedLang);
     }
-  }, [languages, changeLanguage]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleChange = (e) => {
     const newLang = e.target.value;
     setSelectedLang(newLang);
-    localStorage.setItem("language", newLang); // Simpan pilihan
+    localStorage.setItem("language", newLang);
     changeLanguage(newLang);
-      window.location.reload(); //   refresh otomatis setelah ganti bahasa
+    window.location.reload(); // Refresh untuk update teks yang sudah terload
   };
 
   return (
