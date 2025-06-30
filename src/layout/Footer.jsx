@@ -1,43 +1,102 @@
 import Icon from "../lib/Icon";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bottom-0 mt-auto w-full rounded-t-4xl bg-gray-800 px-10 py-10 text-white">
-      <div className="mx-auto flex max-w-screen-xl flex-wrap items-start justify-between gap-6">
-        {/* Logo */}
-        <div className="flex w-full flex-col items-center md:w-auto md:items-start">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-start justify-between gap-10">
+        {/* Logo & Deskripsi */}
+        <div className="flex w-full flex-col items-center text-center md:w-1/4 md:items-start md:text-left">
           <img
             src="/image/Mobilin_Logo_1.png"
             alt="Mobilin Logo"
-            className="h-auto w-50"
+            className="mb-4 h-auto w-48"
           />
+          <p className="text-sm text-gray-300">
+            Solusi jual beli mobil terbaik untuk keluarga Indonesia. Aman,
+            cepat, dan terpercaya.
+          </p>
         </div>
 
-        {/* Navigasi */}
-        <nav className="flex w-full flex-col items-start text-base leading-6 font-medium md:w-auto">
+        {/* Navigasi Utama */}
+        <nav className="w-full text-base md:w-1/5">
           <h2 className="mb-4 text-xl font-semibold">Navigasi</h2>
-          <a href="/" className="hover:underline">
-            Home
-          </a>
-          <a href="/buy-cars" className="mt-2 hover:underline">
-           Beli Mobil
-          </a>
-          <a href="/sell-cars" className="mt-2 hover:underline">
-           Jual Mobil
-          </a>
-          <a href="/promo" className="mt-2 hover:underline">
-            Promo
-          </a>
-          <a href="/tentang-kami" className="mt-2 hover:underline">
-            Tentang Kami
-          </a>
-          <a href="/kontak-kami" className="mt-2 hover:underline">
-            Hubungi Kami
-          </a>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/" className="hover:underline">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/buy-cars" className="hover:underline">
+                Beli Mobil
+              </Link>
+            </li>
+            <li>
+              <Link to="/sell-cars" className="hover:underline">
+                Jual Mobil
+              </Link>
+            </li>
+            <li>
+              <Link to="/promo" className="hover:underline">
+                Promo
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:underline">
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Tentang & Lainnya */}
+        <nav className="w-full text-base md:w-1/5">
+          <h2 className="mb-4 text-xl font-semibold">Perusahaan</h2>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/tentang-kami" className="hover:underline">
+                {t("navbar.tentang-kami")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/artikel" className="hover:underline">
+                {t("navbar.artikel")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/kontak-kami" className="hover:underline">
+                {t("navbar.kontak-kami")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/lokasi-kami" className="hover:underline">
+                {t("navbar.lokasi-kami")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/karir" className="hover:underline">
+                {t("navbar.karir")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/simulasi-kredit" className="hover:underline">
+                {t("navbar.simulasi-kredit")}
+              </Link>
+            </li>
+            <li>
+              <Link to="/katalog-media" className="hover:underline">
+                {t("navbar.katalog-media")}
+              </Link>
+            </li>
+          </ul>
         </nav>
 
         {/* Kontak */}
-        <div className="w-full text-base md:w-auto">
+        <div className="w-full text-base md:w-1/4">
           <h2 className="mb-4 text-xl font-semibold">Kontak Kami</h2>
           <p>
             Email:{" "}
@@ -55,26 +114,25 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-3 text-center md:gap-5">
+      {/* Sosial Media */}
+      <div className="mt-10 flex flex-wrap justify-center gap-4 text-center md:gap-6">
         <Icon
           name="facebook"
-          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 shadow-lg transition duration-300 ease-in-out hover:bg-yellow-500 hover:text-white hover:shadow-xl"
         />
         <Icon
           name="instagram"
-          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 shadow-lg transition duration-300 ease-in-out hover:bg-yellow-500 hover:text-white hover:shadow-xl"
         />
         <Icon
           name="youtube"
-          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
+          className="h-10 w-10 rounded-full bg-white py-2.5 text-xl text-gray-800 shadow-lg transition duration-300 ease-in-out hover:bg-yellow-500 hover:text-white hover:shadow-xl"
         />
       </div>
 
       {/* Copyright */}
-      <div className="mt-10 border-t-2 border-gray-500/80 px-4 text-center">
-        <div className="mt-6 text-center text-xs text-gray-400 md:text-sm">
-          © 2025 Showroom Mobilin. All Rights Reserved.
-        </div>
+      <div className="mt-10 border-t-2 border-gray-500/80 px-4 pt-6 text-center text-xs text-gray-400 md:text-sm">
+        © 2025 Showroom Mobilin. All Rights Reserved.
       </div>
     </footer>
   );
