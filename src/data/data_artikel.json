@@ -1,382 +1,154 @@
 [
   {
     "id": 1,
-    "judul_artikel": "Panduan Event Terbaru untuk Pemula",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-01",
-    "penulis": "Maya Puspita",
-    "kategori": "Event",
-    "tags": [
-      "event",
-      "konferensi",
-      "webinar"
-    ],
-    "pendahuluan": "Artikel ini membahas topik event yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "judul_artikel": "Panduan Membeli Mobil Bekas untuk Pemula",
+    "gambar": "/image/artikel/1.jpeg",
+    "tanggal_publikasi": "2025-06-01",
+    "penulis": "Andi Nugroho",
+    "kategori": "Mobil Bekas",
+    "tags": ["tips", "pembelian", "pemula"],
+    "pendahuluan": "Membeli mobil bekas bisa menjadi solusi ekonomis bagi banyak orang, terutama bagi pemula yang ingin memiliki kendaraan pribadi tanpa menguras tabungan. Panduan ini disusun untuk membantu Anda memilih mobil bekas yang tepat sesuai dengan kebutuhan, gaya hidup, dan anggaran.",
+    "isi": "Membeli mobil bekas bukan sekadar soal harga murah. Anda harus memperhatikan banyak aspek agar tidak menyesal di kemudian hari. Berikut langkah-langkah penting yang sebaiknya Anda ikuti:\n\n1. **Tentukan Anggaran dan Kebutuhan**:\n   Mulailah dengan menentukan kisaran harga mobil yang mampu Anda beli. Jangan lupa pertimbangkan biaya tambahan seperti pajak, balik nama, asuransi, dan perbaikan minor. Sesuaikan pilihan mobil dengan kebutuhan Anda, apakah untuk keperluan sehari-hari, keluarga, atau bisnis.\n\n2. **Riset Harga Pasaran**:\n   Gunakan situs jual beli mobil bekas dan forum otomotif untuk membandingkan harga model dan tahun mobil yang Anda incar. Ini membantu Anda mengenali harga pasar yang wajar dan menghindari penipuan.\n\n3. **Periksa Kondisi Fisik Mobil**:\n   Cek bodi mobil apakah ada penyok, goresan, atau tanda bekas tabrakan. Pastikan tidak ada keropos akibat karat, terutama di bagian bawah mobil. Jangan lupa periksa kondisi ban, kaca, dan lampu.\n\n4. **Cek Mesin dan Komponen Mekanis**:\n   Bukalah kap mesin dan periksa kebersihan serta kebocoran. Dengarkan suara mesin saat menyala, apakah terdengar kasar atau normal. Perhatikan juga transmisi, rem, dan suspensi saat uji jalan (test drive).\n\n5. **Lakukan Test Drive**:\n   Ini adalah tahap krusial. Rasakan kenyamanan berkendara, cek suara-suara aneh, serta respons mobil saat akselerasi dan pengereman. Pastikan semua fitur elektronik seperti AC, audio, dan power window berfungsi dengan baik.\n\n6. **Periksa Riwayat Servis dan Dokumen**:\n   Minta buku servis atau riwayat perawatan mobil. Mobil yang terawat rutin biasanya lebih awet. Pastikan BPKB dan STNK asli, serta cocok dengan nomor rangka dan mesin.\n\n7. **Pertimbangkan Pemeriksaan oleh Mekanik Profesional**:\n   Jika Anda tidak terlalu paham soal teknis, ajak mekanik kepercayaan Anda untuk memeriksa mobil. Pemeriksaan menyeluruh akan membantu menghindari potensi masalah tersembunyi.\n\n8. **Waspadai Penjual yang Terlalu Mendesak**:\n   Hindari penjual yang terkesan menekan atau memberi batas waktu sempit untuk membuat keputusan. Penjual profesional biasanya memberikan waktu cukup untuk pertimbangan.\n\n9. **Negosiasi dengan Cerdas**:\n   Setelah mengevaluasi kondisi mobil, Anda bisa melakukan negosiasi harga. Gunakan informasi hasil pemeriksaan sebagai dasar untuk meminta potongan harga jika ada kekurangan.\n\n10. **Lakukan Transaksi Aman**:\n   Hindari pembayaran tunai tanpa bukti. Gunakan rekening resmi dan minta kwitansi atau perjanjian jual beli. Jika memungkinkan, lakukan transaksi di kantor notaris atau tempat jual beli resmi.",
+    "kesimpulan": "Membeli mobil bekas tidak perlu rumit jika Anda mengikuti langkah-langkah penting seperti riset harga, pemeriksaan menyeluruh, dan test drive. Selalu prioritaskan kualitas, transparansi dokumen, dan kejujuran penjual. Dengan persiapan yang matang, Anda bisa mendapatkan mobil bekas berkualitas dengan harga yang sesuai.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 243
+    "jumlah_view": 302
   },
+
   {
     "id": 2,
-    "judul_artikel": "Cara Cerdas Menghadapi Perubahan di Dunia Event",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-02",
-    "penulis": "Rina Marlina",
-    "kategori": "Event",
-    "tags": [
-      "review",
-      "pengalaman",
-      "fitur"
-    ],
-    "pendahuluan": "Artikel ini membahas topik event yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "judul_artikel": "Teknologi Terkini dalam Industri Otomotif",
+    "gambar": "/image/artikel/2.jpeg",
+    "tanggal_publikasi": "2025-06-02",
+    "penulis": "Dewi Kartika",
+    "kategori": "Teknologi Otomotif",
+    "tags": ["inovasi", "mobil listrik", "teknologi"],
+    "pendahuluan": "Industri otomotif mengalami revolusi besar berkat kemajuan teknologi. Mulai dari pengembangan kendaraan listrik, sistem bantuan pengemudi, hingga konektivitas digital, semuanya dirancang untuk meningkatkan keamanan, kenyamanan, dan efisiensi dalam berkendara.",
+    "isi": "Perkembangan teknologi otomotif telah membawa transformasi besar dalam cara kita mengemudi dan berinteraksi dengan kendaraan. Berikut adalah beberapa inovasi utama yang sedang membentuk masa depan industri ini:\n\n1. **Mobil Listrik (Electric Vehicles/EV)**:\n   Kendaraan listrik menjadi semakin populer karena kesadaran akan lingkungan dan meningkatnya harga bahan bakar. Banyak produsen besar seperti Tesla, Hyundai, dan Toyota telah merilis lini mobil listrik dengan jangkauan yang lebih jauh, waktu pengisian baterai lebih cepat, dan infrastruktur stasiun pengisian yang semakin luas.\n\n2. **Fitur Self-Driving (Autonomous Driving)**:\n   Teknologi self-driving kini dikembangkan dengan dukungan kecerdasan buatan dan sensor canggih seperti LiDAR, radar, dan kamera. Beberapa produsen bahkan sudah mencapai Level 3 otonomi, di mana mobil dapat mengemudi sendiri dalam kondisi tertentu tanpa intervensi pengemudi.\n\n3. **Sistem Bantuan Pengemudi (ADAS)**:\n   Advanced Driver Assistance Systems mencakup fitur seperti pengereman darurat otomatis, lane keeping assist, adaptive cruise control, dan deteksi titik buta. Teknologi ini dirancang untuk mengurangi risiko kecelakaan dan membuat pengalaman berkendara lebih aman.\n\n4. **Konektivitas dan Infotainment**:\n   Mobil modern kini dilengkapi dengan sistem infotainment berbasis Android Auto atau Apple CarPlay. Beberapa bahkan mendukung koneksi 5G, pembaruan perangkat lunak over-the-air (OTA), dan integrasi dengan smart home.\n\n5. **Teknologi Ramah Lingkungan**:\n   Selain mobil listrik, produsen juga mengembangkan mobil berbahan bakar hidrogen dan sistem hybrid yang menggabungkan mesin bensin dan motor listrik. Material ringan seperti serat karbon juga digunakan untuk meningkatkan efisiensi bahan bakar.\n\n6. **Keamanan Aktif dan Pasif**:\n   Sensor 360 derajat, airbag adaptif, serta sistem deteksi kelelahan pengemudi adalah bagian dari teknologi keselamatan modern yang semakin diperhatikan oleh pabrikan.\n\n7. **Personalisasi dan AI dalam Kendaraan**:\n   Asisten suara berbasis AI memungkinkan pengemudi mengatur navigasi, musik, bahkan suhu kabin hanya dengan perintah suara. Sistem ini juga dapat belajar dari kebiasaan pengemudi untuk memberikan pengalaman yang lebih personal.\n\nTeknologi-teknologi ini tidak hanya membuat mobil lebih pintar dan nyaman, tetapi juga membuka jalan bagi mobilitas masa depan yang lebih efisien, aman, dan berkelanjutan.",
+    "kesimpulan": "Inovasi teknologi dalam industri otomotif tidak hanya memperkaya fitur kendaraan, tetapi juga mendorong perubahan besar dalam gaya hidup dan pola berkendara masyarakat. Mobil masa depan akan semakin cerdas, hemat energi, dan mampu beradaptasi dengan kebutuhan pengguna serta lingkungan. Perkembangan ini menandai awal dari era baru dalam dunia transportasi.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 227
+    "jumlah_view": 187
   },
+
   {
     "id": 3,
-    "judul_artikel": "5 Hal Penting dalam Dunia Event",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-03",
+    "judul_artikel": "5 Mobil Keluarga Terbaik Tahun Ini",
+    "gambar": "/image/artikel/3.jpeg",
+    "tanggal_publikasi": "2025-06-03",
     "penulis": "Rina Marlina",
-    "kategori": "Event",
-    "tags": [
-      "tips",
-      "pemula",
-      "bermanfaat"
-    ],
-    "pendahuluan": "Artikel ini membahas topik event yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "kategori": "Rekomendasi Mobil",
+    "tags": ["keluarga", "nyaman", "spesifikasi"],
+    "pendahuluan": "Memilih mobil keluarga yang tepat merupakan keputusan penting, terutama jika Anda memiliki anak kecil atau sering bepergian bersama keluarga besar. Faktor seperti kapasitas penumpang, ruang bagasi, kenyamanan kabin, dan fitur keselamatan harus menjadi prioritas utama.",
+    "isi": "Berikut adalah 5 mobil keluarga terbaik tahun ini yang kami pilih berdasarkan kombinasi ulasan pengguna, fitur, efisiensi, serta uji coba langsung di berbagai kondisi jalan:\n\n1. **Toyota Innova Zenix**\n   Toyota Innova Zenix hadir dengan desain modern dan kabin yang luas. Dilengkapi dengan mesin hybrid, mobil ini menawarkan efisiensi bahan bakar yang baik. Fitur keselamatan seperti 6 airbag, sistem pengereman ABS+EBD, serta Toyota Safety Sense membuatnya sangat ideal untuk keluarga.\n\n2. **Mitsubishi Xpander Cross**\n   Varian tertinggi dari Xpander ini tampil tangguh dan cocok untuk perjalanan jarak jauh. Suspensi empuk, ground clearance tinggi, serta kabin dengan konfigurasi 7-seater menjadikannya favorit bagi keluarga yang aktif. Dilengkapi juga dengan fitur Hill Start Assist dan kamera 360 derajat.\n\n3. **Honda BR-V All New**\n   Dengan tampilan SUV dan kenyamanan MPV, Honda BR-V menawarkan performa mesin yang responsif dan efisiensi bahan bakar yang cukup baik. Kursi baris ketiga dapat dilipat rata lantai untuk ruang bagasi ekstra. Fitur Honda Sensing juga tersedia untuk keamanan berkendara.\n\n4. **Hyundai Stargazer**\n   Mobil ini tampil dengan desain futuristik dan kabin yang lapang. Stargazer dilengkapi fitur seperti layar sentuh besar, wireless charger, dan Hyundai SmartSense. Kenyamanan kabin dan kekedapan suara menjadi nilai plus untuk perjalanan keluarga.\n\n5. **Suzuki XL7**\n   Suzuki XL7 menawarkan keseimbangan antara harga dan fitur. Dilengkapi dengan sistem hiburan lengkap, kabin lega untuk 7 penumpang, serta fitur keamanan standar seperti dual airbag dan hill hold control. Cocok untuk keluarga muda yang menginginkan mobil tangguh namun terjangkau.\n\nSetiap mobil di atas memiliki keunggulannya masing-masing, mulai dari kenyamanan, efisiensi bahan bakar, hingga fitur keselamatan yang lengkap. Pilihan terbaik tergantung pada kebutuhan dan preferensi keluarga Anda.",
+    "kesimpulan": "Memilih mobil keluarga yang tepat tidak hanya soal kapasitas, tetapi juga menyangkut kenyamanan dan keselamatan seluruh penumpang, terutama anak-anak. Dengan mempertimbangkan fitur seperti airbag, sistem pengereman, ruang kabin, serta kemudahan perawatan, Anda dapat menentukan pilihan yang paling sesuai dengan gaya hidup dan anggaran keluarga.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 89
+    "jumlah_view": 214
   },
   {
     "id": 4,
-    "judul_artikel": "Manfaat Tersembunyi dari Tips yang Harus Kamu Tahu",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-04",
+    "judul_artikel": "Cara Merawat Cat Mobil Agar Tetap Kinclong",
+    "gambar": "/image/artikel/4.jpeg",
+    "tanggal_publikasi": "2025-06-04",
     "penulis": "Rizky Anwar",
-    "kategori": "Tips",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik tips yang menarik dan berguna untuk pembaca.",
-    "isi": "Tidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "kategori": "Perawatan Mobil",
+    "tags": ["perawatan", "cat", "mobil"],
+    "pendahuluan": "Cat mobil adalah bagian pertama yang terlihat oleh orang lain dan menjadi cerminan dari pemiliknya. Namun, cat mobil bisa cepat memudar, kusam, bahkan terkelupas jika tidak dirawat dengan benar. Artikel ini akan membahas cara menjaga kilap cat mobil agar tetap seperti baru.",
+    "isi": "Merawat cat mobil tidak hanya membuat tampilan mobil tetap menarik, tetapi juga membantu mempertahankan nilai jual kembali. Berikut beberapa tips dan langkah yang bisa dilakukan:\n\n1. **Cuci Mobil Secara Teratur dengan Sabun Khusus**:\n   Gunakan sabun khusus mobil (car shampoo) yang memiliki pH netral dan tidak mengandung bahan kimia keras. Hindari sabun cuci piring atau deterjen yang dapat mengikis lapisan pelindung cat.\n\n2. **Jangan Mencuci Mobil di Bawah Terik Matahari**:\n   Air dan sabun yang cepat mengering di bawah sinar matahari bisa meninggalkan bercak air (water spot) dan merusak lapisan cat. Pilih waktu pagi atau sore hari, atau tempat teduh saat mencuci.\n\n3. **Gunakan Kain Mikrofiber**:\n   Gunakan lap mikrofiber yang lembut untuk menghindari goresan halus. Jangan gunakan kain kasar atau spons kotor yang dapat mengandung pasir dan partikel kecil penyebab baret.\n\n4. **Keringkan Mobil Setelah Dicuci**:\n   Setelah mencuci, segera keringkan mobil menggunakan kain bersih dan lembut. Hal ini mencegah munculnya noda air dan membuat permukaan cat tetap mengkilap.\n\n5. **Aplikasikan Wax Secara Berkala**:\n   Gunakan wax setiap 1–2 bulan sekali untuk melindungi cat dari sinar UV, hujan asam, dan polusi udara. Wax juga memberi efek kilap yang tahan lama dan membantu kotoran tidak mudah menempel.\n\n6. **Gunakan Paint Sealant atau Coating untuk Perlindungan Lebih**:\n   Paint sealant memberikan perlindungan yang lebih tahan lama dibanding wax. Sedangkan coating keramik (nano ceramic) bisa bertahan hingga beberapa tahun dan melindungi cat secara maksimal dari goresan ringan serta oksidasi.\n\n7. **Hindari Parkir di Tempat Terbuka Terlalu Lama**:\n   Sinar matahari langsung dapat membuat warna cat pudar dan kusam. Usahakan parkir di tempat teduh atau gunakan cover mobil saat parkir di luar ruangan dalam waktu lama.\n\n8. **Segera Bersihkan Kotoran Seperti Getah Pohon, Kotoran Burung, atau Oli**:\n   Zat-zat tersebut bersifat asam dan dapat merusak lapisan cat jika dibiarkan terlalu lama. Gunakan cairan pembersih khusus jika diperlukan.\n\n9. **Lakukan Poles Secara Berkala**:\n   Proses poles atau polishing berguna untuk menghilangkan goresan halus dan mengembalikan kilap alami cat. Namun, jangan terlalu sering karena dapat mengikis lapisan clear coat jika dilakukan berlebihan.",
+    "kesimpulan": "Perawatan cat mobil yang rutin dan tepat dapat membuat mobil selalu tampak baru dan menarik. Selain meningkatkan rasa percaya diri saat berkendara, cat mobil yang terjaga juga mempertahankan nilai jual kembali kendaraan Anda. Jangan menunda perawatan kecil, karena dampaknya bisa besar di kemudian hari.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 126
+    "jumlah_view": 198
   },
   {
     "id": 5,
-    "judul_artikel": "Tips Jitu Sukses di Bidang Lingkungan",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-05",
+    "judul_artikel": "Kenali Sistem Hybrid pada Mobil Modern",
+    "gambar": "/image/artikel/5.jpeg",
+    "tanggal_publikasi": "2025-06-05",
     "penulis": "Budi Santoso",
-    "kategori": "Lingkungan",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik lingkungan yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "kategori": "Edukasi Otomotif",
+    "tags": ["hybrid", "efisiensi", "ramah lingkungan"],
+    "pendahuluan": "Mobil hybrid semakin populer di berbagai negara, termasuk Indonesia, berkat efisiensi bahan bakar yang lebih tinggi dan emisi gas buang yang lebih rendah dibandingkan mobil konvensional. Tapi, bagaimana sebenarnya sistem hybrid bekerja dan mengapa ia dianggap lebih ramah lingkungan?",
+    "isi": "Sistem hybrid pada mobil merupakan kombinasi antara mesin pembakaran internal (biasanya bensin) dan motor listrik. Keduanya bekerja secara bergantian atau bersamaan untuk menghasilkan tenaga yang lebih efisien. Berikut adalah penjelasan lebih lanjut:\n\n1. **Cara Kerja Mobil Hybrid**:\n   Pada kecepatan rendah atau saat start awal, motor listrik biasanya menjadi sumber tenaga utama karena efisiensinya yang tinggi dalam kondisi ini. Saat mobil membutuhkan tenaga lebih besar, seperti saat menanjak atau akselerasi cepat, mesin bensin akan aktif untuk membantu. Energi yang dihasilkan saat pengereman juga dikonversi kembali menjadi listrik melalui sistem regenerative braking, lalu disimpan di baterai.\n\n2. **Jenis-Jenis Sistem Hybrid**:\n   - **Mild Hybrid (MHEV)**: Motor listrik hanya membantu mesin bensin pada saat tertentu, tidak bisa menggerakkan mobil sendiri. Contoh: Suzuki Ertiga Hybrid.\n   - **Full Hybrid (HEV)**: Mobil bisa berjalan dengan mesin bensin saja, motor listrik saja, atau kombinasi keduanya. Contoh: Toyota Corolla Cross Hybrid.\n   - **Plug-in Hybrid (PHEV)**: Bisa diisi ulang dari listrik rumah (charging), memiliki jangkauan listrik lebih panjang. Contoh: Mitsubishi Outlander PHEV.\n\n3. **Keunggulan Mobil Hybrid**:\n   - **Efisiensi Bahan Bakar**: Konsumsi BBM lebih hemat terutama saat penggunaan dalam kota.\n   - **Lebih Ramah Lingkungan**: Emisi CO2 lebih rendah karena motor listrik aktif pada kondisi tertentu.\n   - **Pengalaman Berkendara Halus**: Perpindahan tenaga yang lembut dan suara mesin lebih senyap.\n   - **Tidak Perlu Infrastruktur Khusus (untuk HEV)**: Tidak memerlukan stasiun pengisian listrik seperti mobil listrik murni.\n\n4. **Hal yang Perlu Diperhatikan**:\n   - Biaya awal bisa lebih tinggi dibanding mobil bensin biasa.\n   - Perawatan baterai hybrid harus dilakukan di bengkel resmi yang mengerti sistem tersebut.\n   - Efisiensi tergantung pada pola berkendara: hybrid lebih optimal di jalanan perkotaan daripada tol.\n\nMobil hybrid menjadi solusi transisi menuju mobilitas rendah emisi tanpa ketergantungan penuh pada infrastruktur listrik.",
+    "kesimpulan": "Dengan mengenal cara kerja dan keunggulan sistem hybrid, pembaca dapat mempertimbangkan pilihan mobil yang tidak hanya hemat bahan bakar, tetapi juga lebih ramah lingkungan. Di tengah tren global menuju kendaraan elektrifikasi, mobil hybrid menjadi pilihan cerdas untuk masa kini dan masa depan.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 226
+    "jumlah_view": 175
   },
   {
     "id": 6,
-    "judul_artikel": "Kenapa Tips Menjadi Topik Hangat Saat Ini?",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-06",
+    "judul_artikel": "Tips Mengemudi Aman di Musim Hujan",
+    "gambar": "/image/artikel/6.jpeg",
+    "tanggal_publikasi": "2025-06-06",
     "penulis": "Sinta Rahma",
-    "kategori": "Tips",
-    "tags": [
-      "lifestyle",
-      "hidup sehat",
-      "keseharian"
-    ],
-    "pendahuluan": "Artikel ini membahas topik tips yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "kategori": "Keselamatan Berkendara",
+    "tags": ["hujan", "tips", "aman"],
+    "pendahuluan": "Mengemudi saat hujan menuntut kewaspadaan ekstra karena kondisi jalan yang licin dan jarak pandang yang berkurang. Artikel ini membagikan berbagai tips penting untuk menjaga keselamatan Anda dan penumpang selama musim hujan.",
+    "isi": "Berkendara di musim hujan tidak bisa disamakan dengan kondisi kering. Jalanan yang licin, genangan air, dan potensi aquaplaning membuat risiko kecelakaan meningkat. Berikut adalah tips aman yang perlu Anda perhatikan:\n\n1. **Periksa Kondisi Ban**:\n   Pastikan ban masih memiliki alur yang cukup dalam untuk membuang air. Ban yang botak atau aus sangat berbahaya di jalanan basah karena kehilangan traksi.\n\n2. **Periksa Sistem Rem**:\n   Rem yang responsif adalah kunci keselamatan di musim hujan. Jika terasa kurang pakem atau terdengar bunyi aneh, segera lakukan pemeriksaan di bengkel.\n\n3. **Pastikan Wiper Berfungsi Baik**:\n   Wiper yang rusak atau karet yang sudah getas tidak akan mampu menyapu air dengan bersih. Ini akan mengurangi visibilitas saat hujan deras.\n\n4. **Gunakan Lampu Utama (Bukan Lampu Hazard)**:\n   Nyalakan lampu utama untuk meningkatkan visibilitas Anda dan agar mobil Anda terlihat oleh pengguna jalan lain. Jangan menyalakan lampu hazard saat berkendara karena membingungkan pengemudi lain.\n\n5. **Kurangi Kecepatan dan Jaga Jarak Aman**:\n   Jalanan basah memperpanjang jarak pengereman. Kurangi kecepatan dan beri jarak lebih lebar dengan kendaraan di depan Anda.\n\n6. **Hindari Genangan Air Dalam**:\n   Genangan bisa menutupi lubang jalan atau membuat mobil Anda mogok. Jika tidak bisa memperkirakan kedalaman, lebih baik hindari dan cari jalur alternatif.\n\n7. **Waspadai Gejala Aquaplaning**:\n   Aquaplaning terjadi saat ban kehilangan traksi karena mengambang di atas air. Jika mobil terasa melayang, kurangi kecepatan secara perlahan dan jangan mengerem mendadak.\n\n8. **Gunakan AC untuk Menghindari Kaca Berembun**:\n   Nyalakan AC untuk menjaga suhu kabin tetap stabil dan menghindari embun di kaca depan.\n\n9. **Siapkan Perlengkapan Darurat**:\n   Selalu bawa payung, jas hujan, senter, dan perlengkapan darurat lainnya. Periksa juga kondisi aki dan kabel jika Anda harus menyalakan lampu lebih lama dari biasanya.",
+    "kesimpulan": "Mengemudi saat hujan membutuhkan kesiapan kendaraan dan kehati-hatian dari pengemudi. Periksa kondisi teknis mobil secara berkala dan selalu siaga terhadap potensi bahaya di jalan. Dengan menerapkan tips-tips di atas, Anda dapat menjaga keselamatan diri dan keluarga selama musim hujan.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 166
+    "jumlah_view": 132
   },
   {
     "id": 7,
-    "judul_artikel": "Kenapa Gaya Hidup Menjadi Topik Hangat Saat Ini?",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-07",
+    "judul_artikel": "Apa Itu Fitur Cruise Control dan Cara Menggunakannya",
+    "gambar": "/image/artikel/7.jpeg",
+    "tanggal_publikasi": "2025-06-07",
     "penulis": "Sari Wulandari",
-    "kategori": "Gaya Hidup",
-    "tags": [
-      "lifestyle",
-      "hidup sehat",
-      "keseharian"
-    ],
-    "pendahuluan": "Artikel ini membahas topik gaya hidup yang menarik dan berguna untuk pembaca.",
-    "isi": "Tidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "kategori": "Fitur Mobil",
+    "tags": ["cruise control", "otomatis", "teknologi"],
+    "pendahuluan": "Cruise control adalah fitur yang memungkinkan pengemudi mempertahankan kecepatan konstan tanpa harus terus-menerus menginjak pedal gas. Teknologi ini banyak ditemukan pada mobil modern, terutama pada kendaraan yang digunakan untuk perjalanan jauh.",
+    "isi": "Cruise control bekerja dengan cara mengendalikan sistem throttle mobil secara otomatis setelah pengemudi menetapkan kecepatan tertentu. Sistem ini akan menjaga kecepatan tetap stabil tanpa perlu tekanan terus-menerus pada pedal gas, sehingga mengurangi kelelahan selama mengemudi jarak jauh. Berikut penjelasan lebih lengkap:\n\n1. **Jenis Cruise Control**:\n   - **Konvensional (Manual)**: Pengemudi dapat mengaktifkan fitur ini dan memilih kecepatan tetap. Pengemudi harus menonaktifkannya secara manual jika ingin mengubah kecepatan atau berhenti.\n   - **Adaptive Cruise Control (ACC)**: Teknologi yang lebih canggih. Selain menjaga kecepatan, sistem ini juga mampu menyesuaikan jarak dengan kendaraan di depan secara otomatis, menggunakan sensor radar dan kamera.\n\n2. **Cara Mengaktifkan Cruise Control**:\n   - Nyalakan mobil dan pastikan Anda berada di jalan bebas hambatan atau jalan yang relatif lurus.\n   - Tekan tombol **Cruise** atau **ON**, biasanya terletak di setir atau dekat tuas transmisi.\n   - Capai kecepatan yang diinginkan, lalu tekan tombol **SET**.\n   - Setelah aktif, mobil akan mempertahankan kecepatan tersebut. Anda bisa menaikkan atau menurunkan kecepatan dengan tombol **+/-**.\n   - Untuk menonaktifkan sementara, tekan pedal rem atau tombol **CANCEL**. Untuk mematikan sepenuhnya, tekan tombol **OFF**.\n\n3. **Kapan Sebaiknya Menggunakan Cruise Control**:\n   - Saat berkendara di jalan tol atau jalur bebas hambatan yang minim tikungan dan persimpangan.\n   - Dalam kondisi cuaca cerah dan jalan kering.\n   - Ketika lalu lintas cenderung lancar dan stabil.\n\n4. **Kapan Sebaiknya Tidak Menggunakan Cruise Control**:\n   - Di jalan yang ramai atau macet.\n   - Saat hujan deras, berkabut, atau jalan licin.\n   - Di jalur pegunungan, tanjakan dan turunan ekstrem.\n   - Ketika Anda sedang mengantuk, karena cruise control bisa membuat pengemudi kehilangan fokus.\n\n5. **Keunggulan Cruise Control**:\n   - Mengurangi kelelahan pengemudi saat perjalanan jauh.\n   - Membantu menjaga efisiensi bahan bakar karena kecepatan stabil.\n   - Meningkatkan kenyamanan berkendara di jalur bebas hambatan.\n\n6. **Tips Tambahan**:\n   - Selalu pahami lokasi dan fungsi tombol cruise control pada mobil Anda.\n   - Pastikan Anda tetap memegang kendali dan siap untuk mengintervensi kapan saja.\n   - Biasakan membaca buku manual kendaraan sebelum menggunakan fitur ini.",
+    "kesimpulan": "Cruise control adalah fitur yang sangat bermanfaat untuk meningkatkan kenyamanan saat berkendara jarak jauh, terutama di jalan bebas hambatan. Namun, penggunaannya harus tetap bijak dan disesuaikan dengan kondisi jalan dan cuaca. Dengan memahami cara kerja dan waktu yang tepat untuk menggunakannya, pengemudi dapat memaksimalkan kenyamanan sekaligus menjaga keselamatan.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 225
+    "jumlah_view": 163
   },
   {
     "id": 8,
-    "judul_artikel": "Kupas Tuntas Tren Event 2025",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-08",
-    "penulis": "Budi Santoso",
-    "kategori": "Event",
-    "tags": [
-      "event",
-      "konferensi",
-      "webinar"
-    ],
-    "pendahuluan": "Artikel ini membahas topik event yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Dengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.\n\nPenerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.",
+    "judul_artikel": "Perbandingan Mobil MPV vs SUV, Mana Pilihan Terbaik?",
+    "gambar": "/image/artikel/8.jpeg",
+    "tanggal_publikasi": "2025-06-08",
+    "penulis": "Dian Kusuma",
+    "kategori": "Perbandingan Mobil",
+    "tags": ["mpv", "suv", "keluarga"],
+    "pendahuluan": "Banyak calon pembeli mobil bingung ketika harus memilih antara MPV (Multi Purpose Vehicle) dan SUV (Sport Utility Vehicle). Kedua jenis mobil ini populer di Indonesia, namun memiliki karakteristik dan keunggulan yang berbeda. Artikel ini akan membahas perbandingan lengkap agar Anda bisa menentukan pilihan terbaik sesuai kebutuhan.",
+    "isi": "Memahami perbedaan antara MPV dan SUV sangat penting agar Anda tidak salah dalam memilih kendaraan keluarga. Berikut adalah beberapa aspek penting yang dapat Anda pertimbangkan:\n\n1. **Desain dan Kapasitas Penumpang**:\n   - **MPV** dirancang untuk mengangkut banyak penumpang dengan nyaman, umumnya 7-seater. Interior luas, kursi fleksibel, dan ruang bagasi cukup besar membuatnya ideal untuk keluarga.\n   - **SUV** lebih fokus pada desain gagah dan sporty. Meski banyak SUV juga berkapasitas 7 penumpang, ruang kabinnya cenderung lebih sempit dibanding MPV dengan dimensi serupa.\n\n2. **Kenyamanan dan Fitur Interior**:\n   - **MPV** menawarkan kenyamanan maksimal dengan suspensi lembut dan kabin senyap. Kursi dapat direbahkan atau dilipat untuk fleksibilitas ruang.\n   - **SUV** memiliki suspensi yang sedikit lebih keras untuk menunjang performa di berbagai medan, namun tetap nyaman untuk perjalanan harian.\n\n3. **Performa dan Medan Jalan**:\n   - **MPV** lebih cocok untuk jalanan kota dan tol. Performa cukup untuk kebutuhan sehari-hari, namun kurang ideal untuk medan ekstrem.\n   - **SUV** unggul dalam hal performa, ground clearance tinggi, dan sistem penggerak roda (AWD/4WD) yang membuatnya tangguh di jalan berlubang, banjir, atau berbatu.\n\n4. **Efisiensi Bahan Bakar**:\n   - **MPV** umumnya lebih hemat bahan bakar karena bobot lebih ringan dan orientasi penggunaan dalam kota.\n   - **SUV** cenderung lebih boros BBM, apalagi yang menggunakan mesin besar atau sistem penggerak semua roda.\n\n5. **Harga dan Perawatan**:\n   - **MPV** biasanya lebih terjangkau, baik dari segi harga beli maupun biaya operasional.\n   - **SUV** dibanderol lebih mahal dan biaya perawatannya juga bisa lebih tinggi karena penggunaan sistem dan komponen tambahan untuk ketangguhan medan.\n\n6. **Citra dan Gaya Hidup**:\n   - **MPV** cocok untuk keluarga, pebisnis, atau mereka yang mengutamakan fungsi dan kenyamanan.\n   - **SUV** lebih menarik bagi mereka yang aktif, senang berpetualang, atau menginginkan tampilan mobil yang gagah dan maskulin.",
+    "kesimpulan": "MPV dan SUV memiliki keunggulan masing-masing. Jika Anda mencari kendaraan keluarga yang nyaman, lapang, dan efisien, MPV adalah pilihan terbaik. Namun jika Anda sering melintasi medan berat, bepergian jauh, atau menginginkan tampilan yang lebih tangguh, SUV bisa menjadi pilihan yang tepat. Pilihlah sesuai kebutuhan utama dan gaya hidup Anda.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 151
+    "jumlah_view": 141
   },
   {
     "id": 9,
-    "judul_artikel": "5 Hal Penting dalam Dunia Teknologi",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-09",
+    "judul_artikel": "Langkah-Langkah Klaim Asuransi Mobil yang Tepat",
+    "gambar": "/image/artikel/9.jpeg",
+    "tanggal_publikasi": "2025-06-09",
     "penulis": "Nadia Lestari",
-    "kategori": "Teknologi",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik teknologi yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Dengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.\n\nPenerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.",
+    "kategori": "Asuransi Mobil",
+    "tags": ["asuransi", "klaim", "perlindungan"],
+    "pendahuluan": "Mengalami kecelakaan atau kerusakan mobil bisa menjadi pengalaman yang menegangkan. Namun, dengan mengetahui prosedur klaim asuransi yang benar, Anda dapat menyelesaikan masalah dengan lebih cepat dan tenang. Artikel ini membahas langkah-langkah praktis untuk melakukan klaim asuransi mobil secara tepat.",
+    "isi": "Berikut langkah-langkah yang perlu Anda lakukan saat ingin mengklaim asuransi mobil:\n\n1. **Dokumentasikan Kerusakan**:\n   Setelah kejadian, segera ambil foto kondisi kendaraan dari berbagai sudut, termasuk bagian yang rusak dan lingkungan sekitar. Dokumentasi ini menjadi bukti penting saat pengajuan klaim.\n\n2. **Laporkan Kejadian ke Pihak Asuransi**:\n   Segera hubungi pihak asuransi maksimal 1x24 jam setelah kejadian. Beberapa perusahaan memiliki aplikasi atau hotline khusus untuk pelaporan klaim.\n\n3. **Lengkapi Dokumen yang Dibutuhkan**:\n   Biasanya dokumen yang diperlukan meliputi:\n   - Polis asuransi\n   - Fotokopi STNK dan SIM\n   - Formulir klaim (dapat diunduh atau diisi online)\n   - Bukti foto kerusakan\n   - Surat keterangan kepolisian (jika diperlukan, seperti dalam kasus kecelakaan berat)\n\n4. **Ikuti Prosedur Survei**:\n   Pihak asuransi akan mengirimkan surveyor untuk memeriksa kondisi mobil. Pastikan mobil tersedia untuk disurvei di bengkel atau rumah sesuai kesepakatan.\n\n5. **Tunggu Persetujuan dan Estimasi Biaya**:\n   Setelah survei, Anda akan mendapatkan informasi estimasi biaya perbaikan dan status persetujuan klaim.\n\n6. **Perbaikan di Bengkel Rekanan**:\n   Jika klaim disetujui, Anda bisa membawa mobil ke bengkel rekanan yang telah ditunjuk oleh pihak asuransi. Pastikan untuk meminta estimasi waktu penyelesaian.\n\n7. **Pembayaran Risiko Sendiri (Own Risk/OR)**:\n   Dalam sebagian besar kasus, Anda tetap perlu membayar biaya own risk (misalnya Rp300.000–Rp500.000 per klaim) sesuai ketentuan polis.\n\n8. **Ambil Mobil Setelah Selesai**:\n   Setelah mobil selesai diperbaiki, ambil mobil dan pastikan semua perbaikan sesuai dengan laporan kerusakan. Simpan seluruh dokumen perbaikan untuk arsip pribadi.\n\n**Tips Tambahan**:\n- Bacalah polis dengan seksama agar mengetahui batasan dan pengecualian klaim.\n- Gunakan aplikasi resmi asuransi (jika tersedia) untuk mempermudah pelaporan dan pelacakan status klaim.\n- Simpan kontak darurat asuransi di ponsel Anda.",
+    "kesimpulan": "Mengetahui langkah-langkah klaim asuransi mobil dengan benar dapat membantu Anda menangani insiden dengan lebih tenang dan efisien. Dengan persiapan dokumen yang lengkap dan pemahaman terhadap isi polis, proses klaim akan berjalan lebih lancar dan minim stres.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 154
+    "jumlah_view": 156
   },
   {
     "id": 10,
-    "judul_artikel": "Panduan Gaya Hidup Terbaru untuk Pemula",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-10",
-    "penulis": "Dian Kusuma",
-    "kategori": "Gaya Hidup",
-    "tags": [
-      "review",
-      "pengalaman",
-      "fitur"
-    ],
-    "pendahuluan": "Artikel ini membahas topik gaya hidup yang menarik dan berguna untuk pembaca.",
-    "isi": "Tidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
+    "judul_artikel": "Mobil Listrik: Masa Depan Otomotif yang Ramah Lingkungan",
+    "gambar": "/image/artikel/10.jpeg",
+    "tanggal_publikasi": "2025-06-10",
+    "penulis": "Hendra Wijaya",
+    "kategori": "Mobil Listrik",
+    "tags": ["mobil listrik", "ramah lingkungan", "masa depan"],
+    "pendahuluan": "Mobil listrik kini menjadi simbol masa depan otomotif yang lebih bersih dan efisien. Dengan dukungan berbagai negara dalam mengurangi emisi karbon, tren penggunaan mobil listrik terus meningkat secara global, termasuk di Indonesia.",
+    "isi": "Mobil listrik (electric vehicle/EV) adalah kendaraan yang sepenuhnya digerakkan oleh motor listrik dan menggunakan energi dari baterai. Dibandingkan dengan mobil konvensional berbahan bakar fosil, mobil listrik memiliki banyak keunggulan:\n\n1. **Nol Emisi Gas Buang**:\n   Mobil listrik tidak menghasilkan emisi CO2 saat digunakan, sehingga berkontribusi besar dalam mengurangi polusi udara dan perubahan iklim.\n\n2. **Biaya Operasional Lebih Murah**:\n   Pengisian daya mobil listrik lebih hemat dibandingkan membeli bensin atau solar. Selain itu, komponen mobil listrik lebih sedikit dan tidak memerlukan perawatan rutin seperti penggantian oli.\n\n3. **Pengalaman Berkendara yang Senyap dan Responsif**:\n   Motor listrik memberikan torsi instan, membuat akselerasi terasa halus dan cepat. Suara mesin yang minim juga meningkatkan kenyamanan berkendara.\n\n4. **Infrastruktur Pengisian Daya Terus Berkembang**:\n   Pemerintah dan swasta di berbagai negara, termasuk Indonesia, terus membangun stasiun pengisian kendaraan listrik umum (SPKLU) di kota besar, rest area, dan pusat perbelanjaan. Bahkan beberapa rumah tangga kini sudah memasang charger pribadi.\n\n5. **Dukungan Kebijakan dan Insentif**:\n   Di banyak negara, pemerintah memberikan insentif seperti pengurangan pajak, bebas ganjil genap, dan subsidi pembelian untuk mempercepat adopsi kendaraan listrik.\n\n6. **Tantangan yang Masih Dihadapi**:\n   - Harga beli mobil listrik masih relatif tinggi, meski terus menurun.\n   - Jarak tempuh (range) tergantung kapasitas baterai, meski kini sudah ada model yang menempuh hingga 500 km lebih.\n   - Waktu pengisian daya bisa mencapai beberapa jam, kecuali menggunakan fast charging.\n\n7. **Contoh Mobil Listrik Populer di Indonesia**:\n   - Hyundai Ioniq 5\n   - Wuling Air EV\n   - Nissan Leaf\n   - DFSK Gelora E\n\nDengan perkembangan teknologi baterai dan penurunan harga secara bertahap, mobil listrik semakin terjangkau dan relevan untuk penggunaan sehari-hari.",
+    "kesimpulan": "Investasi pada mobil listrik adalah langkah bijak tidak hanya bagi lingkungan, tetapi juga untuk efisiensi jangka panjang. Dengan dukungan teknologi dan infrastruktur yang terus meningkat, mobil listrik akan menjadi standar baru dalam dunia otomotif di masa depan.",
     "status": "publish",
     "komentar": [],
-    "jumlah_view": 107
-  },
-  {
-    "id": 11,
-    "judul_artikel": "Kupas Tuntas Tren Event 2025",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-11",
-    "penulis": "Sari Wulandari",
-    "kategori": "Event",
-    "tags": [
-      "tips",
-      "pemula",
-      "bermanfaat"
-    ],
-    "pendahuluan": "Artikel ini membahas topik event yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Dengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.\n\nPenerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 221
-  },
-  {
-    "id": 12,
-    "judul_artikel": "Kupas Tuntas Tren Review 2025",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-12",
-    "penulis": "Dewi Kartika",
-    "kategori": "Review",
-    "tags": [
-      "review",
-      "pengalaman",
-      "fitur"
-    ],
-    "pendahuluan": "Artikel ini membahas topik review yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 134
-  },
-  {
-    "id": 13,
-    "judul_artikel": "Kupas Tuntas Tren Tips 2025",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-13",
-    "penulis": "Taufik Hidayat",
-    "kategori": "Tips",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik tips yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 105
-  },
-  {
-    "id": 14,
-    "judul_artikel": "Manfaat Tersembunyi dari Review yang Harus Kamu Tahu",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-14",
-    "penulis": "Budi Santoso",
-    "kategori": "Review",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik review yang menarik dan berguna untuk pembaca.",
-    "isi": "Tidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Dengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.\n\nPenerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 133
-  },
-  {
-    "id": 15,
-    "judul_artikel": "Gaya Hidup dalam Perspektif Baru",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-15",
-    "penulis": "Rizky Anwar",
-    "kategori": "Gaya Hidup",
-    "tags": [
-      "event",
-      "konferensi",
-      "webinar"
-    ],
-    "pendahuluan": "Artikel ini membahas topik gaya hidup yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 159
-  },
-  {
-    "id": 16,
-    "judul_artikel": "Tips Jitu Sukses di Bidang Tips",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-16",
-    "penulis": "Rina Marlina",
-    "kategori": "Tips",
-    "tags": [
-      "inovasi",
-      "digital",
-      "teknologi"
-    ],
-    "pendahuluan": "Artikel ini membahas topik tips yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 216
-  },
-  {
-    "id": 17,
-    "judul_artikel": "Kenapa Review Menjadi Topik Hangat Saat Ini?",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-17",
-    "penulis": "Maya Puspita",
-    "kategori": "Review",
-    "tags": [
-      "tips",
-      "pemula",
-      "bermanfaat"
-    ],
-    "pendahuluan": "Artikel ini membahas topik review yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 157
-  },
-  {
-    "id": 18,
-    "judul_artikel": "5 Hal Penting dalam Dunia Gaya Hidup",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-18",
-    "penulis": "Sari Wulandari",
-    "kategori": "Gaya Hidup",
-    "tags": [
-      "promo",
-      "diskon",
-      "hemat"
-    ],
-    "pendahuluan": "Artikel ini membahas topik gaya hidup yang menarik dan berguna untuk pembaca.",
-    "isi": "Tidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 146
-  },
-  {
-    "id": 19,
-    "judul_artikel": "Kenapa Edukasi Menjadi Topik Hangat Saat Ini?",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-19",
-    "penulis": "Rina Marlina",
-    "kategori": "Edukasi",
-    "tags": [
-      "event",
-      "konferensi",
-      "webinar"
-    ],
-    "pendahuluan": "Artikel ini membahas topik edukasi yang menarik dan berguna untuk pembaca.",
-    "isi": "Artikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.\n\nSelain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 191
-  },
-  {
-    "id": 20,
-    "judul_artikel": "Kenapa Gaya Hidup Menjadi Topik Hangat Saat Ini?",
-    "gambar": "/image/artikel-card.jpg",
-    "tanggal_publikasi": "2025-05-20",
-    "penulis": "Andi Pratama",
-    "kategori": "Gaya Hidup",
-    "tags": [
-      "ramah lingkungan",
-      "sustainable",
-      "eco"
-    ],
-    "pendahuluan": "Artikel ini membahas topik gaya hidup yang menarik dan berguna untuk pembaca.",
-    "isi": "Selain itu, artikel ini juga membahas studi kasus dan pengalaman nyata yang bisa menjadi acuan dalam mengambil keputusan yang tepat. Informasi disajikan secara sistematis dan mudah dipahami, baik oleh pemula maupun yang sudah berpengalaman.\n\nArtikel ini mengupas tuntas mengenai aspek penting dalam topik ini, dimulai dari pengertian dasar hingga praktik terbaik yang bisa diterapkan di kehidupan nyata. Pembaca diajak memahami permasalahan umum dan solusi praktis yang relevan dengan kondisi saat ini.\n\nTidak hanya itu, pembaca juga akan memperoleh tips aplikatif yang bisa langsung diterapkan untuk mendapatkan hasil optimal dalam bidang yang dibahas. Artikel ini diharapkan mampu memberikan wawasan baru dan menambah pemahaman yang lebih dalam.",
-    "kesimpulan": "Penerapan pengetahuan dari artikel ini tidak hanya bermanfaat secara pribadi, tetapi juga dapat berdampak positif terhadap lingkungan sekitar. Terus belajar dan beradaptasi menjadi kunci utama dalam meraih keberhasilan.\n\nDengan memahami secara menyeluruh topik yang dibahas, pembaca dapat membuat keputusan yang lebih bijak dan tepat sasaran. Pengetahuan ini akan menjadi bekal berharga dalam menghadapi tantangan di masa depan.",
-    "status": "publish",
-    "komentar": [],
-    "jumlah_view": 233
+    "jumlah_view": 203
   }
 ]
