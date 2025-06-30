@@ -7,9 +7,10 @@ import {
   Gift,
   PhoneCall,
   Calendar,
+  HandCoins,
 } from "lucide-react";
 import cars from "../../data/data_mobil_bekas.json";
-import ScrollToSectionButton from "../../components/guest/buycars/ScrollToSectionButton";
+import ScrollToSectionButton from "../../components/common/ScrollToSectionButton";
 import SimulasiKredit from "../../components/guest/buycars/SimulasiKredit";
 import CarDetail from "../../components/guest/buycars/CarDetail";
 
@@ -91,9 +92,14 @@ export default function CarDetailPage() {
             <div className="space-y-2">
               <ScrollToSectionButton
                 className="flex w-full items-center justify-between rounded-lg border bg-blue-50 px-4 py-3 font-medium text-blue-800 transition hover:bg-blue-100"
-                label="Lihat Simulasi Kredit"
                 targetId="tes"
-              />
+              >
+                <span className="flex items-center gap-2">
+                  <HandCoins size={16} />
+                  Lihat Simulasi Kredit
+                </span>
+              </ScrollToSectionButton>
+
               <button className="flex w-full items-center justify-between rounded-lg border bg-yellow-100 px-4 py-3 font-medium text-yellow-900 transition hover:bg-yellow-200">
                 <span className="flex items-center gap-2">
                   <Gift size={16} /> Voucher Saya
