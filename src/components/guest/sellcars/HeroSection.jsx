@@ -1,6 +1,8 @@
 export default function HeroSection() {
   return (
-      <section className="relative min-h-screen py-12">
+    <section className="relative min-h-screen py-12">
+      <div className="flex flex-col-reverse md:flex-col">
+        {/* Gambar Background */}
         <div className="absolute inset-0 z-0">
           <img
             src="/image/sell_car_hero.png"
@@ -10,105 +12,99 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative left-20 z-20 container mx-auto mt-20 flex h-full flex-col items-center justify-end px-4 md:flex-row">
+        <div className="relative left-20 z-20 container mx-auto mt-10 flex flex-col-reverse md:flex-row items-center justify-end ">
           {/* Form */}
-          <div className="mt-8 rounded-lg bg-white p-6 shadow-lg md:mt-0 md:w-1/2">
-            <h2 className="mb-4 text-center text-xl font-semibold">
+          <div className="mt-8 w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg md:mt-0">
+            <h2 className="mb-6 text-center text-2xl font-semibold text-gray-800">
               Cek Harga Mobil Gratis!
             </h2>
-            <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Merek Mobil</span>
+            <form className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {/* Merek Mobil */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Merek Mobil
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Merek
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Merek</option>
                   <option>Toyota</option>
                   <option>Honda</option>
                   <option>Suzuki</option>
                 </select>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Model Mobil</span>
+              {/* Model Mobil */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Model Mobil
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Model
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Model</option>
                   <option>Avanza</option>
                   <option>Jazz</option>
                   <option>Ertiga</option>
                 </select>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Tahun Mobil</span>
+              {/* Tahun Mobil */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Tahun Mobil
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Tahun
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Tahun</option>
                   <option>2024</option>
                   <option>2023</option>
                   <option>2022</option>
                 </select>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Tipe Mobil</span>
+              {/* Tipe Mobil */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Tipe Mobil
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Tipe
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Tipe</option>
                   <option>MPV</option>
                   <option>SUV</option>
                   <option>Hatchback</option>
                 </select>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Jenis Mesin</span>
+              {/* Jenis Mesin */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Jenis Mesin
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Mesin
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Mesin</option>
                   <option>Bensin</option>
                   <option>Diesel</option>
                   <option>Hybrid</option>
                 </select>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Transmisi</span>
+              {/* Transmisi */}
+              <div className="flex flex-col">
+                <label className="mb-1 text-sm font-medium text-gray-700">
+                  Transmisi
                 </label>
-                <select className="select select-bordered">
-                  <option disabled selected>
-                    Pilih Transmisi
-                  </option>
+                <select className="w-full rounded-md border border-gray-300 p-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                  <option value="">Pilih Transmisi</option>
                   <option>Manual</option>
                   <option>Otomatis</option>
                 </select>
               </div>
 
-              {/* Checkbox Persetujuan */}
-              <div className="col-span-full">
-                <label className="flex cursor-pointer items-start gap-2">
+              {/* Persetujuan */}
+              <div className="md:col-span-2">
+                <label className="flex items-start gap-2 text-sm text-gray-700">
                   <input
                     type="checkbox"
-                    className="checkbox checkbox-sm mt-1"
+                    className="mt-1 h-4 w-4 rounded border-gray-300 text-yellow-500 focus:ring-yellow-400"
                     required
                   />
-                  <span className="text-sm">
+                  <span>
                     Dengan ini saya menyetujui{" "}
                     <a href="#" className="text-blue-500 underline">
                       syarat & ketentuan
@@ -119,10 +115,10 @@ export default function HeroSection() {
               </div>
 
               {/* Tombol Submit */}
-              <div className="col-span-full">
+              <div className="md:col-span-2">
                 <button
                   type="submit"
-                  className="btn btn-warning w-full font-semibold"
+                  className="w-full rounded-md bg-yellow-400 px-4 py-2 font-semibold text-white transition hover:bg-yellow-500"
                 >
                   Mulai Disini
                 </button>
@@ -130,6 +126,7 @@ export default function HeroSection() {
             </form>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
