@@ -74,7 +74,7 @@ export default function CaraKerja() {
 
   return (
     <div className="mx-auto p-10">
-     <h1 className="text-center mb-4 text-5xl font-bold tracking-tight text-yellow-600">
+     <h1 className="text-center mb-4 text-5xl font-bold tracking-tight text-yellow-500">
           Cara Jual <span className="text-gray-800">&</span> Beli
         </h1>
       {/* Tabs */}
@@ -91,7 +91,7 @@ export default function CaraKerja() {
           >
             {step.title}
             {currentStep === step.id && (
-              <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-yellow-600" />
+              <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-yellow-500" />
             )}
           </button>
         ))}

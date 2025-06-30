@@ -81,7 +81,7 @@ export default function Faq() {
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-12">
         <HelpCircle className="mx-auto mb-2 h-10 w-10 text-yellow-500" />
-        <h1 className="text-4xl font-bold text-yellow-600 mb-2">
+        <h1 className="text-4xl font-bold text-yellow-500 mb-2">
           Pertanyaan Umum (FAQ)
         </h1>
         <p className="text-gray-600 text-md">
