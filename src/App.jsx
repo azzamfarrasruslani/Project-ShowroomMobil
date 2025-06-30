@@ -22,6 +22,8 @@ const Lokasi = React.lazy(() => import("./pages/guest/Lokasi"));
 const LokasiDetail = React.lazy(() => import("./pages/guest/LokasiDetail"));
 const Ulasan = React.lazy(() => import("./pages/guest/Ulasan"));
 const KatalogMedia = React.lazy(() => import("./pages/guest/KatalogMedia"));
+const KebijakanPrivasi = React.lazy(() => import("./pages/guest/KebijakanPrivasi"));
+const KetentuanPenggunaan = React.lazy(() => import("./pages/guest/KetentuanPenggunaan"));
 
 // ===========
 // Admin Pages
@@ -96,6 +98,8 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/ulasan" element={<Ulasan />} />
             <Route path="/katalog-media" element={<KatalogMedia />} />
+            <Route path="/kebijakan-privasi" element={<KebijakanPrivasi />} />
+            <Route path="/ketentuan-penggunaan" element={<KetentuanPenggunaan />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
