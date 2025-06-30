@@ -1,136 +1,109 @@
 /* eslint-disable no-unused-vars */
-import { useRef, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { X, ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { ChevronDown, ChevronUp, X, User, Globe } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import LanguageSelector from "./LanguageSelector";
 
-export default function MobileNavbar({ isOpen, setIsOpen, openDropdown, toggleDropdown }) {
-  const { t } = useTranslation();
+export default function MobileNavbar({ setIsOpen, openDropdown, toggleDropdown }) {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const menuRef = useRef(null);
-  const overlayRef = useRef(null);
-
-  const [pendingPath, setPendingPath] = useState(null);
-
-  // Handle navigasi setelah menu ditutup
-  useEffect(() => {
-    if (!isOpen && pendingPath) {
-      const timeout = setTimeout(() => {
-        navigate(pendingPath);
-        setPendingPath(null);
-      }, 300); // Sesuai durasi exit animation
-      return () => clearTimeout(timeout);
-    }
-  }, [isOpen, pendingPath, navigate]);
+  const currentLang = i18n.language;
+  const languages = ["id", "en"];
+  const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
   const handleNavigation = (path) => {
-    setPendingPath(path);
-    setIsOpen(false); // tutup menu, baru navigasi setelah 300ms
+    setIsOpen(false);
+    navigate(path);
   };
 
   return (
     <motion.div
-      ref={overlayRef}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ x: "-100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "-100%" }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-60 bg-black/50"
+      className="fixed left-0 top-0 z-50 h-full w-72 bg-white p-6 md:hidden overflow-y-auto shadow-lg"
     >
-      <motion.div
-        ref={menuRef}
-        initial={{ x: "-100%" }}
-        animate={{ x: "0%" }}
-        exit={{ x: "-100%" }}
-        transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 z-50 h-full w-64 bg-gray-100 p-6 shadow-xl md:hidden"
-      >
-        <button className="absolute top-4 right-4" onClick={() => setIsOpen(false)}>
-          <X size={28} />
+      {/* Tombol Tutup */}
+      <button className="absolute top-4 right-4" onClick={() => setIsOpen(false)}>
+        <X size={28} />
+      </button>
+
+      {/* Language & Login */}
+      <div className="flex flex-col items-start gap-4 mb-8 px-4">
+        <div className="flex items-center gap-2">
+          <Globe size={18} className="text-gray-700" />
+          <LanguageSelector
+            changeLanguage={changeLanguage}
+            currentLang={currentLang}
+            languages={languages}
+          />
+        </div>
+        <button
+          onClick={() => handleNavigation("/login")}
+          className="flex items-center gap-2 text-sm text-gray-800 hover:underline"
+        >
+          <User size={18} />
+          {t("navbar.masuk")} / {t("navbar.daftar")}
         </button>
-        <ul className="mt-10 space-y-4 text-lg font-medium">
-          {/* Menu Utama */}
-          <li>
-            <button onClick={() => handleNavigation("/buy-cars")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-              {t("navbar.beli-mobil")}
-            </button>
-          </li>
-          <li>
-            <button onClick={() => handleNavigation("/sell-cars")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-              {t("navbar.jual-mobil")}
-            </button>
-          </li>
-          <li>
-            <button onClick={() => handleNavigation("/faq")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-              {t("FAQ")}
-            </button>
-          </li>
+      </div>
 
-          {/* Dropdown: Tentang Mobilin */}
-          <li>
-            <button
-              onClick={() => toggleDropdown("tentang")}
-              className="flex w-full items-center justify-between px-4 py-2 text-left hover:bg-gray-200"
-            >
-              {t("navbar.tentang-mobilin")}
-              {openDropdown === "tentang" ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </button>
-            {openDropdown === "tentang" && (
-              <motion.div
-                key="tentang"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="ml-4 overflow-hidden"
-              >
-                <button onClick={() => handleNavigation("/tentang-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.tentang-kami")}
-                </button>
-                <button onClick={() => handleNavigation("/artikel")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.artikel")}
-                </button>
-                <button onClick={() => handleNavigation("/kontak-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.kontak-kami")}
-                </button>
-                <button onClick={() => handleNavigation("/lokasi-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.lokasi-kami")}
-                </button>
-              </motion.div>
-            )}
-          </li>
+      {/* Menu */}
+      <ul className="space-y-2 text-base font-medium">
+        <li><button onClick={() => handleNavigation("/buy-cars")} className="w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.beli-mobil")}</button></li>
+        <li><button onClick={() => handleNavigation("/sell-cars")} className="w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.jual-mobil")}</button></li>
+        <li><button onClick={() => handleNavigation("/faq")} className="w-full text-left px-4 py-2 hover:bg-gray-100">{t("FAQ")}</button></li>
 
-          {/* Dropdown: Lainnya */}
-          <li>
-            <button
-              onClick={() => toggleDropdown("lainnya")}
-              className="flex w-full items-center justify-between px-4 py-2 text-left hover:bg-gray-200"
+        {/* Dropdown: Tentang Mobilin */}
+        <li>
+          <button
+            onClick={() => toggleDropdown("tentang")}
+            className="flex w-full items-center justify-between px-4 py-2 text-left hover:bg-gray-100"
+          >
+            {t("navbar.tentang-mobilin")}
+            {openDropdown === "tentang" ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </button>
+          {openDropdown === "tentang" && (
+            <motion.div
+              key="tentang"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="ml-4 overflow-hidden"
             >
-              {t("navbar.lainnya")}
-              {openDropdown === "lainnya" ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </button>
-            {openDropdown === "lainnya" && (
-              <motion.div
-                key="lainnya"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="ml-4 overflow-hidden"
-              >
-                <button onClick={() => handleNavigation("/karir")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.karir")}
-                </button>
-                <button onClick={() => handleNavigation("/simulasi-kredit")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.simulasi-kredit")}
-                </button>
-                <button onClick={() => handleNavigation("/katalog-media")} className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-                  {t("navbar.katalog-media")}
-                </button>
-              </motion.div>
-            )}
-          </li>
-        </ul>
-      </motion.div>
+              <button onClick={() => handleNavigation("/tentang-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.tentang-kami")}</button>
+              <button onClick={() => handleNavigation("/artikel")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.artikel")}</button>
+              <button onClick={() => handleNavigation("/kontak-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.kontak-kami")}</button>
+              <button onClick={() => handleNavigation("/lokasi-kami")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.lokasi-kami")}</button>
+            </motion.div>
+          )}
+        </li>
+
+        {/* Dropdown: Lainnya */}
+        <li>
+          <button
+            onClick={() => toggleDropdown("lainnya")}
+            className="flex w-full items-center justify-between px-4 py-2 text-left hover:bg-gray-100"
+          >
+            {t("navbar.lainnya")}
+            {openDropdown === "lainnya" ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </button>
+          {openDropdown === "lainnya" && (
+            <motion.div
+              key="lainnya"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="ml-4 overflow-hidden"
+            >
+              <button onClick={() => handleNavigation("/karir")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.karir")}</button>
+              <button onClick={() => handleNavigation("/simulasi-kredit")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.simulasi-kredit")}</button>
+              <button onClick={() => handleNavigation("/katalog-media")} className="block w-full text-left px-4 py-2 hover:bg-gray-100">{t("navbar.katalog-media")}</button>
+            </motion.div>
+          )}
+        </li>
+      </ul>
     </motion.div>
   );
 }
