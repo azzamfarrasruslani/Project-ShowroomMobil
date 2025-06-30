@@ -26,6 +26,7 @@ export default function ListMenu() {
   const [selectedList2] = useState(t("navbar.lainnya"));
   const menuList2 = [
     { label: t("navbar.karir"), path: "/karir" },
+    { label: t("navbar.halaman-paket"), path: "/pricing-page" },
     { label: t("navbar.simulasi-kredit"), path: "/simulasi-kredit" },
     { label: t("navbar.katalog-media"), path: "/katalog-media" }
   ];
