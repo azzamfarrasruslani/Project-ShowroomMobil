@@ -51,7 +51,7 @@ export default function AboutUs() {
         <motion.img
           src="/image/about-us.png"
           alt="Mobil bekas berkualitas"
-          className="w-full rounded-xl shadow-xl"
+          className="w-full h-96 object-cover rounded-xl shadow-xl"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
