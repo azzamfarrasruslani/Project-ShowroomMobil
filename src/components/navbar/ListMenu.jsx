@@ -33,13 +33,13 @@ export default function ListMenu() {
 
   return (
     <>
-      <Link to="/">
+      {/* <Link to="/">
         <img
           src="/image/Mobilin_Logo_1.png"
           alt="logo mobilin"
           className="w-30"
         />
-      </Link>
+      </Link> */}
       <ul className="hidden space-x-6 text-lg font-medium capitalize md:flex">
         <li>
           <NavLink to="/buy-cars" className={menuClass}>
