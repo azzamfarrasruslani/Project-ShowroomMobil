@@ -1,93 +1,220 @@
 import { useParams } from "react-router-dom";
 import cars from "../../data/data_mobil_bekas.json";
 import { useState } from "react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Info,
+  User,
+  Factory,
+  Palette,
+  BadgeDollarSign,
+  Settings2,
+  Gauge,
+  Users,
+} from "lucide-react";
 
 export default function TestDrive() {
   const { id } = useParams();
   const car = cars.find((c) => c.id === parseInt(id));
+
+  const [nama, setNama] = useState("");
+  const [nohp, setNohp] = useState("");
   const [tanggal, setTanggal] = useState("");
   const [waktu, setWaktu] = useState("");
 
   if (!car) {
-    return <div className="text-center py-10 text-red-500 font-bold">Mobil tidak ditemukan.</div>;
+    return (
+      <div className="py-10 text-center font-bold text-red-500">
+        Mobil tidak ditemukan.
+      </div>
+    );
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Tanggal:", tanggal, "Waktu:", waktu, "Mobil:", car);
+    console.log("Nama:", nama);
+    console.log("No. HP:", nohp);
+    console.log("Tanggal:", tanggal);
+    console.log("Waktu:", waktu);
+    console.log("Mobil:", car);
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 bg-gray-50 p-6 rounded-lg shadow">
-      {/* Form Test Drive */}
-      <div className="w-full md:w-2/3 bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-xl font-semibold mb-4">Jadwal Test Drive</h2>
-
-        <div className="bg-yellow-100 text-yellow-800 p-3 rounded mb-4 text-sm">
-          💡 Jadwalkan test drive gratis sekarang dan cek 18 mobil serupa yang ada di Showroom.
+    <>
+      {/* Modal Informasi */}
+      <dialog id="slot_modal" className="modal">
+        <div className="modal-box">
+          <h3 className="mb-2 flex items-center gap-2 text-lg font-bold">
+            <Info className="h-5 w-5 text-blue-500" />
+            Kenapa beberapa slot tidak tersedia?
+          </h3>
+          <p className="text-sm text-gray-700">
+            Beberapa slot mungkin telah dipesan pengguna lain, berada di luar
+            jam operasional showroom, atau belum tersedia karena alasan teknis.
+            Silakan pilih tanggal dan waktu lainnya.
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn btn-sm">Tutup</button>
+            </form>
+          </div>
         </div>
+      </dialog>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Pilih Tanggal */}
-          <div>
-            <label className="block font-medium mb-1">Pilih Tanggal</label>
-            <input
-              type="date"
-              value={tanggal}
-              onChange={(e) => setTanggal(e.target.value)}
-              className="w-full border px-3 py-2 rounded"
+      {/* Section */}
+      <div className="min-h-screen bg-gradient-to-br from-white via-yellow-50 to-blue-50 px-4 py-12 sm:px-6 lg:px-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-3">
+          {/* Kartu Form Test Drive */}
+          <div className="col-span-2 rounded-2xl bg-white p-8 shadow-lg">
+            <h2 className="mb-4 text-3xl font-bold text-gray-800">
+              Jadwalkan <span className="text-yellow-500">Test Drive</span>
+            </h2>
+            <div className="mb-4 flex items-center gap-2 rounded bg-yellow-100 p-3 text-sm text-yellow-800">
+              <User className="h-4 w-4" />
+              <span>Test drive gratis tersedia di showroom kami.</span>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Input Nama */}
+              <div>
+                <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
+                  <User className="h-4 w-4" /> Nama Lengkap
+                </label>
+                <input
+                  type="text"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
+                  required
+                  placeholder="Masukkan nama Anda"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Input No HP */}
+              <div>
+                <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
+                  <PhoneIcon className="h-4 w-4" /> Nomor HP
+                </label>
+                <input
+                  type="tel"
+                  value={nohp}
+                  onChange={(e) => setNohp(e.target.value)}
+                  required
+                  placeholder="08xxxxxxxxxx"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Input Tanggal */}
+              <div>
+                <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
+                  <Calendar className="h-4 w-4" /> Pilih Tanggal
+                </label>
+                <input
+                  type="date"
+                  value={tanggal}
+                  onChange={(e) => setTanggal(e.target.value)}
+                  required
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Input Waktu */}
+              <div>
+                <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
+                  <Clock className="h-4 w-4" /> Pilih Waktu
+                </label>
+                <input
+                  type="time"
+                  value={waktu}
+                  onChange={(e) => setWaktu(e.target.value)}
+                  required
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Link ke modal */}
+              <div
+                onClick={() =>
+                  document.getElementById("slot_modal").showModal()
+                }
+                className="flex cursor-pointer items-center gap-1 text-sm text-blue-600 hover:underline"
+              >
+                <Info className="h-4 w-4" />
+                Kenapa beberapa slot tidak tersedia?
+              </div>
+
+              <button
+                type="submit"
+                className="mt-4 w-full rounded-xl bg-yellow-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-yellow-600"
+              >
+                Konfirmasi Jadwal
+              </button>
+            </form>
+          </div>
+
+          {/* Kartu Info Mobil */}
+          <div className="rounded-2xl bg-white p-6 shadow-lg">
+            <img
+              src={car.gambar}
+              alt={car.nama}
+              className="mb-4  w-full rounded-lg object-cover shadow"
             />
-          </div>
+            <h3 className="mb-1 text-xl font-bold text-gray-800">{car.nama}</h3>
+            <p className="mb-2 text-sm text-gray-500">Info Singkat Mobil</p>
 
-          {/* Pilih Waktu */}
-          <div>
-            <label className="block font-medium mb-1">Pilih Waktu</label>
-            <input
-              type="time"
-              value={waktu}
-              onChange={(e) => setWaktu(e.target.value)}
-              className="w-full border px-3 py-2 rounded"
-            />
+            <div className="grid grid-cols-1 gap-3 rounded-lg bg-gray-100 p-4 text-sm text-gray-700 md:grid-cols-2">
+              <div className="flex items-center gap-2">
+                <Factory className="h-4 w-4" /> <span>{car.merek}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />{" "}
+                <span>Tahun {car.tahun_beli}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Palette className="h-4 w-4" /> <span>Warna {car.warna}</span>
+              </div>
+              {car.lokasi && (
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4" /> <span>{car.lokasi}</span>
+                </div>
+              )}
+              {car.harga && (
+                <div className="flex items-center gap-2">
+                  <BadgeDollarSign className="h-4 w-4" />{" "}
+                  <span>Rp {car.harga.toLocaleString()}</span>
+                </div>
+              )}
+              {car.transmisi && (
+                <div className="flex items-center gap-2">
+                  <Settings2 className="h-4 w-4" /> <span>{car.transmisi}</span>
+                </div>
+              )}
+              {car.cc && (
+                <div className="flex items-center gap-2">
+                  <Gauge className="h-4 w-4" /> <span>{car.cc} cc</span>
+                </div>
+              )}
+              {car.kursi && (
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4" /> <span>{car.kursi} kursi</span>
+                </div>
+              )}
+              {car.kilometer && (
+                <div className="flex items-center gap-2">
+                  <Gauge className="h-4 w-4" /> <span>{car.kilometer} km</span>
+                </div>
+              )}
+    
+            </div>
           </div>
-
-          <div className="text-blue-600 text-sm">
-            ℹ️ Kenapa beberapa slot tidak tersedia?
-          </div>
-
-          <button
-            type="submit"
-            className="bg-yellow-500 text-white px-4 py-2 rounded w-full mt-4 hover:bg-yellow-600 transition"
-          >
-            Konfirmasi
-          </button>
-        </form>
+        </div>
       </div>
-
-      {/* Detail Mobil */}
-      <div className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-sm">
-        <div className="mb-4">
-          <img
-            src={car.gambar}
-            alt={car.nama}
-            className="w-full h-auto rounded-md object-cover"
-          />
-        </div>
-        <div className="font-semibold text-lg">{car.nama}</div>
-        <div className="text-sm text-gray-600">
-          {car.jarak_tempuh} km | {car.transmisi}
-        </div>
-
-        <div className="mt-4">
-          <div className="font-medium">📍 Penjual</div>
-          <div className="text-sm text-gray-700 mt-1">
-            {car.penjual.nama}
-            <br />
-            Kontak: {car.penjual.kontak}
-            <br />
-            Rating: {car.penjual.rating} ⭐
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
+
+// Tambahkan import ikon telepon di atas:
+import { Phone as PhoneIcon } from "lucide-react";
