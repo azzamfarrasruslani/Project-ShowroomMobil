@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
-import cars from "../../data/data_mobil_bekas.json";
 import { useState } from "react";
+import cars from "../../data/data_mobil_bekas.json";
+import { testDriveAPI } from "../../services/testDriveAPI";
+import AlertBox from "../../components/common/AlertBox";
 import {
   Calendar,
   Clock,
@@ -13,6 +15,7 @@ import {
   Settings2,
   Gauge,
   Users,
+  Phone as PhoneIcon,
 } from "lucide-react";
 
 export default function TestDrive() {
@@ -24,6 +27,10 @@ export default function TestDrive() {
   const [tanggal, setTanggal] = useState("");
   const [waktu, setWaktu] = useState("");
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
   if (!car) {
     return (
       <div className="py-10 text-center font-bold text-red-500">
@@ -32,13 +39,35 @@ export default function TestDrive() {
     );
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Nama:", nama);
-    console.log("No. HP:", nohp);
-    console.log("Tanggal:", tanggal);
-    console.log("Waktu:", waktu);
-    console.log("Mobil:", car);
+    setLoading(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      const data = {
+        car_id: car.id,
+        nama,
+        nohp,
+        tanggal,
+        waktu,
+      };
+
+      await testDriveAPI.create(data);
+
+      setSuccess("Jadwal test drive berhasil dikirim!");
+      setNama("");
+      setNohp("");
+      setTanggal("");
+      setWaktu("");
+
+      setTimeout(() => setSuccess(""), 3000);
+    } catch (err) {
+      setError(`Terjadi kesalahan: ${err.message}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -76,8 +105,10 @@ export default function TestDrive() {
               <span>Test drive gratis tersedia di showroom kami.</span>
             </div>
 
+            {error && <AlertBox type="error">{error}</AlertBox>}
+            {success && <AlertBox type="success">{success}</AlertBox>}
+
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Input Nama */}
               <div>
                 <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
                   <User className="h-4 w-4" /> Nama Lengkap
@@ -92,7 +123,6 @@ export default function TestDrive() {
                 />
               </div>
 
-              {/* Input No HP */}
               <div>
                 <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
                   <PhoneIcon className="h-4 w-4" /> Nomor HP
@@ -107,7 +137,6 @@ export default function TestDrive() {
                 />
               </div>
 
-              {/* Input Tanggal */}
               <div>
                 <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
                   <Calendar className="h-4 w-4" /> Pilih Tanggal
@@ -121,7 +150,6 @@ export default function TestDrive() {
                 />
               </div>
 
-              {/* Input Waktu */}
               <div>
                 <label className="mb-1 flex items-center gap-2 font-medium text-gray-700">
                   <Clock className="h-4 w-4" /> Pilih Waktu
@@ -135,11 +163,8 @@ export default function TestDrive() {
                 />
               </div>
 
-              {/* Link ke modal */}
               <div
-                onClick={() =>
-                  document.getElementById("slot_modal").showModal()
-                }
+                onClick={() => document.getElementById("slot_modal").showModal()}
                 className="flex cursor-pointer items-center gap-1 text-sm text-blue-600 hover:underline"
               >
                 <Info className="h-4 w-4" />
@@ -150,7 +175,7 @@ export default function TestDrive() {
                 type="submit"
                 className="mt-4 w-full rounded-xl bg-yellow-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-yellow-600"
               >
-                Konfirmasi Jadwal
+                {loading ? "Mengirim..." : "Konfirmasi Jadwal"}
               </button>
             </form>
           </div>
@@ -160,7 +185,7 @@ export default function TestDrive() {
             <img
               src={car.gambar}
               alt={car.nama}
-              className="mb-4  w-full rounded-lg object-cover shadow"
+              className="mb-4 w-full rounded-lg object-cover shadow"
             />
             <h3 className="mb-1 text-xl font-bold text-gray-800">{car.nama}</h3>
             <p className="mb-2 text-sm text-gray-500">Info Singkat Mobil</p>
@@ -170,8 +195,7 @@ export default function TestDrive() {
                 <Factory className="h-4 w-4" /> <span>{car.merek}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />{" "}
-                <span>Tahun {car.tahun_beli}</span>
+                <Calendar className="h-4 w-4" /> <span>Tahun {car.tahun_beli}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Palette className="h-4 w-4" /> <span>Warna {car.warna}</span>
@@ -183,8 +207,7 @@ export default function TestDrive() {
               )}
               {car.harga && (
                 <div className="flex items-center gap-2">
-                  <BadgeDollarSign className="h-4 w-4" />{" "}
-                  <span>Rp {car.harga.toLocaleString()}</span>
+                  <BadgeDollarSign className="h-4 w-4" /> <span>Rp {car.harga.toLocaleString()}</span>
                 </div>
               )}
               {car.transmisi && (
@@ -207,7 +230,6 @@ export default function TestDrive() {
                   <Gauge className="h-4 w-4" /> <span>{car.kilometer} km</span>
                 </div>
               )}
-    
             </div>
           </div>
         </div>
@@ -215,6 +237,3 @@ export default function TestDrive() {
     </>
   );
 }
-
-// Tambahkan import ikon telepon di atas:
-import { Phone as PhoneIcon } from "lucide-react";
