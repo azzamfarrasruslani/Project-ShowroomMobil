@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { lowonganAPI } from "../../services/lowonganAPI";
-import { ArrowLeft } from "lucide-react";
+import {
+  ArrowLeft,
+  MapPin,
+  Briefcase,
+  Wallet,
+  Calendar,
+  FileText,
+  BadgeCheck,
+  Phone,
+  Mail,
+} from "lucide-react";
+import Error from "../../components/guest/Error";
 
 export default function KarirDetail() {
   const { id_lowongan } = useParams();
-
   const navigate = useNavigate();
 
   const [data, setData] = useState(null);
@@ -19,22 +29,17 @@ export default function KarirDetail() {
       .then((res) => {
         if (!res) {
           setError("Lowongan tidak ditemukan");
-          setData(null);
         } else {
           setData(res);
-          setError(null);
         }
       })
-      .catch(() => {
-        setError("Gagal mengambil data lowongan");
-        setData(null);
-      })
+      .catch(() => setError("Gagal mengambil data lowongan"))
       .finally(() => setLoading(false));
   }, [id_lowongan]);
 
   if (loading) {
     return (
-      <div className="max-w-3xl mx-auto px-6 py-10 text-center">
+      <div className="min-h-screen flex items-center justify-center text-gray-600">
         <p>Loading data lowongan...</p>
       </div>
     );
@@ -42,65 +47,120 @@ export default function KarirDetail() {
 
   if (error) {
     return (
-      <div className="max-w-3xl mx-auto px-6 py-10 text-center">
-        <h1 className="text-2xl font-bold text-red-600">{error}</h1>
-        <p className="text-gray-600 cursor-pointer hover:underline" onClick={() => navigate("/karir")}>
+      <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <Error message={error} />
+        <button
+          onClick={() => navigate("/karir")}
+          className="mt-4 text-blue-600 hover:underline"
+        >
           Kembali ke halaman karir
-        </p>
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10">
-      <div
-        className="mb-8 flex items-center gap-2 text-blue-700 cursor-pointer hover:underline"
-        onClick={() => navigate(-1)}
-      >
-        <ArrowLeft size={20} />
-        <span>Kembali</span>
-      </div>
-      <h1 className="text-3xl font-bold mb-2">{data.posisi}</h1>
-      <p className="text-gray-700 text-lg mb-4">{data.perusahaan}</p>
+    <div className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Tombol kembali */}
+        <div
+          className="mb-6 inline-flex items-center gap-2 text-blue-700 cursor-pointer hover:underline"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft size={20} />
+          <span>Kembali</span>
+        </div>
 
-      <div className="space-y-2 text-gray-600">
-        <p>
-          <strong>Lokasi:</strong> {data.lokasi.kota} - {data.lokasi.alamat}
-        </p>
-        <p>
-          <strong>Tipe Pekerjaan:</strong> {data.tipe_pekerjaan}
-        </p>
-        <p>
-          <strong>Gaji:</strong>{" "}
-          {data.gaji.mata_uang} {data.gaji.minimal.toLocaleString()} -{" "}
-          {data.gaji.maksimal.toLocaleString()} ({data.gaji.tipe})
-        </p>
-        <p>
-          <strong>Tanggal Posting:</strong> {data.tanggal_posting}
-        </p>
-        <p>
-          <strong>Batas Lamaran:</strong> {data.batas_lamaran}
-        </p>
-      </div>
+        {/* Card Detail */}
+        <div className="rounded-xl bg-white p-8 shadow-md">
+          <div className="mb-6">
+            <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-yellow-300 bg-yellow-100 px-4 py-1 text-sm font-semibold text-yellow-800">
+              <Briefcase size={18} className="text-yellow-700" />
+              Detail Lowongan
+            </div>
+            <h1 className="mt-2 text-3xl font-extrabold text-gray-800">
+              {data.posisi}
+            </h1>
+            <p className="text-gray-600">{data.perusahaan}</p>
+          </div>
 
-      <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-2">Deskripsi Pekerjaan</h2>
-        <p className="text-gray-700">{data.deskripsi}</p>
-      </div>
+          {/* Info Umum */}
+          <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="text-gray-700 space-y-2">
+              <p className="flex items-center gap-2">
+                <MapPin size={18} className="text-gray-500" />
+                <span>
+                  {data.lokasi.kota} - {data.lokasi.alamat}
+                </span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Briefcase size={18} className="text-gray-500" />
+                {data.tipe_pekerjaan}
+              </p>
+              <p className="flex items-center gap-2">
+                <Wallet size={18} className="text-gray-500" />
+                {data.gaji.mata_uang} {data.gaji.minimal.toLocaleString()} -{" "}
+                {data.gaji.maksimal.toLocaleString()} ({data.gaji.tipe})
+              </p>
+            </div>
+            <div className="text-gray-700 space-y-2">
+              <p className="flex items-center gap-2">
+                <Calendar size={18} className="text-gray-500" />
+                Tanggal Posting: {data.tanggal_posting}
+              </p>
+              <p className="flex items-center gap-2">
+                <Calendar size={18} className="text-red-500" />
+                Batas Lamaran: {data.batas_lamaran}
+              </p>
+            </div>
+          </div>
 
-      <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-2">Kualifikasi</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          {data.kualifikasi.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </div>
+          {/* Deskripsi */}
+          <div className="mt-6">
+            <h2 className="flex items-center gap-2 text-xl font-semibold mb-2 text-gray-800">
+              <FileText size={20} className="text-gray-600" />
+              Deskripsi Pekerjaan
+            </h2>
+            <p className="text-gray-700">{data.deskripsi}</p>
+          </div>
 
-      <div className="mt-6">
-        <h2 className="text-xl font-semibold mb-2">Kontak</h2>
-        <p className="text-gray-700">Email: {data.kontak.email}</p>
-        <p className="text-gray-700">Telepon: {data.kontak.telepon}</p>
+          {/* Kualifikasi */}
+          <div className="mt-6">
+            <h2 className="flex items-center gap-2 text-xl font-semibold mb-2 text-gray-800">
+              <BadgeCheck size={20} className="text-yellow-500" />
+              Kualifikasi
+            </h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              {data.kualifikasi.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Kontak */}
+          <div className="mt-6">
+            <h2 className="flex items-center gap-2 text-xl font-semibold mb-2 text-gray-800">
+              <Phone size={20} className="text-green-600" />
+              Kontak
+            </h2>
+            <p className="text-gray-700 flex items-center gap-2">
+              <Mail size={16} className="text-gray-500" />
+              Email: {data.kontak.email}
+            </p>
+            <p className="text-gray-700 flex items-center gap-2">
+              <Phone size={16} className="text-gray-500" />
+              Telepon: {data.kontak.telepon}
+            </p>
+          </div>
+
+          {/* Tombol Lamar */}
+          <div className="mt-10">
+            <button className="w-full flex items-center justify-center gap-2 rounded-lg bg-gray-800 px-6 py-3 text-white font-semibold transition hover:bg-yellow-500">
+              <Briefcase size={18} />
+              Lamar Sekarang
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
