@@ -15,7 +15,6 @@ export default function BuyCars() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showFilter, setShowFilter] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-  const [viewMode, setViewMode] = useState("grid");
   const [filters, setFilters] = useState({ merek: [], transmisi: [] });
 
   const carsPerPage = 9;
@@ -114,17 +113,6 @@ export default function BuyCars() {
               <Icon name="filter" />
               <span>Filter Pencarian</span>
             </motion.button>
-
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              className="hidden items-center gap-2 rounded-md px-4 py-2 text-white ring-2 ring-white focus:ring-yellow-500 md:flex"
-              onClick={() => setViewMode(viewMode === "grid" ? "list" : "grid")}
-            >
-              <Icon
-                name={viewMode === "grid" ? "list" : "card"}
-                className="text-xl"
-              />
-            </motion.button>
           </div>
         </div>
       </div>
@@ -144,33 +132,17 @@ export default function BuyCars() {
           />
         )}
 
-        {currentCars.length > 0 ? (
-          <div
-            className={
-              viewMode === "grid"
-                ? "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
-                : "flex flex-col gap-2"
-            }
-          >
-            {currentCars.map((car) => (
-              <Link
-                to={`/buy-cars/${car.id}`}
-                key={car.id}
-                className="no-underline"
-              >
-                <CardItem key={car.id} car={car} variant={viewMode} />
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="-mt-20 flex justify-center">
-            <img
-              src="/image/error/notfound-01.png"
-              alt="notfound"
-              className="w-120"
-            />
-          </div>
-        )}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {currentCars.map((car) => (
+            <Link
+              key={car.id}
+              to={`/buy-cars/${car.id}`}
+              className="no-underline"
+            >
+              <CardItem car={car} />
+            </Link>
+          ))}
+        </div>
 
         <p className="md:text-md px-3 text-sm text-gray-600 md:px-0">
           Menampilkan {currentCars.length} dari {filteredCars.length} mobil
