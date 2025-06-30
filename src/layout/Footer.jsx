@@ -133,6 +133,16 @@ const Footer = () => {
       {/* Copyright */}
       <div className="mt-10 border-t-2 border-gray-500/80 px-4 pt-6 text-center text-xs text-gray-400 md:text-sm">
         © 2025 Showroom Mobilin. All Rights Reserved.
+        <span className="px-3">
+          |
+          <Link to="/kebijakan-privasi" className="px-1 hover:underline">
+            Kebijakan Privasi
+          </Link>
+          |
+          <Link to="/ketentuan-penggunaan" className="px-1 hover:underline">
+            Ketentuan Penggunaan
+          </Link>
+        </span>
       </div>
     </footer>
   );
