@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen py-12">
@@ -12,7 +13,7 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative left-20 z-20 container mx-auto mt-10 flex flex-col-reverse md:flex-row items-center justify-end ">
+        <div className="relative left-20 z-20 container mx-auto mt-10 flex flex-col-reverse items-center justify-end md:flex-row">
           {/* Form */}
           <div className="mt-8 w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg md:mt-0">
             <h2 className="mb-6 text-center text-2xl font-semibold text-gray-800">
@@ -106,10 +107,12 @@ export default function HeroSection() {
                   />
                   <span>
                     Dengan ini saya menyetujui{" "}
-                    <a href="#" className="text-blue-500 underline">
+                    <Link to="/ketentuan-penggunaan" className="text-blue-500 underline">
                       syarat & ketentuan
-                    </a>{" "}
-                    serta kebijakan privasi yang berlaku.
+                    </Link>{" "}
+                    serta   <Link to="/kebijakan-privasi" className="text-blue-500 underline">
+                    kebijakan privasi
+                    </Link>{" "} yang berlaku.
                   </span>
                 </label>
               </div>
