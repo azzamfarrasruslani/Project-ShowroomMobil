@@ -8,12 +8,10 @@ import CarInfoCard from "../../components/guest/testDrive/CarInfoCard";
 export default function TestDrive() {
   const { id } = useParams();
   const car = cars.find((c) => c.id === parseInt(id));
-
   const [nama, setNama] = useState("");
   const [nohp, setNohp] = useState("");
   const [tanggal, setTanggal] = useState("");
   const [waktu, setWaktu] = useState("");
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
