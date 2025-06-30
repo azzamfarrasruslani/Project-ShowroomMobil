@@ -14,6 +14,7 @@ import { lokasiAPI } from "../../services/lokasiAPI";
 import Loading from "../../components/guest/Loading";
 import Error from "../../components/guest/Error";
 import EmptyState from "../../components/guest/EmptyState";
+import ScrollToSectionButton from "../../components/common/ScrollToSectionButton";
 
 export default function Lokasi() {
   const [lokasiData, setLokasiData] = useState([]);
@@ -62,18 +63,18 @@ export default function Lokasi() {
             Showroom & layanan Mobilin kini hadir di berbagai kota. Dapatkan
             pengalaman jual beli mobil yang cepat, aman, dan terpercaya!
           </p>
-          <Link
-            to="#daftar-lokasi"
+          <ScrollToSectionButton
             className="mt-6 inline-block rounded-lg bg-yellow-500 px-6 py-2 text-sm font-medium text-white shadow-md transition hover:bg-yellow-400"
+            targetId="lokasi-card"
           >
             Lihat Semua Lokasi
-          </Link>
+          </ScrollToSectionButton>
+    
         </div>
       </div>
 
       <div className="mx-auto mb-10 max-w-7xl rounded-2xl bg-white p-6 shadow-md">
         <div className="flex flex-col gap-8 md:flex-row md:items-center">
-        
           <div className="md:w-1/2">
             <img
               src="/image/lokasi2.png"
@@ -127,7 +128,7 @@ export default function Lokasi() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div id="lokasi-card" className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {lokasiData.map((lokasi, index) => (
           <div
             key={index}
