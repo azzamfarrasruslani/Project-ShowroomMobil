@@ -14,14 +14,14 @@ const Home = () => {
         <div className="relative ">
           <Carousel />
         </div>
-        <div className="mt-4 block px-4 ">
+        {/* <div className="mt-4 block px-4 ">
           <div className="mx-auto w-full max-w-6xl rounded-xl bg-white p-4 shadow-lg sm:p-6">
             <SearchCar />
           </div>
-        </div>
+        </div> */}
       </section>
 
-      <div className="">
+      <div className="mt-10">
         <CaraKerja
           selectedType={selectedType}
           setSelectedType={setSelectedType}
