@@ -69,8 +69,7 @@ export default function Faq() {
         ))}
       </div>
        <div className="text-center mt-10">
-          {/* <a href="#" className="text-blue-200 underline">Lihat lebih banyak ulasan</a> */}
-          <NavLink to="/faq" className="inline-block ml-4 text-blue-900 underline" >Lihat lebih banyak ulasan </NavLink>
+          <NavLink to="/faq" className="inline-block ml-4 text-blue-900 underline" >Lihat lebih banyak Faq </NavLink>
         </div>
     </div>
   );
