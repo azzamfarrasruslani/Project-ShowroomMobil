@@ -9,6 +9,9 @@ import {
   Users,
   PaintBucket,
   Info,
+  Car,
+  Settings,
+  MapPin,
 } from "lucide-react";
 
 export default function CarDetail({ car }) {
@@ -20,28 +23,31 @@ export default function CarDetail({ car }) {
       </div>
 
       <div className="grid grid-cols-1 gap-6 text-gray-800 sm:grid-cols-2 lg:grid-cols-3">
-        {/* Card Item */}
         {[
           {
-            icon: <Fuel size={20} />,
-            label: "Jenis Bahan Bakar",
-            value: "Bensin",
-          },
-          { icon: <PaintBucket size={20} />, label: "Warna", value: car.warna },
-          {
-            icon: <Users size={20} />,
-            label: "Jumlah Tempat Duduk",
-            value: "7 atau lebih",
+            icon: <Car size={20} />,
+            label: "Merek & Nama",
+            value: `${car.merek} ${car.nama}`,
           },
           {
             icon: <Calendar size={20} />,
-            label: "Tanggal Registrasi",
-            value: `Jun ${car.tahun_beli}`,
+            label: "Tahun Pembelian",
+            value: car.tahun_beli,
           },
           {
-            icon: <BadgeCheck size={20} />,
-            label: "Tipe Registrasi",
-            value: "Perorangan",
+            icon: <Settings size={20} />,
+            label: "Transmisi",
+            value: car.transmisi,
+          },
+          {
+            icon: <Fuel size={20} />,
+            label: "Jenis Bahan Bakar",
+            value: "Bensin", // asumsinya
+          },
+          {
+            icon: <PaintBucket size={20} />,
+            label: "Warna",
+            value: car.warna,
           },
           {
             icon: <GaugeCircle size={20} />,
@@ -49,9 +55,14 @@ export default function CarDetail({ car }) {
             value: `${car.jarak_tempuh.toLocaleString("id-ID")} km`,
           },
           {
-            icon: <KeyRound size={20} />,
-            label: "Kunci Cadangan",
-            value: "Ya",
+            icon: <BadgeCheck size={20} />,
+            label: "Tipe Mobil",
+            value: car.tipe,
+          },
+          {
+            icon: <Users size={20} />,
+            label: "Kapasitas",
+            value: "7 Penumpang", // asumsinya SUV
           },
           {
             icon: <BookOpen size={20} />,
@@ -59,11 +70,20 @@ export default function CarDetail({ car }) {
             value: car.kondisi?.servis_terakhir ? "Ya" : "Tidak",
           },
           {
+            icon: <KeyRound size={20} />,
+            label: "Kunci Cadangan",
+            value: "Ya", // asumsinya
+          },
+          {
             icon: <CarFront size={20} />,
             label: "Garansi Pabrik",
-            value: "Tidak",
+            value: "Tidak", // asumsinya mobil bekas
           },
-          // { icon: <Info size={20} />, label: "Masa Berlaku STNK", value: "-" },
+          {
+            icon: <MapPin size={20} />,
+            label: "Lokasi",
+            value: car.daerah,
+          },
         ].map((item, idx) => (
           <div
             key={idx}
