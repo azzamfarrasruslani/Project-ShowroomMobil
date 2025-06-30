@@ -2,10 +2,18 @@ import Mobil3DViewer from "../../components/guest/katalogMedia/Mobil3DViewer";
 
 export default function KatalogMedia() {
   const fotoData = [
-    { id: 1, src: "/images/mobil1.jpg", alt: "Toyota Avanza 2020" },
-    { id: 2, src: "/images/mobil2.jpg", alt: "Honda Jazz RS 2019" },
-    { id: 3, src: "/images/mobil3.jpg", alt: "Suzuki Ertiga 2021" },
-    { id: 4, src: "/images/mobil4.jpg", alt: "Daihatsu Xenia 2018" },
+    { id: 1, src: "/image/katalog-media/1.jpeg", alt: "Honda Jazz RS 2019" },
+    { id: 2, src: "/image/katalog-media/2.jpeg", alt: "Honda HR-V" },
+    { id: 3, src: "/image/katalog-media/3.jpeg", alt: "Toyota Innova Reborn" },
+    { id: 4, src: "/image/katalog-media/4.jpeg", alt: "Toyota Innova Reborn" },
+    { id: 5, src: "/image/katalog-media/5.jpeg", alt: "Daihatsu Xenia 2020" },
+    { id: 6, src: "/image/katalog-media/6.jpeg", alt: "Honda BR-V" },
+    { id: 7, src: "/image/katalog-media/7.jpeg", alt: "Toyota Fortuner" },
+    { id: 8, src: "/image/katalog-media/8.jpeg", alt: "Toyota Avanza" },
+    { id: 9, src: "/image/katalog-media/9.jpeg", alt: "Mitsubishi Pajero" },
+    { id: 10, src: "/image/katalog-media/10.jpeg", alt: "Honda BR-V 2021" },
+    { id: 11, src: "/image/katalog-media/11.jpeg", alt: "Toyota Raize" },
+    { id: 12, src: "/image/katalog-media/12.jpeg", alt: "Toyota Rush" },
   ];
 
   const videoData = [
@@ -42,18 +50,18 @@ export default function KatalogMedia() {
         <h2 className="mb-6 inline-block border-b-2 border-yellow-400 pb-1 text-2xl font-semibold text-gray-800">
           📷 Galeri Foto
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="columns-1 gap-4 space-y-4 sm:columns-2 md:columns-3 lg:columns-4">
           {fotoData.map((foto) => (
             <div
               key={foto.id}
-              className="group relative overflow-hidden rounded-xl bg-white shadow-md transition hover:shadow-xl"
+              className="break-inside-avoid overflow-hidden rounded-xl bg-white shadow-md transition hover:shadow-xl"
             >
               <img
                 src={foto.src}
                 alt={foto.alt}
-                className="h-48 w-full transform object-cover transition duration-300 group-hover:scale-105"
+                className="w-full object-cover transition duration-300 hover:scale-105"
               />
-              <div className="absolute bottom-0 w-full bg-black/50 p-2 text-center text-sm font-medium text-white">
+              <div className="bg-black/50 p-2 text-center text-sm font-medium text-white">
                 {foto.alt}
               </div>
             </div>
@@ -100,9 +108,10 @@ export default function KatalogMedia() {
           Putar dan jelajahi tampilan 3D mobil secara interaktif.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <Mobil3DViewer />
-        <Mobil3DViewer />
-        <Mobil3DViewer /></div>
+          <Mobil3DViewer />
+          <Mobil3DViewer />
+          <Mobil3DViewer />
+        </div>
       </section>
     </div>
   );
