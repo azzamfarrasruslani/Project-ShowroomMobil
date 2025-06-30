@@ -24,6 +24,7 @@ const Ulasan = React.lazy(() => import("./pages/guest/Ulasan"));
 const KatalogMedia = React.lazy(() => import("./pages/guest/KatalogMedia"));
 const KebijakanPrivasi = React.lazy(() => import("./pages/guest/KebijakanPrivasi"));
 const KetentuanPenggunaan = React.lazy(() => import("./pages/guest/KetentuanPenggunaan"));
+const PricingPage = React.lazy(() => import("./pages/guest/PricingPage"));
 
 // ===========
 // Admin Pages
@@ -100,6 +101,7 @@ export default function App() {
             <Route path="/katalog-media" element={<KatalogMedia />} />
             <Route path="/kebijakan-privasi" element={<KebijakanPrivasi />} />
             <Route path="/ketentuan-penggunaan" element={<KetentuanPenggunaan />} />
+            <Route path="/pricing-page" element={<PricingPage />} />
             <Route path="/error/:errorCode" element={<ErrorPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
