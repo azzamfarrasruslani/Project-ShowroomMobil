@@ -120,7 +120,7 @@ export default function Karir() {
                 to={`/karir/${job.id_lowongan}`}
                 className="mt-4 flex w-full justify-center rounded-lg bg-gray-800 px-4 py-2 text-sm text-white transition hover:bg-yellow-500"
               >
-                Lamar Sekarang
+                Lihat
               </Link>
             </div>
           ))
