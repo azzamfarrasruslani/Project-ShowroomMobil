@@ -8,7 +8,10 @@ import {
   PhoneCall,
   Calendar,
   HandCoins,
+  ShoppingCart,
+  CarFront,
 } from "lucide-react";
+
 import cars from "../../data/data_mobil_bekas.json";
 import ScrollToSectionButton from "../../components/common/ScrollToSectionButton";
 import SimulasiKredit from "../../components/guest/buycars/SimulasiKredit";
@@ -111,25 +114,36 @@ export default function CarDetailPage() {
             {/* Lokasi */}
             <div>
               <p className="flex items-center gap-1 text-sm font-semibold text-gray-700">
-                <MapPin size={14} /> Lokasi Mobil
+                <MapPin size={14} />{car.daerah}
               </p>
-              <p className="ml-5 text-sm text-gray-600">{car.daerah}</p>
+              <p className="ml-5 text-sm text-gray-600"></p>
             </div>
 
             {/* Tombol Aksi */}
             <div className="flex gap-3">
               <button className="w-1/2 rounded-lg bg-blue-600 px-4 py-2 text-center text-sm font-medium text-white shadow hover:bg-blue-700">
-                Pesan Mobil
-                <p className="text-xs font-normal text-blue-100">
-                  Bisa Dikembalikan
-                </p>
+                <div className="flex flex-col items-center">
+                  <span className="flex items-center justify-center gap-1">
+                    <ShoppingCart size={16} />
+                    Pesan Mobil
+                  </span>
+                  <p className="text-xs font-normal text-blue-100">
+                    Bisa Dikembalikan
+                  </p>
+                </div>
               </button>
+
               <Link
                 to={`/test-drive/${car.id}`}
                 className="w-1/2 rounded-lg bg-yellow-400 px-4 py-2 text-center text-sm font-medium text-yellow-900 shadow hover:bg-yellow-500"
               >
-                Tes Drive Gratis
-                <p className="text-xs font-normal">Di Experience Center</p>
+                <div className="flex flex-col items-center">
+                  <span className="flex items-center justify-center gap-1">
+                    <CarFront size={16} />
+                    Tes Drive Gratis
+                  </span>
+                  <p className="text-xs font-normal">Di Experience Center</p>
+                </div>
               </Link>
             </div>
           </div>
