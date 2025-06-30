@@ -10,25 +10,18 @@ const Home = () => {
   const [selectedType, setSelectedType] = useState(null);
   return (
     <>
-      <section className="relative">
-        <div className="relative h-[400px] overflow-hidden sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
+      <section className="relative ">
+        <div className="relative ">
           <Carousel />
         </div>
-
-        <div className="absolute inset-x-0 bottom-[-300px] z-10 hidden justify-center px-4 lg:flex xl:bottom-[-360px]">
-          <div className="w-full max-w-6xl sm:p-6">
-            <SearchCar />
-          </div>
-        </div>
-
-        <div className="mt-4 block px-4 lg:hidden">
+        <div className="mt-4 block px-4 ">
           <div className="mx-auto w-full max-w-6xl rounded-xl bg-white p-4 shadow-lg sm:p-6">
             <SearchCar />
           </div>
         </div>
       </section>
 
-      <div className="mt-[300px] sm:mt-[500px] md:mt-[550px] lg:mt-[580px] xl:mt-[300px]">
+      <div className="">
         <CaraKerja
           selectedType={selectedType}
           setSelectedType={setSelectedType}
