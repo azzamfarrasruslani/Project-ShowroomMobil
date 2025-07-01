@@ -13,7 +13,7 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative left-20 z-20 container mx-auto mt-10 flex flex-col-reverse items-center justify-end md:flex-row">
+       <div className="relative z-10 mx-auto flex w-full max-w-8xl flex-col items-center px-4 py-12 md:items-end md:justify-end">
           {/* Form */}
           <div className="mt-8 w-full max-w-2xl rounded-lg bg-white p-6 shadow-lg md:mt-0">
             <h2 className="mb-6 text-center text-2xl font-semibold text-gray-800">
