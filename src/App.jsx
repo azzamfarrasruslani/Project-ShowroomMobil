@@ -77,7 +77,7 @@ import Loading from "./components/common/Loading";
 export default function App() {
   return (
     <div className="bg-gray-100">
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route element={<GuestLayout />}>
