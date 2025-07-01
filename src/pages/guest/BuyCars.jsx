@@ -1,19 +1,15 @@
 import { useState, useMemo } from "react";
-/* eslint-disable no-unused-vars */
-import { motion, AnimatePresence } from "framer-motion";
-import Icon from "../../lib/Icon";
+import { Link } from "react-router-dom";
 import cars from "../../data/data_mobil_bekas.json";
-import FilterSidebar from "../../components/guest/buycars/FilterSidebar";
+import Icon from "../../lib/Icon";
 import SearchBar from "../../components/guest/buycars/SearchBar";
-import TabPagination from "../../components/guest/buycars/TabPagination";
 import CheckBoxFilter from "../../components/guest/buycars/CheckBoxFilter";
 import CardItem from "../../components/guest/buycars/CardItem";
 import HeroSection from "../../components/guest/buycars/HeroSection";
-import { Link } from "react-router-dom";
+import TabPagination from "../../components/guest/buycars/TabPagination";
 
 export default function BuyCars() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [showFilter, setShowFilter] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
   const [filters, setFilters] = useState({ merek: [], transmisi: [] });
 
@@ -47,19 +43,6 @@ export default function BuyCars() {
     setActiveTab(0);
   };
 
-  const handleResetFilter = () => {
-    setFilters({ merek: [], transmisi: [] });
-    setActiveTab(0);
-  };
-
-  const handleApplyFilter = () => {
-    setShowFilter(false);
-  };
-
-  const handleTabChange = (index) => {
-    setActiveTab(index);
-  };
-
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
@@ -90,30 +73,17 @@ export default function BuyCars() {
 
         <SearchBar searchTerm={searchTerm} onSearch={handleSearch} />
 
-        <div className="flex flex-col gap-4 md:flex-row">
-          <div className="flex gap-4">
-            <CheckBoxFilter
-              name="Brand & Model"
-              onFilterChange={(tags) => handleFilterChange("merek", tags)}
-              tag={getTagCounts("merek")}
-            />
-
-            <CheckBoxFilter
-              name="Transmisi"
-              onFilterChange={(tags) => handleFilterChange("transmisi", tags)}
-              tag={getTagCounts("transmisi")}
-            />
-
-            <motion.button
-              onClick={() => setShowFilter(true)}
-              className="flex items-center gap-2 rounded-md px-2 py-2 text-sm text-white ring-2 ring-white focus:ring-yellow-500 md:hidden md:px-4 md:text-base"
-              title="Tampilkan opsi filter"
-              whileTap={{ y: 1 }}
-            >
-              <Icon name="filter" />
-              <span>Filter Pencarian</span>
-            </motion.button>
-          </div>
+        <div className="flex flex-wrap gap-4">
+          <CheckBoxFilter
+            name="Brand & Model"
+            onFilterChange={(tags) => handleFilterChange("merek", tags)}
+            tag={getTagCounts("merek")}
+          />
+          <CheckBoxFilter
+            name="Transmisi"
+            onFilterChange={(tags) => handleFilterChange("transmisi", tags)}
+            tag={getTagCounts("transmisi")}
+          />
         </div>
       </div>
 
@@ -121,16 +91,6 @@ export default function BuyCars() {
         <p className="md:text-md px-3 text-sm text-gray-600 md:px-0">
           {filteredCars.length} Hasil
         </p>
-
-        {showFilter && (
-          <FilterSidebar
-            onClose={() => setShowFilter(false)}
-            onFilterChange={handleFilterChange}
-            onResetFilter={handleResetFilter}
-            onApplyFilter={handleApplyFilter}
-            filteredCars={filteredCars}
-          />
-        )}
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {currentCars.map((car) => (
@@ -151,7 +111,7 @@ export default function BuyCars() {
         <TabPagination
           totalTabs={totalTabs}
           activeTab={activeTab}
-          onTabChange={handleTabChange}
+          onTabChange={setActiveTab}
         />
       </div>
     </div>

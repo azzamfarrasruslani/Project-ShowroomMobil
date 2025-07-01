@@ -54,7 +54,7 @@ export default function CheckBoxFilter({ onFilterChange, tag, name }) {
   };
 
   return (
-    <div className="hidden md:relative md:block" ref={dropdownRef}>
+    <div className="relative block" ref={dropdownRef}>
       <motion.button
         className="flex items-center gap-2 rounded-md px-4 py-2 text-white ring-2 ring-white focus:ring-yellow-500"
         onClick={() => setIsOpen(!isOpen)}
